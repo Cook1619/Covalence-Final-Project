@@ -7,7 +7,7 @@ class DisplayGames extends Component {
             games: []
         };
     }
-    componentDidMount() {
+    async componentDidMount() {
         this.setState({
             games: [
                 { team1: 'Green Bay', team2: 'Minnesota' },
@@ -18,7 +18,7 @@ class DisplayGames extends Component {
         });
     }
     render() {
-        console.log(games);
+        console.log(this.state.games);
         let gameList = this.state.games.map((game, index) => {
             return <GameDetails key={index} game={game} />
         })
