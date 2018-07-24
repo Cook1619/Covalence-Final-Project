@@ -4,7 +4,7 @@ import background from './img/baseball.png'
 const HomePage = () => {
     return(
         <div>
-            <img className="m-4" src={background} alt="baseball" />
+            <img className="m-5" src={background} alt="baseball" />
         </div>
     )
 }
