@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import GameDetails from './GameDetails';
 class DisplayGames extends Component {
     constructor(props) {
         super(props);
@@ -18,9 +18,12 @@ class DisplayGames extends Component {
         })
     }
     render() {
+        let gameList = this.state.games.map((game) => {
+            return <GameDetails key={game.id} gamedata={game} />
+        })
         return (
             <Fragment>
-
+                {gameList}
             </Fragment>
         )
     }
