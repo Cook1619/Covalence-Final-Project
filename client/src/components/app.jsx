@@ -16,9 +16,11 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-                    <Link to="/goodbye">Goodbye</Link>
-                    <Link to="/games">Games</Link>
-                    <AuthButton />
+                    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                        <Link className="nav-item nav-link" to="/goodbye">Goodbye</Link>
+                        <Link className="nav-item nav-link" to="/games">Games</Link>
+                        <AuthButton />
+                    </nav>
                     <Switch>
                         <Route exact path="/" component={HelloWorld} />
                         <Route path="/login" component={Login} />

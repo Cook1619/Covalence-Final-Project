@@ -22,6 +22,7 @@ class DisplayGames extends Component {
         let gameList = this.state.games.map((game, index) => {
             return <GameDetails key={index} game={game} />
         })
+        console.log(gameList);
         return (
             <Fragment>
                 <h1>Hello</h1>
