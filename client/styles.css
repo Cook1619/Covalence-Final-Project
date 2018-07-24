@@ -76,3 +76,7 @@ body {
   .StripeElement.PaymentRequestButton {
     padding: 0;
   }
+
+  h1 {
+    font-family: 'Quicksand', sans-serif;
+  }
