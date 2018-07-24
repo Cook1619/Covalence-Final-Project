@@ -14,15 +14,9 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-<<<<<<< HEAD
                     <nav className="navbar navbar-light bg-dark">
                         <Link className="btn btn-outline-info btn-sml" to="/games">Games</Link>
                         <AuthButton className="nav-item nav-link"/>
-=======
-                    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-                        <Link className="nav-item nav-link" to="/">Games</Link>
-                        <AuthButton className="float-right"/>
->>>>>>> 533ad8b2a94985e144ca125d2106789befd769cc
                     </nav>
                     <Switch>
                         <Route exact path="/" component={HomePage} />
