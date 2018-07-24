@@ -8,8 +8,11 @@ class GameDetails extends Component {
 
     render() {
         return (
-            <div>
-                <div>{`${this.props.game.team1} VS ${this.props.game.team2}`}</div>
+            <div className="card p-2 m-4">
+                <div className="card-body">
+                    <h3 className="card-title">Matchup Preview</h3>
+                    <p className="card-text">{`${this.props.game.team1} VS ${this.props.game.team2}`}</p>
+                </div>
             </div>
         )
     }

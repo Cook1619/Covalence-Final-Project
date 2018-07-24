@@ -25,7 +25,6 @@ class DisplayGames extends Component {
         console.log(gameList);
         return (
             <Fragment>
-                <h1>Hello</h1>
                 {gameList}
             </Fragment>
         )
