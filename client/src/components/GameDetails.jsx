@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-let GameDetails = ({ gameData }) => {
-    return (
-        <div className="card">
-            <div className="card-header">
-                <div className="card-body">{gameData.team1}{gameData.team2}
-                
-                </div>
+class GameDetails extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>
+                <div>{this.props.game.team1}</div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 export default GameDetails;

@@ -15,14 +15,16 @@ class DisplayGames extends Component {
                 { team1: 'San Diego', team2: 'Utah' },
                 { team1: 'Denver', team2: 'Houston' },
             ]
-        })
+        });
     }
     render() {
-        let gameList = this.state.games.map((game) => {
-            return <GameDetails key={game.id} gamedata={game} />
+        console.log(games);
+        let gameList = this.state.games.map((game, index) => {
+            return <GameDetails key={index} game={game} />
         })
         return (
             <Fragment>
+                <h1>Hello</h1>
                 {gameList}
             </Fragment>
         )
