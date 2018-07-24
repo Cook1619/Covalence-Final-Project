@@ -17,6 +17,7 @@ class Navigation extends Component {
             <Router>
                 <Fragment>
                     <Link to="/goodbye">Goodbye</Link>
+                    <Link to="/games">Games</Link>
                     <AuthButton />
                     <Switch>
                         <Route exact path="/" component={HelloWorld} />
