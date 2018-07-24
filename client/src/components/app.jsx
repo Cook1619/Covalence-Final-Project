@@ -15,10 +15,10 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-                    <nav className="navbar navbar-light bg-dark">
-                        <Link className="btn btn-outline-info btn-sml" to="/">Home</Link>
-                        <Link className="btn btn-outline-info btn-sml" to="/games">Games</Link>
-                        <Link className="btn btn-outline-info btn-sml" to="/contact">Contact</Link>
+                    <nav className="navbar transparent ">
+                        <Link className="btn btn-outline-light rounded-0 btn-sml" to="/">Home</Link>
+                        <Link className="btn btn-outline-light rounded-0 btn-sml" to="/games">Games</Link>
+                        <Link className="btn btn-outline-light rounded-0 btn-sml" to="/contact">Contact</Link>
                         <AuthButton className="nav-item nav-link"/>
                     </nav>
                     <Switch>
