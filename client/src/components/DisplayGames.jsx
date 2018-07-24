@@ -7,7 +7,7 @@ class DisplayGames extends Component {
             games: []
         };
     }
-    componentDidMount() {
+     componentDidMount() {
         this.setState({
             games: [
                 { team1: 'Green Bay', team2: 'Minnesota' },
