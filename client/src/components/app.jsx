@@ -15,7 +15,7 @@ class Navigation extends Component {
                 <Fragment>
                     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
                         <Link className="nav-item nav-link" to="/">Games</Link>
-                        <AuthButton />
+                        <AuthButton className="float-right"/>
                     </nav>
                     <Switch>
                         <Route path="/login" component={Login} />
