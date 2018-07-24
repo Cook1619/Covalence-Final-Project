@@ -6,6 +6,7 @@ import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
 import AuthButton from './auth/authButton';
+import HomePage from './HomePage';
 
 class Navigation extends Component {
 
@@ -14,12 +15,13 @@ class Navigation extends Component {
             <Router>
                 <Fragment>
                     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-                        <Link className="nav-item nav-link" to="/">Games</Link>
+                        <Link className="nav-item nav-link" to="/games">Games</Link>
                         <AuthButton />
                     </nav>
                     <Switch>
+                        <Route exact path="/" component={HomePage} />
                         <Route path="/login" component={Login} />
-                        <Route path="/" component={DisplayGames} />
+                        <Route path="/games" component={DisplayGames} />
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                     </Switch>
