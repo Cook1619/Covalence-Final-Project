@@ -9,7 +9,7 @@ class GameDetails extends Component {
     render() {
         return (
             <div>
-                <div>{this.props.game.team1}</div>
+                <div>{`${this.props.game.team1} VS ${this.props.game.team2}`}</div>
             </div>
         )
     }
