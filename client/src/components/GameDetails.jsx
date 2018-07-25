@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Footer from './Footer';
+
 
 class GameDetails extends Component {
     constructor(props) {

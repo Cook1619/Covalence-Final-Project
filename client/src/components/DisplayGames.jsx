@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import GameDetails from './GameDetails';
-import Footer from './Footer';
 
 class DisplayGames extends Component {
     constructor(props) {
@@ -32,7 +31,6 @@ class DisplayGames extends Component {
                         {gameList}
                     </div>
                 </div>
-                <Footer />
             </Fragment>
         )
     }

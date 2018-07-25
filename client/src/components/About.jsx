@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from './Footer';
 import Rodgers from './img/rodgers.png'
 
 const About = () => {
@@ -37,7 +36,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
