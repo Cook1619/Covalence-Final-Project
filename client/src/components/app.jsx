@@ -18,13 +18,12 @@ class Navigation extends Component {
             <Router>
                 <Fragment>
                     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                        <ul class="navbar-nav">
-                        <img src={Placeholder} alt="Placeholder" width="50px" height="50px"/>
+                        <ul class="navbar-nav"> 
                             <li class="nav-item">
-                                <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">Home</a></Link>
+                                <Link className="btn border-0 rounded-0" to="/"><img src={Placeholder} alt="Placeholder" width="40px" height="40px"/></Link>
                             </li>
                             <li class="nav-item">
-                                <Link className="btn  border-0 rounded-0" to="/"><a class="nav-link">Pricing</a></Link>
+                                <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">Pricing</a></Link>
                             </li>
                             <li class="nav-item">
                                 <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">How It Works</a></Link>
