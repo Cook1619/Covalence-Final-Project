@@ -6,7 +6,7 @@ const AuthButton = (props) => {
     if (isLoggedIn()) {
         return <Link className="btn btn-info" to="/logout">Logout</Link>;
     } else {
-        return <Link className="btn btn-dark float-right rounded-0 " to="/login">Login</Link>;
+        return <Link className="btn btn-light border-0 ml-auto" to="/login">Login</Link>;
     }
 };
 

@@ -16,16 +16,28 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-                    <nav className="navbar fixed-top">
-                        <img src="https://www.logolynx.com/images/logolynx/f0/f009386dc544d1455db05db19d454629.png " width="100px" alt=""/>
-                        <Link className="btn btn-outline-light border-0 rounded-0" to="/">Home</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0" to="/games">Games</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0" to="/">Pricing</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0" to="/">How It Works</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0" to="/about">About</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0" to="/contact">Contact</Link>
-                        <Link className="btn btn-dark rounded-0 btn-sml" to="/">Sign Up!</Link>
-                        <AuthButton className="nav-item nav-link"/>
+                    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">Home</a></Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link className="btn  border-0 rounded-0" to="/"><a class="nav-link">Pricing</a></Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">How It Works</a></Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link className="btn border-0 rounded-0" to="/about"><a class="nav-link">About</a></Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link className="btn  border-0 rounded-0" to="/contact"><a class="nav-link">Contact</a></Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link className="btn border-0 rounded-0 navbar-right" to="/"><a class="nav-link">Sign Up!</a></Link>
+                            </li>
+                        </ul>
+                        <AuthButton className="nav-link float-right ml-auto" />
                     </nav>
                     <Switch>
                         <Route exact path="/" component={HomePage} />
