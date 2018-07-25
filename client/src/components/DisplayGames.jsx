@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import GameDetails from './GameDetails';
+import Footer from './Footer';
+
 class DisplayGames extends Component {
     constructor(props) {
         super(props);
@@ -26,6 +28,7 @@ class DisplayGames extends Component {
         return (
             <Fragment>
                 {gameList}
+                <Footer />
             </Fragment>
         )
     }
