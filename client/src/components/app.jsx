@@ -8,6 +8,7 @@ import Logout from './auth/logout';
 import AuthButton from './auth/authButton';
 import HomePage from './HomePage';
 import Contact from './Contact';
+import About from './About';
 
 class Navigation extends Component {
 
@@ -22,6 +23,7 @@ class Navigation extends Component {
                         <Link className="btn btn-outline-light border-0 rounded-0" to="/">Pricing</Link>
                         <Link className="btn btn-outline-light border-0 rounded-0" to="/">How It Works</Link>
                         <Link className="btn btn-outline-light border-0 rounded-0" to="/contact">Contact</Link>
+                        <Link className="btn btn-outline-light border-0 rounded-0" to="/about">About</Link>
                         <Link className="btn btn-dark rounded-0 btn-sml" to="/">Sign Up!</Link>
                         <AuthButton className="nav-item nav-link"/>
                     </nav>
@@ -30,6 +32,7 @@ class Navigation extends Component {
                         <Route path="/login" component={Login} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/games" component={DisplayGames} />
+                        <Route path="/about" component={About} />
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                     </Switch>
