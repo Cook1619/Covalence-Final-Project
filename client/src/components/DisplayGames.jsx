@@ -9,7 +9,7 @@ class DisplayGames extends Component {
             games: []
         };
     }
-     componentDidMount() {
+    componentDidMount() {
         this.setState({
             games: [
                 { team1: 'Green Bay', team2: 'Minnesota' },
@@ -24,10 +24,14 @@ class DisplayGames extends Component {
         let gameList = this.state.games.map((game, index) => {
             return <GameDetails key={index} game={game} />
         })
-    
+
         return (
             <Fragment>
-                {gameList}
+                <div className="container-fluid">
+                    <div className="row">
+                        {gameList}
+                    </div>
+                </div>
                 <Footer />
             </Fragment>
         )

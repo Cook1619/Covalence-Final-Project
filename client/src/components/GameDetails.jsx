@@ -9,22 +9,21 @@ class GameDetails extends Component {
 
     render() {
         return (
-            <div>
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <div className="card p-2 m-4 bg-light rounded-3">
-                                <div className="card-body">
-                                    <h5 className="card-header bg-dark text-white rounded-0">Some Text here</h5>
-                                    <div className="card-title"> Matchup Preview</div>
-                                    <p className="card-text">{`${this.props.game.team1} VS ${this.props.game.team2}`}</p>
-                                    <button className="btn btn-sm btn-success float-right">Bet Now</button>
-                                </div>
-                            </div>
+
+            <div className="col-md-6 position-static">
+                <div className="card post-body p-2 m-4 bg-light rounded-3">
+                    <div className="card-header bg-dark text-white rounded-0">
+                        <h5>Matchup Preview</h5>
+                    </div>
+                    <div className="card-body">
+                        <div className="card-text">
+                            {`${this.props.game.team1} VS ${this.props.game.team2}`}
                         </div>
+                        <button className="btn btn-sm btn-success float-right">Bet Now</button>
                     </div>
                 </div>
             </div>
+
 
             // <div className="col-6 position-static">
             //     <div className="card p-2 m-4 bg-light rounded-3">
