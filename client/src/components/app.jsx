@@ -15,8 +15,8 @@ class Navigation extends Component {
     render() {
         return (
             <Router>
-                <Fragment className="container-fluid">
-                    <nav className="navbar transparent">
+                <Fragment className="container">
+                    <nav className="navbar fixed-top">
                         <img src="https://www.logolynx.com/images/logolynx/f0/f009386dc544d1455db05db19d454629.png " width="100px" alt=""/>
                         <Link className="btn btn-outline-light border-0 rounded-0" to="/">Home</Link>
                         <Link className="btn btn-outline-light border-0 rounded-0" to="/games">Games</Link>
@@ -43,3 +43,4 @@ class Navigation extends Component {
 }
 
 export default Navigation;
+
