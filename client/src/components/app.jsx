@@ -9,6 +9,7 @@ import AuthButton from './auth/authButton';
 import HomePage from './HomePage';
 import Contact from './Contact';
 import About from './About';
+import Placeholder from './img/placeholderlogo.png'
 
 class Navigation extends Component {
 
@@ -18,6 +19,7 @@ class Navigation extends Component {
                 <Fragment>
                     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
                         <ul class="navbar-nav">
+                        <img src={Placeholder} alt="Placeholder" width="50px" height="50px"/>
                             <li class="nav-item">
                                 <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">Home</a></Link>
                             </li>
