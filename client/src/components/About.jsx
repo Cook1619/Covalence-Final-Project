@@ -12,7 +12,7 @@ const About = () => {
                             <img src={Rodgers} alt="Some text" />
                         </a>
                             <div className="caption">
-                                <p className="text-white">Some more Text</p>
+                                <p className="text-white">Matt Cook</p>
                             </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ const About = () => {
                             <img src={Rodgers} alt="Some text" />
                         </a>
                         <div className="caption">
-                            <p className="text-white">Some more Text</p>
+                            <p className="text-white">Peter Grant</p>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const About = () => {
                             <img src={Rodgers} alt="Some text" />
                         </a>
                         <div className="caption">
-                            <p className="text-white">Some more Text</p>
+                            <p className="text-white">Billy Hughes</p>
                         </div>
                     </div>
                 </div>
