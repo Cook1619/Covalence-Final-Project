@@ -4,7 +4,7 @@ import Rodgers from './img/rodgers.png'
 
 const About = () => {
     return (
-        <div>
+        <div className="container">
             <div className="row">
                 <div className="col-md-4">
                     <div className="img-circle">
