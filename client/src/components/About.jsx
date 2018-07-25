@@ -8,7 +8,7 @@ const About = () => {
             <div className="row">
                 <div className="col-md-4">
                     <div className="img-circle">
-                        <a href="https://github.com/Cook1619">
+                        <a href="https://github.com/Cook1619" target="_blank">
                             <img src={Rodgers} alt="Some text" />
                         </a>
                             <div className="caption">
@@ -18,7 +18,7 @@ const About = () => {
                 </div>
                 <div className="col-md-4">
                     <div className="img-circle">
-                        <a href="https://github.com/percussion1313">
+                        <a href="https://github.com/percussion1313" target="_blank">
                             <img src={Rodgers} alt="Some text" />
                         </a>
                         <div className="caption">
@@ -28,7 +28,7 @@ const About = () => {
                 </div>
                 <div className="col-md-4">
                     <div className="img-circle">
-                        <a href="https://github.com/hughes2215">
+                        <a href="https://github.com/hughes2215" target="_blank">
                             <img src={Rodgers} alt="Some text" />
                         </a>
                         <div className="caption">
