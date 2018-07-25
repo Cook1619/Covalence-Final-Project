@@ -17,12 +17,12 @@ class Navigation extends Component {
                 <Fragment>
                     <nav className="navbar transparent ">
                         <img src="https://www.logolynx.com/images/logolynx/f0/f009386dc544d1455db05db19d454629.png" width="100px" alt=""/>
-                        <Link className="btn btn-outline-light border-0 rounded-0 btn-sml float-left" to="/">Home</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0 btn-sml" to="/games">Games</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0 btn-sml" to="/">Pricing</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0 btn-sml" to="/">How It Works</Link>
-                        <Link className="btn btn-outline-light border-0 rounded-0 btn-sml" to="/contact">Contact</Link>
-                        <Link className="btn btn-dark rounded-0 btn-sml float-right" to="/">SIGN UP</Link>
+                        <Link className="btn btn-outline-light border-0 rounded-0" to="/">Home</Link>
+                        <Link className="btn btn-outline-light border-0 rounded-0" to="/games">Games</Link>
+                        <Link className="btn btn-outline-light border-0 rounded-0" to="/">Pricing</Link>
+                        <Link className="btn btn-outline-light border-0 rounded-0" to="/">How It Works</Link>
+                        <Link className="btn btn-outline-light border-0 rounded-0" to="/contact">Contact</Link>
+                        <Link className="btn btn-dark rounded-0 btn-sml" to="/">Sign Up!</Link>
                         <AuthButton className="nav-item nav-link"/>
                     </nav>
                     <Switch>

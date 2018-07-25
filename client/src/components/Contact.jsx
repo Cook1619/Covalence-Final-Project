@@ -42,15 +42,16 @@ class Contact extends Component {
             <div className="container">
                 <form onSubmit={ (e) => this.handleSubmit(e) }>
                     <div className="form-group">
-                        <input placeholder="Name" onChange={ (e) => this.handleName(e.target.value) } name="name" type="text" className="form-control" required/>
+                        <input placeholder="Name" onChange={ (e) => this.handleName(e.target.value) } name="name" type="text" className="form-control rounded-0" required/>
                     </div>
                     <div className="form-group">
-                        <input placeholder="Email" onChange={ (e) => this.handleEmail(e.target.value) } email="mail" type="email" className="form-control" required/>
+                        <input placeholder="Email" onChange={ (e) => this.handleEmail(e.target.value) } email="mail" type="email" className="form-control rounded-0" required/>
                     </div>
                     <div className="form-group">
-                        <textarea onChange={ (e) => this.handleMessage(e.target.value) }cols="30" rows="10" className="form-control"></textarea>
+                        <textarea onChange={ (e) => this.handleMessage(e.target.value) }cols="30" rows="10" className="form-control rounded-0"></textarea>
+                        <input type="submit" className="btn btn-success float-left mt-2 p-1 rounded-0"/>
                     </div>
-                    <input type="submit" className="btn btn-primary"/>
+                    
                 </form>
             </div>
         );

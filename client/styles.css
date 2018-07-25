@@ -4,6 +4,7 @@ body {
   height: 100%;
   background: black; /* For browsers that do not support gradients */
   background: linear-gradient(#159915, black);
+  font-family: 'Nunito', sans-serif;
 }
 
 .Checkout {
@@ -46,9 +47,8 @@ body {
   form {
     margin: 2em 1em;
     padding: 2em;
-    background-color: lightgray;
+    background-color:#454545;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11);
-    border-radius: 4px;
   }
 
   button:hover {
@@ -81,5 +81,5 @@ body {
   }
 
   h1 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
   }
