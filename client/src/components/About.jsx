@@ -1,5 +1,6 @@
 import React from 'react';
 import Rodgers from './img/rodgers.png'
+import Peter from './img/mypic.png'
 
 const About = () => {
     return (
@@ -16,9 +17,9 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="img-circle">
+                    <div className="img-circle profilepic">
                         <a href="https://github.com/percussion1313" target="_blank">
-                            <img src={Rodgers} alt="Some text" />
+                            <img src={Peter} alt="Some text" />
                         </a>
                         <div className="caption">
                             <p className="text-white">Peter Grant</p>
