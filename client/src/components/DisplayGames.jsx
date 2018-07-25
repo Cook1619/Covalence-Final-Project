@@ -20,11 +20,11 @@ class DisplayGames extends Component {
         });
     }
     render() {
-        console.log(this.state.games);
+
         let gameList = this.state.games.map((game, index) => {
             return <GameDetails key={index} game={game} />
         })
-        console.log(gameList);
+    
         return (
             <Fragment>
                 {gameList}
