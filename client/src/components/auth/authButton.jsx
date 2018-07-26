@@ -4,7 +4,7 @@ import { isLoggedIn } from '../../services/user';
 
 const AuthButton = (props) => {
     if (isLoggedIn()) {
-        return <Link className="btn btn-info" to="/logout">Logout</Link>;
+        return <Link className="btn btn-light border-0 ml-auto" to="/logout">Logout</Link>;
     } else {
         return <Link className="btn btn-light border-0 ml-auto" to="/login">Login</Link>;
     }
