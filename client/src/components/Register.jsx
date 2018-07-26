@@ -11,34 +11,39 @@ class Register extends Component {
             username: '',
             password: ''
         }
-
+        this.handleFirstName = this.handleFirstName.bind(this);
+        this.handleLastName = this.handleLastName.bind(this);
+        this.handleEmail = this.handleEmail.bind(this);
+        this.handlePassword = this.handlePassword.bind(this);
+        this.handleUserName = this.handleUserName.bind(this);
+        this.addUser = this.addUser.bind(this);
     }
-    handleFirstName(event) {
+    handleFirstName(event){
         this.setState({
             firstName: event.target.value
         })
     }
-    handleLastName(event) {
+    handleLastName(event){
         this.setState({
             lastName: event.target.value
         })
     }
-    handleEmail(event) {
+    handleEmail(event){
         this.setState({
             email: event.target.value
         })
     }
-    handleEmail(event) {
+    handlePassword(event){
         this.setState({
             password: event.target.value
         })
     }
-    handleUserName(event) {
+    handleUserName(event){
         this.setState({
             username: event.target.value
         })
     }
-    addUser() {
+    addUser(){
         let userInfo = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -62,7 +67,7 @@ class Register extends Component {
                                     className="form-control"
                                     id="Firstname"
                                     placeholder="First Name"
-                                    onChange={this.handleFirstName.bind}
+                                    onChange={this.handleFirstName}
                                 />
                             </div>
                         </div>
@@ -74,7 +79,7 @@ class Register extends Component {
                                     className="form-control"
                                     id="LastName"
                                     placeholder="Last Name"
-                                    onChange={this.handleLastName.bind}
+                                    onChange={this.handleLastName}
                                 />
                             </div>
                         </div>
@@ -86,7 +91,7 @@ class Register extends Component {
                                     className="form-control"
                                     id="EMAIL"
                                     placeholder="Email"
-                                    onChange={this.handleEmail.bind}
+                                    onChange={this.handleEmail}
                                 />
                             </div>
                         </div>
@@ -98,7 +103,7 @@ class Register extends Component {
                                     className="form-control"
                                     id="PASSWORD"
                                     placeholder="Password"
-                                    onChange={this.handlePassword.bind}
+                                    onChange={this.handlePassword}
                                 />
                             </div>
                         </div>
@@ -116,16 +121,16 @@ class Register extends Component {
                                     className="form-control"
                                     id="USERNAME"
                                     placeholder="User Name"
-                                    onChange={this.handleUserName.bind}
+                                    onChange={this.handleUserName}
                                 />
                             </div>
                         </div>
                         <div className="form-group row">
                             <div className="offset-sm-2 col-sm-10">
-                                <button 
-                                type="submit" 
-                                className="btn btn-primary"
-                                onChange={this.addUser.bind}
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary"
+                                    onChange={this.addUser}
                                 >Submit</button>
                             </div>
                         </div>
