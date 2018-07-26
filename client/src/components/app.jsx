@@ -9,6 +9,7 @@ import AuthButton from './auth/authButton';
 import HomePage from './HomePage';
 import Contact from './Contact';
 import About from './About';
+import Register from './Register';
 import Placeholder from './img/placeholderlogo.png'
 
 class Navigation extends Component {
@@ -17,25 +18,25 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-                    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                        <ul class="navbar-nav"> 
-                            <li class="nav-item">
+                    <nav className="navbar navbar-expand-md navbar-dark fixed-top">
+                        <ul className="navbar-nav"> 
+                            <li className="nav-item">
                                 <Link className="btn border-0 rounded-0" to="/"><img src={Placeholder} alt="Placeholder" width="40px" height="40px"/></Link>
                             </li>
-                            <li class="nav-item">
-                                <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">Pricing</a></Link>
+                            <li className="nav-item">
+                                <Link className="btn border-0 rounded-0 nav-link" to="/">Pricing</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link className="btn border-0 rounded-0" to="/"><a class="nav-link">How It Works</a></Link>
+                            <li className="nav-item">
+                                <Link className="btn border-0 rounded-0 nav-link" to="/games">How It Works</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link className="btn border-0 rounded-0" to="/about"><a class="nav-link">About</a></Link>
+                            <li className="nav-item">
+                                <Link className="btn border-0 rounded-0 nav-link" to="/about">About</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link className="btn  border-0 rounded-0" to="/contact"><a class="nav-link">Contact</a></Link>
+                            <li className="nav-item">
+                                <Link className="btn  border-0 rounded-0 nav-link" to="/contact">Contact</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link className="btn border-0 rounded-0 navbar-right" to="/"><a class="nav-link">Sign Up!</a></Link>
+                            <li className="nav-item">
+                                <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/register">Sign Up!</Link>
                             </li>
                         </ul>
                         <AuthButton className="nav-link float-right ml-auto" />
@@ -46,6 +47,7 @@ class Navigation extends Component {
                         <Route path="/contact" component={Contact} />
                         <Route path="/games" component={DisplayGames} />
                         <Route path="/about" component={About} />
+                        <Route path="/register" component={Register} />
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                     </Switch>

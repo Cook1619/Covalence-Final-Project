@@ -5,7 +5,7 @@ import background from './img/homepage.png'
 const HomePage = () => {
     return (
         <div>
-            <img className="img-responsive w-100" src={background} alt="baseball" />
+            <img className="img-responsive w-100 m-4" src={background} alt="baseball" />
         </div>
     )
 }

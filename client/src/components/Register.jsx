@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 
 class Register extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            user: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            username: '',
             password: ''
         }
 
 
     }
-    render(){
+    render() {
         return (
             <Fragment>
-            
+            <h1>Hello</h1>
+                <form>
+                    <input type="text" placeholder="FIRSTNAME" /><input type="text" placeholder="LASTNAME" />
+                </form>
             </Fragment>
         )
     }

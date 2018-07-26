@@ -3,7 +3,6 @@ import React, { Component, Fragment } from 'react';
 
 class GameDetails extends Component {
     constructor(props) {
-        console.log(props);
         super(props);
     }
 
