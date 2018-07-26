@@ -9,8 +9,16 @@ import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
 import AuthButton from './auth/authButton';
+import 'isomorphic-fetch';
+import 'es6-promise';
 
 class Navigation extends Component {
+
+    componentDidMount(){
+        fetch("https://api.mysportsfeeds.com/v1.2/pull/mlb/2018-regular/daily_game_schedule.json?fordate=20180413")
+        .then(res => res.json())
+        .then(obj => console.log(obj));
+    }
 
     render() {
         return (
