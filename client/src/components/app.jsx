@@ -27,7 +27,10 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0 nav-link" to="/">Pricing</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/games">How It Works</Link>
+                                <Link className="btn border-0 rounded-0 nav-link" to="/games">Games</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="btn border-0 rounded-0 nav-link" to="/">How It Works</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 nav-link" to="/about">About</Link>
