@@ -72,3 +72,4 @@ This boilerplate has been updated to use a configuration method that does not re
   }
   ```
 * If you need to support additional file types, feel free to modify the `webpack.config.js`. You should be able to discern the sections for image handling vs document handling.
+*making sure it works
