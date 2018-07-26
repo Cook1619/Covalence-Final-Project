@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class Register extends Component {
     constructor(props) {
@@ -10,7 +10,6 @@ class Register extends Component {
             username: '',
             password: ''
         }
-
 
     }
     render() {
