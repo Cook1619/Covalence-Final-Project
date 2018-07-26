@@ -39,7 +39,7 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/register">Sign Up!</Link>
                             </li>
                         </ul>
-                        <AuthButton className="nav-link float-right ml-auto" />
+                        <AuthButton className="nav-link float-right ml-auto" to="/login" />
                     </nav>
                     <Switch>
                         <Route exact path="/" component={HomePage} />

@@ -5,7 +5,7 @@ import { generateHash } from '../utils/hash';
 
 let router = Router();
 
-//actually /api/auth.login
+//actually /api/auth/login
 router.post('/login', (req, res, next) => {
     console.log(req.body.email);
     console.log(req.body.password);
