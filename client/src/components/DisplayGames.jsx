@@ -26,6 +26,7 @@ class DisplayGames extends Component {
 
         return (
             <Fragment>
+            <h1>Hello</h1>
                 <div className="container-fluid">
                     <div className="row">
                         {gameList}
