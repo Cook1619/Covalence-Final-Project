@@ -38,7 +38,7 @@ class Register extends Component {
                         <div className="form-group row">
                             <label htmlFor="PASSWORD" className="col-sm-2 col-form-label">Password</label>
                             <div className="col-sm-10">
-                                <input type="password" className="form-control" id="PASSWORD" placeholder="Password"/>
+                                <input type="password" className="form-control" id="PASSWORD" placeholder="Password" />
                             </div>
                         </div>
                         <div className="form-group row">
@@ -51,6 +51,11 @@ class Register extends Component {
                             <label htmlFor="USERNAME" className="col-sm-2 col-form-label">User Name</label>
                             <div className="col-sm-10">
                                 <input type="User Name" className="form-control" id="USERNAME" placeholder="User Name" />
+                            </div>
+                        </div>
+                        <div className="form-group row">
+                            <div className="offset-sm-2 col-sm-10">
+                                <button type="submit" className="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </form>
