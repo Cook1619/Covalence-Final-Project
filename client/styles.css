@@ -1,6 +1,10 @@
 body {
   text-align: center;
-  padding: 2em;
+  padding: 4em;
+  background: black; /* For browsers that do not support gradients */
+  background: linear-gradient(#159915, black);
+  font-family: 'Nunito', sans-serif;
+  height: auto;
 }
 
 .Checkout {
@@ -43,9 +47,8 @@ body {
   form {
     margin: 2em 1em;
     padding: 2em;
-    background-color: lightgray;
+    background-color:#454545;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11);
-    border-radius: 4px;
   }
 
   button:hover {
@@ -76,3 +79,68 @@ body {
   .StripeElement.PaymentRequestButton {
     padding: 0;
   }
+
+  h1 {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .navbar {
+    background-color:black;
+    width:100%;
+    color: white;
+  }
+    
+    .nav-link {
+      top: 30px;
+      padding-right: .5rem !important;
+      padding-left: .5rem !important;
+    }
+
+  .fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10em 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .profilepic{
+    top: 2em;
+  }
+  
+  .a{
+    color: white;
+  }
+  
+  .btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+/* #homepage{
+  max-width: 100% !important;
+  padding: 0 !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
