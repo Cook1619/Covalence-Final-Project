@@ -24,7 +24,7 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0" to="/"><img src={Placeholder} alt="Placeholder" width="40px" height="40px"/></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/">Pricing</Link>
+                                <Link className="btn border-0 rounded-0 nav-link" to="/"><a>Pricing</a></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 nav-link" to="/games">How It Works</Link>
