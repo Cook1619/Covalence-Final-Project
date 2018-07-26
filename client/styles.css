@@ -136,3 +136,8 @@ body {
     outline: none !important;
     box-shadow: none;
  }
+
+#homepage{
+  max-width: 100% !important;
+  padding: 0 !important;
+}
