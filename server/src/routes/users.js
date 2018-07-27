@@ -7,6 +7,9 @@ let router = Router();
 
 let newUser = new Table('users');
 
+
+//comment
+
 router.post('/addnew', async (req,res) => {
     let body = {
         name: req.body.name,
