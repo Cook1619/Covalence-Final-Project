@@ -12,10 +12,11 @@ router.use('/auth', authRouter);
 
 router.use('/users', usersRouter);
 
-// router.route('*')
-//     // .post(tokenMiddleware, isLoggedIn)
-//     .put(tokenMiddleware, isLoggedIn)
-//     .delete(tokenMiddleware, isLoggedIn);
+router.route('*')
+    // .post(tokenMiddleware, isLoggedIn)
+    .put(tokenMiddleware, isLoggedIn)
+    .delete(tokenMiddleware, isLoggedIn);
+    
 router.use('/donate', stripeDonationsRouter);
 router.use('/classes', classesRouter);
 router.use('/people', peopleRouter);
