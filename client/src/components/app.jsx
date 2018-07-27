@@ -10,15 +10,10 @@ import HomePage from './HomePage';
 import Contact from './Contact';
 import About from './About';
 import Register from './Register';
+import AdminHome from './Admin/AdminHome';
 import Placeholder from './img/placeholderlogo.png'
 
 class Navigation extends Component {
-
-    componentDidMount(){
-        fetch("https://api.mysportsfeeds.com/v1.2/pull/mlb/2018-regular/daily_game_schedule.json?fordate=20180413")
-        .then(res => res.json())
-        .then(obj => console.log(obj));
-    }
 
     render() {
         return (
@@ -59,6 +54,7 @@ class Navigation extends Component {
                         <Route path="/register" component={Register} />
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
+                        <PrivateRoute path="/admin" component={AdminHome} />
                     </Switch>
                 </Fragment>
             </Router>
