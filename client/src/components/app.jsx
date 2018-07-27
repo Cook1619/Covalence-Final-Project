@@ -42,6 +42,9 @@ class Navigation extends Component {
                             <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/register">Sign Up!</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/admin">Admin</Link>
+                            </li>
                         </ul>
                         <AuthButton className="nav-link float-right ml-auto" to="/login" />
                     </nav>
