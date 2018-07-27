@@ -1,28 +1,27 @@
 import { Router } from 'express';
 import { tokenMiddleware, isLoggedIn } from '../middleware/auth.mw';
-import { generateHash } from '../utils/hash';
+// import { generateHash } from '../utils/hash';
 import Table from "../table";
 
 let router = Router();
 
 let newUser = new Table('users');
 
+router.post('/addnew', async (req,res) => {
+    let body = {
+        name: req.body.name,
+        email: req.body.email,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        password: req.body.password
+    }
+    let id = await newUser.insert(body);
+    res.json(id);
+})
+
 router.get('/me', tokenMiddleware, isLoggedIn, (req, res) => {
     res.json(req.user);
 });
 
-router.post('/users/', (req, res) => {
-
-    let password = generateHash(req.body.password);
-    newUser.insert({
-        name: req.body.name,
-        email: req.body.email,
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        password
-    }).then(user => {
-        res.json(user)
-    });
-})
 
 export default router;
