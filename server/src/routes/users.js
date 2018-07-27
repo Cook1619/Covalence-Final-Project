@@ -9,7 +9,7 @@ router.get('/me', tokenMiddleware, isLoggedIn, (req, res) => {
     res.json(req.user);
 });
 
-router.post('/users/', async (req,res) => {
+router.post('/users/', (req, res) => {
 
     let password = generateHash(req.body.password);
     newUser.update({
@@ -17,11 +17,10 @@ router.post('/users/', async (req,res) => {
         email: req.body.email,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        
         password
-      }).then(user => {
+    }).then(user => {
         res.json(user)
-      });
+    });
 })
 
 export default router;
