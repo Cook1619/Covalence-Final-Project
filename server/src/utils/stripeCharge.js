@@ -1,6 +1,6 @@
 import stripeLoader from 'stripe';
-import { config } from '../config';
-const stripe = stripeLoader(config.STRIPE_SK); // define secret key in config folder
+//import { config } from '../config';
+//const stripe = stripeLoader(config.STRIPE_SK); // define secret key in config folder
 
 function charge(token, amt) {
     // returning a promise, so when we call .charge elsewhere, we will use await
