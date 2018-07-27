@@ -11,7 +11,7 @@ import Contact from './Contact';
 import About from './About';
 import Register from './Register';
 import AdminHome from './Admin/AdminHome';
-import Placeholder from './img/placeholderlogo.png'
+import Logo from './img/logo.png'
 
 class Navigation extends Component {
 
@@ -22,7 +22,7 @@ class Navigation extends Component {
                     <nav className="navbar navbar-expand-md navbar-dark fixed-top">
                         <ul className="navbar-nav"> 
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0" to="/"><img src={Placeholder} alt="Placeholder" width="40px" height="40px"/></Link>
+                                <Link className="btn border-0 rounded-0" to="/"><img src={Logo} alt="Placeholder" width="65px" height="40px"/></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 nav-link" to="/">Pricing</Link>
