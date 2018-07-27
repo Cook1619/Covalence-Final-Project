@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import { tokenMiddleware, isLoggedIn } from '../middleware/auth.mw';
 import { generateHash } from '../utils/hash';
+import Table from "../table";
+
 let router = Router();
 
 let newUser = new Table('users');
@@ -12,7 +14,7 @@ router.get('/me', tokenMiddleware, isLoggedIn, (req, res) => {
 router.post('/users/', (req, res) => {
 
     let password = generateHash(req.body.password);
-    newUser.update({
+    newUser.insert({
         name: req.body.name,
         email: req.body.email,
         firstName: req.body.firstName,
