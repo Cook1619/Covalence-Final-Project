@@ -108,12 +108,6 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label htmlFor="CONFIRMPASSWORD" className="col-sm-2 col-form-label">Confirm Password</label>
-                            <div className="col-sm-10">
-                                <input type="password" className="form-control" id="CONFIRMPASSWORD" placeholder="Confirm Password" />
-                            </div>
-                        </div>
-                        <div className="form-group row">
                             <label htmlFor="USERNAME" className="col-sm-2 col-form-label">User Name</label>
                             <div className="col-sm-10">
                                 <input
