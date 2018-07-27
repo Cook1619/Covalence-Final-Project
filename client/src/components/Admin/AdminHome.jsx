@@ -11,9 +11,9 @@ class AdminHome extends Component {
     componentDidMount() {
         this.setState({
             users: [
-                {user1:'MrRodgersNeighborHood', money: 550},
-                {user2:'BehindTheSteelCurtain', money: 70},
-                {user3:'Vikingdown', money:20}
+                {user1:'MrRodgersNeighborHood', money: 550, wins: 125},
+                {user2:'BehindTheSteelCurtain', money: 70, wins: 6},
+                {user3:'Vikingdown', money:20, wins: 0}
             ]
         })
                 
