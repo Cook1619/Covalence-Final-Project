@@ -14,7 +14,7 @@ class AdminDisplay extends Component {
                         </div>
                         <div className="card-body">
                             <div className="card-text">
-                                {this.props.user.money}
+                                {`${this.props.user.money} money and ${this.props.user.wins} wins!!!!`}
                             </div>
                         </div>
                     </div>

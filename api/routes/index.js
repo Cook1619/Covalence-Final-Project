@@ -7,7 +7,7 @@ const lastnameRouter = require('./routes/lastname');
 
 let router = express.Router();
 
-router.use('./name', nameRouter);
+router.use('/name', nameRouter);
 router.use('/email', emailRouter);
 router.use('/firstname', firstnameRouter);
 router.use('/lastname', lastnameRouter);
