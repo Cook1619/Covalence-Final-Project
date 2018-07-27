@@ -1,9 +1,15 @@
 const express = require('express');
-const usersRouter = require('./routes/users');
-const teamsRouter = require('./routes/teams');
+const nameRouter = require('./routes/name');
+const emailRouter = require('./routes/email');
+const firstnameRouter = require('./routes/firstname');
+const lastnameRouter = require('./routes/lastname');
+
 
 let router = express.Router();
 
-router.use('./api/users', usersRouter);
-router.use('/api/teams', teamsRouter);
-module.exports(router);
+router.use('./name', nameRouter);
+router.use('/email', emailRouter);
+router.use('/firstname', firstnameRouter);
+router.use('/lastname', lastnameRouter);
+
+module.exports = router;
