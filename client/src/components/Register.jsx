@@ -5,8 +5,8 @@ class Register extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            firstName: '',
-            lastName: '',
+            firstname: '',
+            lastname: '',
             email: '',
             username: '',
             password: ''
@@ -20,12 +20,12 @@ class Register extends Component {
     }
     handleFirstName(event){
         this.setState({
-            firstName: event.target.value
+            firstname: event.target.value
         })
     }
     handleLastName(event){
         this.setState({
-            lastName: event.target.value
+            lastname: event.target.value
         })
     }
     handleEmail(event){
@@ -45,8 +45,8 @@ class Register extends Component {
     }
     addUser(){
         let userInfo = {
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
+            firstName: this.state.firstname,
+            lastName: this.state.lastname,
             email: this.state.email,
             password: this.state.password,
             username: this.state.username,
@@ -124,7 +124,7 @@ class Register extends Component {
                                 <button
                                     type="submit"
                                     className="btn btn-primary"
-                                    onChange={this.addUser}
+                                    onSubmit={this.addUser}
                                 >Submit</button>
                             </div>
                         </div>
