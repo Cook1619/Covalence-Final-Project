@@ -3,62 +3,81 @@ import * as userServices from '../services/registerusers';
 
 class Register extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+
         this.state = {
-            firstname: '',
-            lastname: '',
-            email: '',
-            username: '',
-            password: ''
+            name: "",
+            email: "",
+            firstname: "",
+            lastname: "",
+            password: "",
         }
+
+
         this.handleFirstName = this.handleFirstName.bind(this);
         this.handleLastName = this.handleLastName.bind(this);
         this.handleEmail = this.handleEmail.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
-        this.handleUserName = this.handleUserName.bind(this);
+        this.handleName = this.handleName.bind(this);
         this.addUser = this.addUser.bind(this);
     }
-    handleFirstName(event){
+
+    handleFirstName(event) {
         this.setState({
             firstname: event.target.value
         })
     }
-    handleLastName(event){
+    handleLastName(event) {
         this.setState({
             lastname: event.target.value
         })
     }
-    handleEmail(event){
+    handleEmail(event) {
         this.setState({
             email: event.target.value
         })
     }
-    handlePassword(event){
+    handlePassword(event) {
         this.setState({
             password: event.target.value
         })
     }
-    handleUserName(event){
+    handleName(event) {
         this.setState({
-            username: event.target.value
+            name: event.target.value
         })
     }
-    addUser(){
+    addUser() {
         let userInfo = {
-            firstName: this.state.firstname,
-            lastName: this.state.lastname,
+            name: this.state.name,
             email: this.state.email,
+            firstname: this.state.firstname,
+            lastname: this.state.lastname,
             password: this.state.password,
-            username: this.state.username,
         }
-        userServices.insert(userInfo);
+        console.log(userInfo)
+        userServices.insert(userInfo)
+            .catch(error => console.log(error));
     }
+
 
     render() {
         return (
             <Fragment>
                 <div className="container">
                     <form>
+                        <div className="form-group row">
+                            <label htmlFor="USERNAME" className="col-sm-2 col-form-label">User Name</label>
+                            <div className="col-sm-10">
+                                <input
+                                    type="name"
+                                    className="form-control"
+                                    id="USERNAME"
+                                    placeholder="Username"
+                                    onChange={this.handleName}
+                                />
+                            </div>
+                        </div>
                         <div className="form-group row">
                             <label htmlFor="FirstName" className="col-sm-2 col-form-label">First Name</label>
                             <div className="col-sm-10">
@@ -108,23 +127,11 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label htmlFor="USERNAME" className="col-sm-2 col-form-label">User Name</label>
-                            <div className="col-sm-10">
-                                <input
-                                    type="User Name"
-                                    className="form-control"
-                                    id="USERNAME"
-                                    placeholder="User Name"
-                                    onChange={this.handleUserName}
-                                />
-                            </div>
-                        </div>
-                        <div className="form-group row">
                             <div className="offset-sm-2 col-sm-10">
                                 <button
                                     type="submit"
                                     className="btn btn-primary"
-                                    onSubmit={this.addUser}
+                                    onClick={this.addUser}
                                 >Submit</button>
                             </div>
                         </div>
@@ -135,4 +142,3 @@ class Register extends Component {
     }
 }
 export default Register;
-
