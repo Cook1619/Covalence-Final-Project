@@ -8,16 +8,17 @@ class DisplayGames extends Component {
             games: []
         };
     }
-    
-    componentDidMount() {
-        this.setState({
-            games: [
-                { homeTeam: 'Green Bay', awayTeam: 'Minnesota' },
-                { homeTeam: 'Chicago', awayTeam: 'Kansas City' },
-                { homeTeam: 'San Diego', awayTeam: 'Utah' },
-                { homeTeam: 'Denver', awayTeam: 'Houston' },
-            ]
-        });
+
+    async componentDidMount() {
+        try {
+            let res = await fetch('/api/sports');
+            let data = await res.json();
+            this.setState({
+                games: data
+            })
+        } catch (e) {
+            console.log(`Error: ${e}`)
+        }
     }
     render() {
 
@@ -27,7 +28,7 @@ class DisplayGames extends Component {
 
         return (
             <Fragment>
-            <h1>Hello</h1>
+                <h1>Hello</h1>
                 <div className="container-fluid">
                     <div className="row">
                         {gameList}
