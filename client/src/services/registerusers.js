@@ -9,11 +9,7 @@ function one(id) {
 }
 
 function insert(data) {
-<<<<<<< HEAD
-    return baseService.post('/api/users/addNew', data);
-=======
     return baseService.post('/api/users/addnew', data);
->>>>>>> 7970589f3413f24a1454df5bd5edfb897ff76409
     console.log(data);
 }
 
