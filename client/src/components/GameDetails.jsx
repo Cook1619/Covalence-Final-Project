@@ -16,7 +16,7 @@ class GameDetails extends Component {
                     </div>
                     <div className="card-body">
                         <div className="card-text">
-                            {`${this.props.game.team1} VS ${this.props.game.team2}`}
+                            {`${this.props.game.homeTeam} VS ${this.props.game.awayTeam}`}
                         </div>
                         <button className="btn btn-sm btn-success float-right">Bet Now</button>
                     </div>
