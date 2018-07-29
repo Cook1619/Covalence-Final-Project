@@ -8,8 +8,12 @@ class AdminTeams extends Component {
         this.state = {
 
         };
+
     }
 
+    componentDidMount() {
+        sportsServices.get()
+    }
     render() {
         return ('')
     }

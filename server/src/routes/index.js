@@ -4,6 +4,7 @@ import classesRouter from './classes';
 import authRouter from './auth';
 import usersRouter from './users';
 import sportsRouter from './sports';
+import gamesRouter from './games'
 import stripeDonationsRouter from './stripeDonations';
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
 
@@ -13,6 +14,7 @@ router.use('/auth', authRouter);
 
 router.use('/users', usersRouter);
 router.use('/sports', sportsRouter);
+router.use('/games', gamesRouter )
 
 router.route('*')
     // .post(tokenMiddleware, isLoggedIn)

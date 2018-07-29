@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import { Link } from 'react-router-dom'; 
 
 class GameDetails extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class GameDetails extends Component {
                         <div className="card-text">
                             {`${this.props.game.homeTeam} VS ${this.props.game.awayTeam}`}
                         </div>
-                        <button className="btn btn-sm btn-success float-right">Bet Now</button>
+                        <Link to="/teams"><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
                     </div>
                 </div>
             </div>

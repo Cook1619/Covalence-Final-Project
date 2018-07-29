@@ -12,6 +12,7 @@ import About from './About';
 import Register from './Register';
 import AdminHome from './Admin/AdminHome';
 import Logo from './img/logo.png'
+import AdminTeams from './Admin/AdminTeams';
 
 class Navigation extends Component {
 
@@ -57,6 +58,7 @@ class Navigation extends Component {
                         <Route path="/register" component={Register} />
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
+                        <Route path="/teams" component={AdminTeams} />
                         <PrivateRoute path="/admin" component={AdminHome} />
                     </Switch>
                 </Fragment>

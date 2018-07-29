@@ -8,12 +8,17 @@ class DisplayGames extends Component {
             games: []
         };
     }
+    
     componentDidMount() {
         this.setState({
-            games: []
+            games: [
+                { homeTeam: 'Green Bay', awayTeam: 'Minnesota' },
+                { homeTeam: 'Chicago', awayTeam: 'Kansas City' },
+                { homeTeam: 'San Diego', awayTeam: 'Utah' },
+                { homeTeam: 'Denver', awayTeam: 'Houston' },
+            ]
         });
     }
-    
     render() {
 
         let gameList = this.state.games.map((game, index) => {
