@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import GameDetails from './GameDetails';
 
+
 class DisplayGames extends Component {
     constructor(props) {
         super(props);
