@@ -9,7 +9,7 @@ function one(id) {
 }
 
 function insert(data) {
-    return baseService.post('/api/registerusers', data);
+    return baseService.post('/api/users/addNew', data);
     console.log(data);
 }
 
