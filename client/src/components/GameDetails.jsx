@@ -7,9 +7,7 @@ class GameDetails extends Component {
     }
 
     render() {
-
         return (
-
             <div className="col-md-6 position-static">
                 <div className="card post-body p-2 m-4 bg-light rounded-3">
                     <div className="card-header bg-dark text-white rounded-0">
@@ -25,5 +23,6 @@ class GameDetails extends Component {
             </div>
         )
     }
+
 }
 export default GameDetails;

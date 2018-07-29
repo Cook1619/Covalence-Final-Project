@@ -27,7 +27,7 @@ let router = Router();
 let SportsData = new Table('scoreboard');
 
 router.get('/', async (req, res) => {
-    let blogs = await SportsData.getAll();
+    let blogs = await SportsData.someInning();
     res.json(blogs);
 });
 

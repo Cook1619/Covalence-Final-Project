@@ -12,7 +12,7 @@ class AdminTeams extends Component {
     }
 
     componentDidMount() {
-        sportsServices.get()
+    
     }
     render() {
         return ('')
