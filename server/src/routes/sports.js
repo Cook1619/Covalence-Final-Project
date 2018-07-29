@@ -27,14 +27,14 @@ let router = Router();
 let SportsData = new Table('INSERTTABLENAMEHEREPETER');
 
 router.get('/', async (req, res) => {
-    let blogs = await iHateThisLab.getAll();
+    let blogs = await SportsData.getAll();
     res.json(blogs);
 });
 
 router.get('/:id', async (req, res) => {
     let id = req.params.id;
     console.log(id);
-    let blogs = await iHateThisLab.getOne(id);
+    let blogs = await SportsData.getOne(id);
     res.json(blogs);
 });
 
