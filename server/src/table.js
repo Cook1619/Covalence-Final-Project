@@ -19,7 +19,7 @@ class Table {
         return executeQuery(sql);
     }
 
-    someInning() {
+    lastInning() {
         let sql = `SELECT * FROM ${this.tableName} WHERE inningSummary_inning_number=9`;
         return executeQuery(sql);
     }
