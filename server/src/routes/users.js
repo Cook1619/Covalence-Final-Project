@@ -23,7 +23,7 @@ router.post('/addnew', async (req,res) => {
     res.json(id);
 })
 
-router.get('/users', async (req, res) => {
+router.get('/', async (req, res) => {
     let user = await newUser.getAll();
     res.json(user);
 })
