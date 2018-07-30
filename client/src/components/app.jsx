@@ -60,6 +60,7 @@ class Navigation extends Component {
                         <Route path="/donate" component={Donate} />
                         <Route path="/teams" component={AdminTeams} />
                         <PrivateRoute path="/admin" component={AdminHome} />
+                        <PrivateRoute path="/admin/:id" component={AdminHome} />
                     </Switch>
                 </Fragment>
             </Router>

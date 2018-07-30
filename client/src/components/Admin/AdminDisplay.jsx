@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 class AdminDisplay extends Component {
     constructor(props) {
@@ -16,8 +17,9 @@ class AdminDisplay extends Component {
                                 </div>
                                 <div className="card-body">
                                     <div className="card-text">
-                                        {`${this.props.user.money} money and ${this.props.user.wins} wins!!!!`}
+                                        {`${this.props.user} money and ${this.props.user} wins!!!!`}
                                     </div>
+                                    <Link key={props.id} className="btn btn-info float-right" to={`/${props.id}`}>More Details</Link>
                                 </div>
                             </div>
                         </div>

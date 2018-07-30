@@ -18,7 +18,7 @@ function update(id, data) {
 }
 
 function destroy(id) {
-    return baseService.destroy(`/api/registerusers/${id}`);
+    return baseService.destroy(`/api/users/${id}`);
 }
 
 export { all, one, insert, update, destroy }
