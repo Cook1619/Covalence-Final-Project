@@ -12,7 +12,7 @@ class DisplayGames extends Component {
 
     async componentDidMount() {
         try {
-            let res = await fetch('/api/sports');
+            let res = await fetch('/api/postgame');
             let data = await res.json();
             this.setState({
                 games: data
