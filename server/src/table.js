@@ -20,7 +20,12 @@ class Table {
     }
 
     lastInning() {
-        let sql = `SELECT * FROM ${this.tableName} WHERE inningSummary_inning_number=9`;
+        let sql = `SELECT * FROM ${this.tableName} WHERE inningSummary_inning_number = 9 AND isCompleted = true`;
+        return executeQuery(sql);
+    }
+
+    futureGame() {
+        let sql = `SELECT * FROM ${this.tableName} WHERE isUnplayed = true`;
         return executeQuery(sql);
     }
 

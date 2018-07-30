@@ -25,15 +25,15 @@ class SingleBlog extends Component {
             console.log(e);
         }
     }
-    async deleteUser() {
-        try {
-            let id = this.props.match.params.id
-            let results = await blogServices.destroy(id)
-            console.log(results);
-        } catch (err) {
-            console.log('This is the' + err);
-        }
-    }
+    // async deleteUser() {
+    //     try {
+    //         let id = this.props.match.params.id
+    //         let results = await blogServices.destroy(id)
+    //         console.log(results);
+    //     } catch (err) {
+    //         console.log('This is the' + err);
+    //     }
+    // }
 
     render() {
         return (
@@ -42,7 +42,7 @@ class SingleBlog extends Component {
                     <div className="card-header">
                         <div className="card-body">{this.state.users.name}
                             <p>{this.state.users._created}</p>
-                            <Link className="btn btn-info float-right m-2" to={`/admin`} onClick={this.deleteUser.bind(this)}> Delete User</Link>
+                            <Link className="btn btn-info float-right m-2" to={`/admin`} /*onClick={this.deleteUser.bind(this)}*/> Delete User</Link>
                         </div>
                     </div>
                 </div>
