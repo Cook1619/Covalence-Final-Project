@@ -8,15 +8,17 @@ class AdminHome extends Component {
             users: []
         }
     }
-    componentDidMount() {
-        this.setState({
-            users: [
-                {user1:'MrRodgersNeighborHood', money: 550, wins: 125},
-                {user2:'BehindTheSteelCurtain', money: 70, wins: 6},
-                {user3:'Vikingdown', money:20, wins: 0}
-            ]
-        })
-                
+    async componentDidMount() {
+        try {
+            let res = await fetch('/api/users');
+            let data = await res.json();
+            this.setState({
+                users: data
+            })
+            console.log(data)
+        } catch (e) {
+            console.log(`Error: ${e}`)
+        }
     }
     render(){
         let userStats = this.state.users.map((user, index)=>{
@@ -24,11 +26,7 @@ class AdminHome extends Component {
         })
         return(
             <Fragment>
-                <div className="container">
-                    <div className="row">
                         {userStats}
-                    </div>
-                </div>
             </Fragment>
         )
     }

@@ -8,7 +8,6 @@ let router = Router();
 
 let newUser = new Table('users');
 
-
 //comment
 
 router.post('/addnew', async (req,res) => {
@@ -22,6 +21,11 @@ router.post('/addnew', async (req,res) => {
     }
     let id = await newUser.insert(body);
     res.json(id);
+})
+
+router.get('/users', async (req, res) => {
+    let user = await newUser.getAll();
+    res.json(user);
 })
 
 router.get('/me', tokenMiddleware, isLoggedIn, (req, res) => {
