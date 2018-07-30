@@ -11,6 +11,7 @@ import Contact from './Contact';
 import About from './About';
 import Register from './Register';
 import AdminHome from './Admin/AdminHome';
+import AdminSingleUser from './Admin/AdminSingleUser';
 import Logo from './img/logo.png'
 import AdminTeams from './Admin/AdminTeams';
 
@@ -60,7 +61,7 @@ class Navigation extends Component {
                         <Route path="/donate" component={Donate} />
                         <Route path="/teams" component={AdminTeams} />
                         <PrivateRoute path="/admin" component={AdminHome} />
-                        <PrivateRoute path="/admin/:id" component={AdminHome} />
+                        <PrivateRoute path="/admin/:id" component={AdminSingleUser} />
                     </Switch>
                 </Fragment>
             </Router>
