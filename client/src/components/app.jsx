@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Donate from './donate';
 import PastGames from './PastGames';
+import FutureGames from './Admin/FutureGames'
 import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
@@ -45,6 +46,9 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/register">Sign Up!</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/futuregames">Bet Now</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/admin">Admin</Link>
                             </li>
                         </ul>
@@ -60,6 +64,7 @@ class Navigation extends Component {
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                         <Route path="/teams" component={AdminTeams} />
+                        <PrivateRoute path="/futuregames" component={FutureGames} />
                         <PrivateRoute path="/admin" component={AdminHome} />
                         <PrivateRoute path="/admin/:id" component={AdminSingleUser} />
                     </Switch>

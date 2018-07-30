@@ -24,8 +24,9 @@ class Table {
         return executeQuery(sql);
     }
 
+    // 0 = false and 1 = true
     futureGame() {
-        let sql = `SELECT * FROM ${this.tableName} WHERE isUnplayed = true`;
+        let sql = `SELECT * FROM ${this.tableName} WHERE isUnplayed = ${1}`;
         return executeQuery(sql);
     }
 
