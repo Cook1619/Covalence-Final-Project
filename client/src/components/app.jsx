@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Donate from './donate';
-import DisplayGames from './DisplayGames';
+import PastGames from './PastGames';
 import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
@@ -30,7 +30,7 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0 nav-link" to="/">Pricing</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/games">Games</Link>
+                                <Link className="btn border-0 rounded-0 nav-link" to="/pastgames">Past Games</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 nav-link" to="/">How It Works</Link>
@@ -54,7 +54,7 @@ class Navigation extends Component {
                         <Route exact path="/" component={HomePage} />
                         <Route path="/login" component={Login} />
                         <Route path="/contact" component={Contact} />
-                        <Route path="/games" component={DisplayGames} />
+                        <Route path="/pastgames" component={PastGames} />
                         <Route path="/about" component={About} />
                         <Route path="/register" component={Register} />
                         <Route path="/logout" component={Logout} />

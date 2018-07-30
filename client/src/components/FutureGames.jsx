@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import GameDetails from './GameDetails';
 
 
-class DisplayGames extends Component {
+class FutureGames extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,7 @@ class DisplayGames extends Component {
 
     async componentDidMount() {
         try {
-            let res = await fetch('/api/postgame');
+            let res = await fetch('/api/futuregame');
             let data = await res.json();
             this.setState({
                 games: data
@@ -41,4 +41,4 @@ class DisplayGames extends Component {
     }
 }
 
-export default DisplayGames;
+export default FutureGames;
