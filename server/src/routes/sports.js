@@ -27,15 +27,15 @@ let router = Router();
 let SportsData = new Table('scoreboard');
 
 router.get('/', async (req, res) => {
-    let blogs = await SportsData.lastInning();
-    res.json(blogs);
+    let mlbdata = await SportsData.lastInning();
+    res.json(mlbdata);
 });
 
 router.get('/:id', async (req, res) => {
     let id = req.params.id;
     console.log(id);
-    let blogs = await SportsData.getOne(id);
-    res.json(blogs);
+    let mlbdata = await SportsData.getOne(id);
+    res.json(mlbdata);
 });
 
 
