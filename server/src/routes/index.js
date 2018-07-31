@@ -4,7 +4,7 @@ import classesRouter from './classes';
 import authRouter from './auth';
 import usersRouter from './users';
 import postGameRouter from './postgame';
-import futureGamesRouter from './futuregame'
+import futureGamesRouter from './futuregames'
 import gamesRouter from './games'
 import stripeDonationsRouter from './stripeDonations';
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';

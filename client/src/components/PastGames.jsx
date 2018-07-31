@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import GameDetails from './GameDetails';
 
+let apiKey = 'ZTkxZmFhYzAtYmFjMi00ZjdlLWFmZGUtODUzZWY3Oktpbm84MTY3MjE0MSE=';
+let sportsURL = 'https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180625';
 
 class PastGames extends Component {
     constructor(props) {
@@ -11,16 +13,11 @@ class PastGames extends Component {
     }
 
     async componentDidMount() {
-        try {
-            let res = await fetch('/api/postgame');
-            let data = await res.json();
-            this.setState({
-                games: data
-            })
-            console.log(data)
-        } catch (e) {
-            console.log(`Error: ${e}`)
-        }
+        const res = await fetch(sportsURL)
+        const data = await res.json()
+        this.setState({
+            games: data
+        })
     }
     render() {
 
