@@ -12,12 +12,23 @@ class PastGames extends Component {
         };
     }
 
-    async componentDidMount() {
-        const res = await fetch(sportsURL)
-        const data = await res.json()
-        this.setState({
-            games: data
-        })
+    // async componentDidMount() {
+    //     const res = await fetch(sportsURL)
+    //     const data = await res.json()
+    //     this.setState({
+    //         games: data
+    //     })
+    // }
+    componentDidMount(){
+        fetch(sportsURL, {
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': apiKey
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response));
     }
     render() {
 
