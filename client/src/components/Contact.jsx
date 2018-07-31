@@ -46,7 +46,7 @@ class Contact extends Component {
                         <input placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="name">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} email="mail" type="email" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
