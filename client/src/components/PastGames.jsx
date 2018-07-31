@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import GameDetails from './GameDetails';
 
-let apiKey = 'ZTkxZmFhYzAtYmFjMi00ZjdlLWFmZGUtODUzZWY3Oktpbm84MTY3MjE0MSE=';
+let apiKey = 'e91faac0-bac2-4f7e-afde-853ef7:Kino81672141!';
 let sportsURL = 'https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180625';
 
 class PastGames extends Component {
@@ -12,11 +12,29 @@ class PastGames extends Component {
         };
     }
 
-    async componentDidMount() {
-        const res = await fetch(sportsURL)
-        const data = await res.json()
-        this.setState({
-            games: data
+    // async componentDidMount() {
+    //     const res = await fetch(sportsURL)
+    //     const data = await res.json()
+    //     this.setState({
+    //         games: data
+    //     })
+    // }
+    componentDidMount() {
+        fetch(sportsURL, {
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": apiKey
+            },
+            credentials: "same-origin"
+        }).then(function (response) {
+            response.status     //=> number 100–599
+            response.statusText //=> String
+            response.headers    //=> Headers
+            response.url        //=> String
+
+            return response.text()
+        }, function (error) {
+            error.message //=> String
         })
     }
     // componentDidMount() {
