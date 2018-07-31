@@ -28,9 +28,6 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0" to="/"><img src={Logo} alt="Placeholder" width="65px" height="40px"/></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/">Pricing</Link>
-                            </li>
-                            <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 nav-link" to="/pastgames">Past Games</Link>
                             </li>
                             <li className="nav-item">
