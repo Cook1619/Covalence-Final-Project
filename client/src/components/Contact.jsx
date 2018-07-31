@@ -11,47 +11,49 @@ class Contact extends Component {
         }
     }
 
-    handleName(name){
+    handleName(name) {
         this.setState({
             name
         })
     }
-    handleEmail(email){
+    handleEmail(email) {
         this.setState({
             email
         })
     }
-    handleMessage(message){
+    handleMessage(message) {
         this.setState({
             message
         })
     }
-    handleSubmit(e){
+    handleSubmit(e) {
         e.preventDefault();
         sendContactEmail(this.state.name, this.state.message, this.state.message)
-        .then(() => {
-            //redirect to homepage
-            this.props.history.push('/');
-        }).catch((err) => {
-            console.log(err);
-        })
+            .then(() => {
+                //redirect to homepage
+                this.props.history.push('/');
+            }).catch((err) => {
+                console.log(err);
+            })
     }
 
     render() {
         return (
             <div className="container">
-                <form onSubmit={ (e) => this.handleSubmit(e) }>
+                <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
-                        <input placeholder="Name" onChange={ (e) => this.handleName(e.target.value) } name="name" type="text" className="form-control rounded-0" required/>
+                        <label htmlFor="name">Name</label>
+                        <input placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
-                        <input placeholder="Email" onChange={ (e) => this.handleEmail(e.target.value) } email="mail" type="email" className="form-control rounded-0" required/>
+                        <label htmlFor="name">Email</label>
+                        <input placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} email="mail" type="email" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
-                        <textarea onChange={ (e) => this.handleMessage(e.target.value) }cols="30" rows="10" className="form-control rounded-0"></textarea>
-                        <input type="submit" className="btn btn-success float-left mt-2 p-1 rounded-0"/>
+                        <textarea onChange={(e) => this.handleMessage(e.target.value)} cols="30" rows="10" className="form-control rounded-0"></textarea>
+                        <input type="submit" className="btn btn-success float-left mt-2 p-1 rounded-0" />
                     </div>
-                    
+
                 </form>
             </div>
         );
