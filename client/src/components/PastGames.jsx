@@ -12,41 +12,6 @@ class PastGames extends Component {
         };
     }
 
-    // async componentDidMount() {
-    //     const res = await fetch(sportsURL)
-    //     const data = await res.json()
-    //     this.setState({
-    //         games: data
-    //     })
-    // }
-    // componentDidMount() {
-    //     fetch(sportsURL, {
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Authorization": `Basic ${apiKey}`
-    //         },
-    //         credentials: "same-origin"
-    //     }).then(function (response) {
-    //         response.status     //=> number 100–599
-    //         response.statusText //=> String
-    //         response.headers    //=> Headers
-    //         response.url        //=> String
-
-    //         return response.text()
-    //     }, function (error) {
-    //         error.message //=> String
-    //     })
-    // }
-    // componentDidMount() {
-    //     let res = fetch(sportsURL, {
-    //         body: res.json(),
-    //         headers: new Headers({
-    //             'Content-type': 'application/json',
-    //             Authorization: apiKey
-    //         })
-    //     }).then(res => res.json())
-    //         .catch(error => console.log(error));
-    // }
 
     componentDidMount(){
         fetch(sportsURL, {
@@ -55,11 +20,13 @@ class PastGames extends Component {
                 'Authorization': `Basic ${apiKey}`
             })
         }).then(res => res.json())
-            .catch(error => console.error('Error:', error))
-            .then(response => console.log('Success:', response));
+        console.log(response)
+            .then(response => this.setState({
+                games: response
+            }));
     }
     render() {
-
+            console.log(this.state.games)
         let gameList = this.state.games.map((game, index) => {
             return <GameDetails key={index} game={game} />
         })
@@ -69,7 +36,7 @@ class PastGames extends Component {
                 <h1>Hello</h1>
                 <div className="container-fluid">
                     <div className="row">
-                        {gameList}
+                            <h1>hi</h1>
                     </div>
                 </div>
             </Fragment>
