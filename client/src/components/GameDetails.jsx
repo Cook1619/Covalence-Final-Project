@@ -16,10 +16,12 @@ class GameDetails extends Component {
                         <h5>{games.location}</h5>
                     </div>
                     <div className="card-body">
-                        <div className="card-text">
+                        <h4>
                             {`${games.awayTeam.Name} VS ${games.homeTeam.Name}`}
+                        </h4>
+                        <div className="card-ext">
+                            {`Final Score: ${this.props.game.homeScore} to ${this.props.game.awayScore}`}
                         </div>
-                        <Link to="/teams"><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
                     </div>
                 </div>
             </div>
