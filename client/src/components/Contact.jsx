@@ -42,7 +42,7 @@ class Contact extends Component {
             <div className="container">
                 <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
+                        <label className="float-left" htmlFor="name">Name</label>
                         <input placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
