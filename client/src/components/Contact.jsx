@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { sendContactEmail } from '../services/contact';
 import Map from './map';
+
 class Contact extends Component {
     constructor(props) {
         super(props)
@@ -42,14 +43,6 @@ class Contact extends Component {
             <div className="container">
                 <form className="p-7" onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input placeholder="Name" onChange={(e) => this.handleName(e.target.value)} id="name" type="text" className="form-control rounded-0" required />
-                        <label className="float-left" htmlFor="name">Name</label>
-                        <input placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} id="mail" type="email" className="form-control rounded-0" required />
                         <input htmlFor="name" placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
@@ -61,7 +54,10 @@ class Contact extends Component {
                     </div>
 
                 </form>
-                <Map />
+                <div className="d-flex justify-content-center">
+                    <Map />
+                </div>
+
             </div>
         );
     }
