@@ -15,6 +15,7 @@ import AdminHome from './Admin/AdminHome';
 import AdminSingleUser from './Admin/AdminSingleUser';
 import Logo from './img/logo.png'
 import AdminTeams from './Admin/AdminTeams';
+import HowItWorks from './HowItWorks';
 
 class Navigation extends Component {
 
@@ -31,7 +32,7 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0 nav-link" to="/pastgames">Past Games</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/">How It Works</Link>
+                                <Link className="btn border-0 rounded-0 nav-link" to="/howitworks">How It Works</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 nav-link" to="/about">About</Link>
@@ -61,6 +62,7 @@ class Navigation extends Component {
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                         <Route path="/teams" component={AdminTeams} />
+                        <Route path="/howitworks" component={HowItWorks} />
                         <PrivateRoute path="/futuregames" component={FutureGames} />
                         <PrivateRoute path="/admin" component={AdminHome} />
                         <PrivateRoute path="/admin/:id" component={AdminSingleUser} />
