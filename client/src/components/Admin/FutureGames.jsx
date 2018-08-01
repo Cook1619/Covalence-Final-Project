@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import GameDetails from '../GameDetails';
+import FutureGameDetails from '../FutureGameDetails';
 
 
 class FutureGames extends Component {
@@ -25,7 +25,7 @@ class FutureGames extends Component {
     render() {
 
         let gameList = this.state.games.map((game, index) => { 
-            return <GameDetails key={index} game={game} />
+            return <FutureGameDetails key={index} gameData={game} />
         })
 
         return (
