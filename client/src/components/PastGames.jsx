@@ -28,7 +28,7 @@ class PastGames extends Component {
     render() {
            
             for( let value in this.state.games){
-                // console.log(this.state.games.scoreboard.gameScore)
+                // console.log(this.state.games.scoreboard.gameScore.game[value]);
                 return <GameDetails key={value.id} game={this.state.games.scoreboard.gameScore}/>
             }
 
