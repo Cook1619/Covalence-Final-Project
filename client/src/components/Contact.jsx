@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { sendContactEmail } from '../services/contact';
-
+import Map from './map';
 class Contact extends Component {
     constructor(props) {
         super(props)
@@ -61,6 +61,7 @@ class Contact extends Component {
                     </div>
 
                 </form>
+                <Map />
             </div>
         );
     }
