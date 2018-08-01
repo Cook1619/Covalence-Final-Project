@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class GameDetails extends Component {
     constructor(props) {
         super(props);
+        console.log(props.game[0].game.awayTeam.Name);
     }
 
     render() {
@@ -15,7 +16,7 @@ class GameDetails extends Component {
                     </div>
                     <div className="card-body">
                         <div className="card-text">
-                            {`${this.props.game.homeTeam_Name} VS ${this.props.game.awayTeam_Name}`}
+                            {`${this.props.game[0].game.awayTeam.Name} VS ${this.props.game[0].game.homeTeam.Name}`}
                         </div>
                         <Link to="/teams"><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
                     </div>

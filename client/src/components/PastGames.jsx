@@ -20,23 +20,23 @@ class PastGames extends Component {
                 'Authorization': `Basic ${apiKey}`
             })
         }).then(res => res.json())
-        console.log(response)
             .then(response => this.setState({
                 games: response
             }));
     }
+   
     render() {
-            console.log(this.state.games)
-        let gameList = this.state.games.map((game, index) => {
-            return <GameDetails key={index} game={game} />
-        })
+           
+            for( let value in this.state.games){
+                // console.log(this.state.games.scoreboard.gameScore)
+                return <GameDetails key={value.id} game={this.state.games.scoreboard.gameScore}/>
+            }
 
         return (
             <Fragment>
-                <h1>Hello</h1>
                 <div className="container-fluid">
                     <div className="row">
-                            <h1>hi</h1>
+                    
                     </div>
                 </div>
             </Fragment>
