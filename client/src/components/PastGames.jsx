@@ -13,7 +13,7 @@ class PastGames extends Component {
     }
 
 
-    componentDidMount(){
+    componentWillMount(){
         fetch(sportsURL, {
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -21,22 +21,19 @@ class PastGames extends Component {
             })
         }).then(res => res.json())
             .then(response => this.setState({
-                games: response
+                games: response.scoreboard.gameScore
             }));
     }
    
     render() {
-           
-            for( let value in this.state.games){
-                // console.log(this.state.games.scoreboard.gameScore.game[value]);
-                return <GameDetails key={value.id} game={this.state.games.scoreboard.gameScore}/>
-            }
-
+           let pastGames = this.state.games.map((game, index)=> {
+               return <GameDetails key={index} game={game}/>
+           })
         return (
             <Fragment>
                 <div className="container-fluid">
                     <div className="row">
-                    
+                        {pastGames}
                     </div>
                 </div>
             </Fragment>
