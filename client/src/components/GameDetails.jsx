@@ -19,8 +19,8 @@ class GameDetails extends Component {
                         <h4>
                             {`${games.awayTeam.Name} VS ${games.homeTeam.Name}`}
                         </h4>
-                        <div className="card-ext">
-                            {`Final Score: ${this.props.game.homeScore} to ${this.props.game.awayScore}`}
+                        <div className="card-text">
+                            {`Final Score: ${this.props.game.awayScore} to ${this.props.game.homeScore}`}
                         </div>
                     </div>
                 </div>

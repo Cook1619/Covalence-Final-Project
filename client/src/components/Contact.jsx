@@ -28,7 +28,7 @@ class Contact extends Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        sendContactEmail(this.state.name, this.state.message, this.state.message)
+        sendContactEmail(this.state.name, this.state.email, this.state.message)
             .then(() => {
                 //redirect to homepage
                 this.props.history.push('/');
@@ -43,11 +43,11 @@ class Contact extends Component {
                 <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0" required />
+                        <input placeholder="Name" onChange={(e) => this.handleName(e.target.value)} id="name" type="text" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} email="mail" type="email" className="form-control rounded-0" required />
+                        <input placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} id="mail" type="email" className="form-control rounded-0" required />
                     </div>
                     <div className="form-group">
                         <textarea onChange={(e) => this.handleMessage(e.target.value)} cols="30" rows="10" className="form-control rounded-0"></textarea>

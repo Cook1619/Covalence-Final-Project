@@ -24,10 +24,10 @@ router.post('/', (req, res, next) => {
 
     let verificationMessage = `
     Hey ${req.body.name},
-    Thank you for your expressed interest in Kaibr.net. Your request for info has been sent to our team for processing and someone should be getting back with you shortly.
-    Until next we meet again!!!
-    <3
-    Dev Team
+    Thank you for your expressed interest the Strikezone!! Your number 1 place for your MLB betting needs!!!
+
+    Regards
+    Strikezone Team
     `
     sendEmail(req.body.email, false, "no-reply@cook.gmail", "Request for Info - Sent", verificationMessage)
         .then((r) => {
