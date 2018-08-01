@@ -1,10 +1,12 @@
 import React from 'react';
 import Rodgers from './img/rodgers.png'
 import Peter from './img/mypic.png'
+import teambg from './img/teambg.png'
 
 const About = () => {
     return (
         <div className="container">
+        <img src={teambg} className = "mx-auto pt-4 pb-4" alt=""/>
             <div className="row">
                 <div className="col-md-4">
                     <div className="img-circle">

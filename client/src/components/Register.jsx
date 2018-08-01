@@ -67,7 +67,7 @@ class Register extends Component {
                 <div className="container">
                     <form>
                         <div className="form-group row">
-                            <label htmlFor="USERNAME" className="col-sm-2 col-form-label">User Name</label>
+                            <label htmlFor="USERNAME" className="col-sm-2 col-form-label float-left">User Name</label>
                             <div className="col-sm-10">
                                 <input
                                     type="name"
@@ -79,7 +79,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label htmlFor="FirstName" className="col-sm-2 col-form-label">First Name</label>
+                            <label htmlFor="FirstName" className="col-sm-2 col-form-label" float-left>First Name</label>
                             <div className="col-sm-10">
                                 <input
                                     type="FirstName"
@@ -91,7 +91,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label htmlFor="LastName" className="col-sm-2 col-form-label">Last Name</label>
+                            <label htmlFor="LastName" className="col-sm-2 col-form-label float-left">Last Name</label>
                             <div className="col-sm-10">
                                 <input
                                     type="LastName"
@@ -103,7 +103,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label htmlFor="EMAIL" className="col-sm-2 col-form-label">Email</label>
+                            <label htmlFor="EMAIL" className="col-sm-2 col-form-label float-left">Email</label>
                             <div className="col-sm-10">
                                 <input
                                     type="email"
@@ -115,7 +115,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label htmlFor="PASSWORD" className="col-sm-2 col-form-label">Password</label>
+                            <label htmlFor="PASSWORD" className="col-sm-2 col-form-label float-left">Password</label>
                             <div className="col-sm-10">
                                 <input
                                     type="password"
@@ -127,10 +127,10 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <div className="offset-sm-2 col-sm-10">
+                            <div className="mx-auto col-sm-10">
                                 <button
                                     type="submit"
-                                    className="btn btn-primary"
+                                    className="btn btn-success"
                                     onClick={this.addUser}
                                 >Submit</button>
                             </div>
