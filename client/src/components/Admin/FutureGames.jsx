@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import FutureGameDetails from '../FutureGameDetails';
+import BaseballPhoto from '../img/baseballheader.png'
 
 
 class FutureGames extends Component {
@@ -30,7 +31,7 @@ class FutureGames extends Component {
 
         return (
             <Fragment>
-                <h1>Hello</h1>
+                <img className = "w-100" src={BaseballPhoto} alt=""/>
                 <div className="container-fluid">
                     <div className="row">
                         {gameList}

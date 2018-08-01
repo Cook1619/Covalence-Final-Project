@@ -12,8 +12,10 @@ const FutureGameDetails = ({ gameData }) => {
                     </div>
                     <div className="card-body">
                         <div className="card-text">
-                            {`${gameData.awayTeam_Name} VS ${gameData.homeTeam_Name}`}
+                            {`${gameData.awayTeam_City}   ${gameData.awayTeam_Name} VS ${gameData.homeTeam_City}   ${gameData.homeTeam_Name}`}
                         </div>
+                        <div>At</div>
+                        <div>{`${gameData.game_location}`}</div>
                         <Link to="/teams"><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
                     </div>
                 </div>
