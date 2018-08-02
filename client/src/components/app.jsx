@@ -41,9 +41,9 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/register">Sign Up!</Link>
                             </li>
                             <li className="nav-item">
-                            <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 nav-link mt-2" to="/pastgames">Past Games</Link>
                             </li>
+                            <li className="nav-item">
                                 <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/futuregames">Bet Now</Link>
                             </li>
                             <li className="nav-item">
