@@ -94,7 +94,9 @@ form{
   }
 
   .navbar {
-    background-color:black;
+    background-color: black;
+    opacity: 0.9; 
+    filter: alpha(opacity=90);
     width:100%;
     color: white;
   }
@@ -143,7 +145,7 @@ form{
     outline: none !important;
     box-shadow: none;
  }
- 
+
 .login-form{
    font-size: 30px;
 }
