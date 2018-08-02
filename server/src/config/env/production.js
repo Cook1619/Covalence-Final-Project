@@ -4,7 +4,8 @@
 let cfg = {
     MAILGUN_API_KEY: process.env.MAILGUN_API_KEY,
     STRIPE_SK: process.env.STRIPE_SK,
-    SPORTS_SK: process.env.SPORTS_SK
+    SPORTS_SK: process.env.SPORTS_SK,
+    GOOGLE_SK: process.env.GOOGLE_SK
 };
 
 export { cfg };

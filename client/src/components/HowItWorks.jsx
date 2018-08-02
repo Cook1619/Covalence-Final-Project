@@ -5,7 +5,7 @@ import background from './img/howitworks.png'
 const HowItWorks = () => {
     return (
         <React.Fragment>
-            <img id="homepage" className="img-fluid shadow" src={background} alt="baseball" />
+            <img id="homepage" className="img-fluid shadow w-100" src={background} alt="baseball" />
         </React.Fragment>
     )
 }

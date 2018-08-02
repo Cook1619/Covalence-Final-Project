@@ -30,14 +30,14 @@ class FutureGames extends Component {
         })
 
         return (
-            <Fragment>
+            <div>
                 <img className = "w-100" src={BaseballPhoto} alt=""/>
                 <div className="container-fluid">
                     <div className="row">
                         {gameList}
                     </div>
                 </div>
-            </Fragment>
+            </div>
         )
     }
 }

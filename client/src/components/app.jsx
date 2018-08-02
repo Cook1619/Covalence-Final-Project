@@ -16,6 +16,7 @@ import AdminSingleUser from './Admin/AdminSingleUser';
 import Logo from './img/logo.png'
 import AdminTeams from './Admin/AdminTeams';
 import HowItWorks from './HowItWorks';
+import BetPage from './BetPage';
 
 class Navigation extends Component {
 
@@ -63,6 +64,7 @@ class Navigation extends Component {
                         <Route path="/donate" component={Donate} />
                         <Route path="/teams" component={AdminTeams} />
                         <Route path="/howitworks" component={HowItWorks} />
+                        <PrivateRoute path="/teams/" component={BetPage} />
                         <PrivateRoute path="/futuregames" component={FutureGames} />
                         <PrivateRoute path="/admin" component={AdminHome} />
                         <PrivateRoute path="/admin/:id" component={AdminSingleUser} />

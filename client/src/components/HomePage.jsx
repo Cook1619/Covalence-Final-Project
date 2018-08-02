@@ -5,7 +5,7 @@ import background from './img/homepage.png'
 const HomePage = () => {
     return (
         <React.Fragment>
-            <img id="homepage" className="img-fluid" src={background} alt="baseball" />
+            <img id="homepage" className="img-fluid img-responsive w-100" src={background} alt="baseball" />
         </React.Fragment>
     )
 }
