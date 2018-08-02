@@ -29,25 +29,25 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0" to="/"><img src={Logo} alt="Placeholder" width="65px" height="40px"/></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/pastgames">Past Games</Link>
+                                <Link className="btn border-0 rounded-0 nav-link mt-2" to="/pastgames">Past Games</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/howitworks">How It Works</Link>
+                                <Link className="btn border-0 rounded-0 nav-link mt-2" to="/howitworks">How It Works</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 nav-link" to="/about">About</Link>
+                                <Link className="btn border-0 rounded-0 nav-link mt-2" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn  border-0 rounded-0 nav-link" to="/contact">Contact</Link>
+                                <Link className="btn  border-0 rounded-0 nav-link mt-2" to="/contact">Contact</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/register">Sign Up!</Link>
+                                <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/register">Sign Up!</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/futuregames">Bet Now</Link>
+                                <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/futuregames">Bet Now</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 navbar-right nav-link" to="/admin">Admin</Link>
+                                <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/admin">Admin</Link>
                             </li>
                         </ul>
                         <AuthButton className="nav-link float-right ml-auto" to="/login" />

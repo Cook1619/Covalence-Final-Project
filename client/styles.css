@@ -143,11 +143,7 @@ form{
     outline: none !important;
     box-shadow: none;
  }
-
- #homepage{
-   background-image: './img/homepage.png';
- }
-
+ 
 .login-form{
    font-size: 30px;
 }
