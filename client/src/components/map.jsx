@@ -6,7 +6,7 @@ const Map = (props) => {
     return (
         <React.Fragment>
             <GoogleMaps
-                apiKey={'AIzaSyB_EU2Vs_DybQGrL4AcJxHfDEJee0WNt40'}
+                apiKey={''}
                 style={{ height: "400px", width: "70%" }}
                 zoom={15}
                 center={{ lat: 33.515516, lng: -86.808866 }}
