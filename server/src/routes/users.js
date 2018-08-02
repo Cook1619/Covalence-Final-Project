@@ -28,6 +28,11 @@ router.get('/', async (req, res) => {
     res.json(user);
 })
 
+router.get('/id', tokenMiddleware, isLoggedIn, async (req, res) => {
+    let user = await newUser.getOne();
+    res.json(user);
+})
+
 router.get('/me', tokenMiddleware, isLoggedIn, (req, res) => {
     res.json(req.user);
 });
