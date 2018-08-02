@@ -40,22 +40,22 @@ class Contact extends Component {
 
     render() {
         return (
-            <div className="container pt-5">
+            <div className="container pt-5" >
                 <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
-                        <input htmlFor="name" placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0 col-8 d-flex justify-content-center" required />
+                        <input htmlFor="name" placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0 col-8 mx-auto" required />
                     </div>
                     <div className="form-group">
-                        <input htmlFor="email" placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} email="mail" type="email" className="form-control rounded-0 col-8 d-flex justify-content-center" required />
+                        <input htmlFor="email" placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} email="mail" type="email" className="form-control rounded-0 col-8 mx-auto" required />
                     </div>
                     <div className="form-group">
-                        <textarea onChange={(e) => this.handleMessage(e.target.value)} cols="30" rows="10" className="form-control rounded-0 col-8 d-flex align-content-center"></textarea>
-                        <input type="submit" className="btn btn-success float-left rounded-0 d-flex mx-auto" />
+                        <textarea onChange={(e) => this.handleMessage(e.target.value)} cols="30" rows="10" className="form-control rounded-0 col-8 mx-auto"></textarea>
+                        <input type="submit" className="btn btn-success d-flex justify-content-center col-3 rounded-0 mx-auto mt-2" />
                     </div>
 
                 </form>
                 <div className="d-flex justify-content-center map position-relative">
-                     
+                   
                 </div>
 
             </div>
