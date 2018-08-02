@@ -22,6 +22,7 @@ const About = () => {
                             <img src={Peter} alt="Some text" className="shadow-lg profilepic" />
                         </a>
                     </div>
+                    <h3 className="text-light mt-5">Peter Grant</h3>
                 </div>
                 <div>
                     <div className=" col-sm-3 img-circle profilepic">
@@ -29,6 +30,7 @@ const About = () => {
                             <img src={Rodgers} alt="Some text" className="shadow-lg profilepic" />
                         </a>
                     </div>
+                    <h3 className="text-light mt-5">Billy Hughes</h3>
                 </div>
             </div>
         </div>

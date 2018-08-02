@@ -8,7 +8,7 @@ const FutureGameDetails = ({ gameData }) => {
             <div className="col-md-6 position-static">
                 <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
                     <div className="card-header bg-dark text-white rounded-0">
-                        <h5>Matchup Preview</h5>
+                        <h5 className="text-center mt-3">Matchup Preview</h5>
                     </div>
                     <div className="card-body">
                         <div className="card-text">
@@ -16,7 +16,7 @@ const FutureGameDetails = ({ gameData }) => {
                         </div>
                         <div>At</div>
                         <div>{`${gameData.game_location}`}</div>
-                        <Link to={`teams/view?id=${gameData.awayTeam_ID.id}vsview?id${gameData.homeTeam_ID.id}`}><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
+                        <Link to={`games/${gameData.game_ID}`}><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
                     </div>
                 </div>
             </div>

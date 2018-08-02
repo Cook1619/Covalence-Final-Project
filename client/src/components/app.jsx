@@ -64,7 +64,7 @@ class Navigation extends Component {
                         <Route path="/donate" component={Donate} />
                         <Route path="/teams" component={AdminTeams} />
                         <Route path="/howitworks" component={HowItWorks} />
-                        <PrivateRoute path="/teams/" component={BetPage} />
+                        <PrivateRoute path="games/:id" component={BetPage} />
                         <PrivateRoute path="/futuregames" component={FutureGames} />
                         <PrivateRoute path="/admin" component={AdminHome} />
                         <PrivateRoute path="/admin/:id" component={AdminSingleUser} />
