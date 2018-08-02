@@ -2,7 +2,7 @@ body {
   padding: 4em;
   background: black; /* For browsers that do not support gradients */
   background: linear-gradient(#159915, black);
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   width: 100%;
 }
 
