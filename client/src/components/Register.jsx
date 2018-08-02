@@ -66,7 +66,7 @@ class Register extends Component {
             <Fragment>
                     <form className="pt-4">
                         <div className="form-group row d-flex justify-content-center">
-                            <div className="col-8">
+                            <div className="col-6">
                                 <input
                                     htmlFor="USERNAME"
                                     type="name"
@@ -78,7 +78,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row d-flex justify-content-center">
-                            <div className="col-8">
+                            <div className="col-6">
                                 <input
                                     htmlFor="FirstName"
                                     type="FirstName"
@@ -90,7 +90,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row d-flex justify-content-center">
-                            <div className="col-8">
+                            <div className="col-6">
                                 <input
                                     htmlFor="LastName"
                                     type="LastName"
@@ -102,7 +102,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row d-flex justify-content-center">
-                            <div className="col-8">
+                            <div className="col-6">
                                 <input
                                     htmlFor="EMAIL"
                                     type="email"
@@ -114,7 +114,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row d-flex justify-content-center">
-                            <div className="col-8">
+                            <div className="col-6">
                                 <input
                                     htmlFor="PASSWORD"
                                     type="password"
@@ -126,7 +126,7 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row d-flex justify-content-center">
-                            <div className="mx-auto col-8">
+                            <div className="mx-auto col-6">
                                 <button
                                     
                                     type="submit"
