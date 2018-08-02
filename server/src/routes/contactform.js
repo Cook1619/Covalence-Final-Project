@@ -29,9 +29,9 @@ router.post('/', (req, res, next) => {
     Regards
     Strikezone Team
     `
-    sendEmail(req.body.email, false, "no-reply@cook.gmail", "Request for Info - Sent", verificationMessage)
+    sendEmail(req.body.email, "no-reply@cook.gmail", "Request for Info - Sent", verificationMessage)
         .then((r) => {
-            sendEmail("cook6348@gmail.com", "peterjacobgrant@gmail.com", "no-reply@cook.gmail", "Request for Info", messageBody)
+            sendEmail("cook6348@gmail.com", "no-reply@cook.gmail", "Request for Info", messageBody)
                 .then((r) => {
                     res.sendStatus(201);
                 }).catch((err) => {
