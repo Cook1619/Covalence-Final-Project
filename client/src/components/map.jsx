@@ -1,19 +1,20 @@
-// import React from 'react';
-// import GoogleMaps from "simple-react-google-maps"
+import React from 'react';
+import GoogleMaps from "simple-react-google-maps"
+import GOOGLE_SK from '../../../server/src/config/env/development'
 
-// const Map = (props) => {
+const Map = (props) => {
 
-//     return (
-//         <React.Fragment>
-//             <GoogleMaps
-//                 apiKey={''}
-//                 style={{ height: "400px", width: "70%" }}
-//                 zoom={15}
-//                 center={{ lat: 33.515516, lng: -86.808866 }}
-//                 markers={{ lat: 33.515516, lng: -86.808866 }} //optional
-//             />
-//         </React.Fragment>
-//     );
-// }
+    return (
+        <React.Fragment>
+            <GoogleMaps
+                apiKey={''}
+                style={{ height: "400px", width: "70%" }}
+                zoom={15}
+                center={{ lat: 44.5013, lng: -88.0622 }}
+                markers={{ lat: 44.5013, lng: -88.0622 }} //optional
+            />
+        </React.Fragment>
+    );
+}
 
-// export default Map;
+export default Map;

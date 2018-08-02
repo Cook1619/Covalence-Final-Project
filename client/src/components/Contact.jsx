@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { sendContactEmail } from '../services/contact';
-// import Map from './map';
+import Map from './map';
 
 class Contact extends Component {
     constructor(props) {
@@ -55,9 +55,8 @@ class Contact extends Component {
 
                 </form>
                 <div className="d-flex justify-content-center map position-relative">
-                   
+                    <Map />
                 </div>
-
             </div>
         );
     }

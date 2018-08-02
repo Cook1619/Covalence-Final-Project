@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class GameDetails extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
     }
     
     render() {

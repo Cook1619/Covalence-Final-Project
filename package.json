@@ -41,6 +41,7 @@
     "react-router-dom": "^4.2.2",
     "react-stripe-elements": "^1.4.1",
     "rimraf": "^2.6.2",
+    "simple-react-google-maps": "^1.1.1",
     "stripe": "^5.4.0",
     "uuid": "^3.2.1",
     "webpack": "^3.11.0"
