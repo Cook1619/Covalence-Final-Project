@@ -64,13 +64,13 @@ class Register extends Component {
     render() {
         return (
             <Fragment>
-                    <form className="pt-4">
+                    <form className="pt-4 mt-5">
                         <div className="form-group row d-flex justify-content-center">
                             <div className="col-6">
                                 <input
                                     htmlFor="USERNAME"
                                     type="name"
-                                    className="form-control"
+                                    className="form-control rounded-0"
                                     id="USERNAME"
                                     placeholder="Username"
                                     onChange={this.handleName}
@@ -82,7 +82,7 @@ class Register extends Component {
                                 <input
                                     htmlFor="FirstName"
                                     type="FirstName"
-                                    className="form-control"
+                                    className="form-control rounded-0"
                                     id="Firstname"
                                     placeholder="First Name"
                                     onChange={this.handleFirstName}
@@ -94,7 +94,7 @@ class Register extends Component {
                                 <input
                                     htmlFor="LastName"
                                     type="LastName"
-                                    className="form-control"
+                                    className="form-control rounded-0"
                                     id="LastName"
                                     placeholder="Last Name"
                                     onChange={this.handleLastName}
@@ -106,7 +106,7 @@ class Register extends Component {
                                 <input
                                     htmlFor="EMAIL"
                                     type="email"
-                                    className="form-control"
+                                    className="form-control rounded-0"
                                     id="EMAIL"
                                     placeholder="Email"
                                     onChange={this.handleEmail}
@@ -118,7 +118,7 @@ class Register extends Component {
                                 <input
                                     htmlFor="PASSWORD"
                                     type="password"
-                                    className="form-control"
+                                    className="form-control rounded-0"
                                     id="PASSWORD"
                                     placeholder="Password"
                                     onChange={this.handlePassword}
@@ -130,7 +130,7 @@ class Register extends Component {
                                 <button
                                     
                                     type="submit"
-                                    className="btn col-12 fancy-button shadow d-flex justify-content-center"
+                                    className="btn col-12 fancy-button shadow d-flex justify-content-center rounded-0"
                                     onClick={this.addUser}
                                 >Sign Up!</button>
                             </div>
