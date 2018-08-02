@@ -1,10 +1,7 @@
 import { Router } from 'express';
 import axios from 'axios';
 import Table from '../table';
-const express = require('express');
-let app = express();
-const MySportsFeeds = require('mysportsfeeds-node');
-const msf = new MySportsFeeds('1.0', true);
+import { config } from '../config';
 
 
 let router = Router();
@@ -16,10 +13,10 @@ router.get('/', async(req, res) => {
     try {
         let testData = await axios({
             method: 'get',
-            url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=2018080${date}`,
+            url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180801`,
             auth: {
-                username: 'e91faac0-bac2-4f7e-afde-853ef7',
-                password: 'Kino81672141!'
+                username: config.SPORTS_SK,
+                password: config.SPORTS_PW
             }
         });
         
