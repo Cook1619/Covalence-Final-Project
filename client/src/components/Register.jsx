@@ -64,12 +64,11 @@ class Register extends Component {
     render() {
         return (
             <Fragment>
-                <div className="container">
-                    <form>
-                        <div className="form-group row">
-                            <label htmlFor="USERNAME" className="col-sm-2 col-form-label float-left">User Name</label>
-                            <div className="col-sm-10">
+                    <form className="pt-4">
+                        <div className="form-group row d-flex justify-content-center">
+                            <div className="col-8">
                                 <input
+                                    htmlFor="USERNAME"
                                     type="name"
                                     className="form-control"
                                     id="USERNAME"
@@ -78,10 +77,10 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row">
-                            <label htmlFor="FirstName" className="col-sm-2 col-form-label" float-left>First Name</label>
-                            <div className="col-sm-10">
+                        <div className="form-group row d-flex justify-content-center">
+                            <div className="col-8">
                                 <input
+                                    htmlFor="FirstName"
                                     type="FirstName"
                                     className="form-control"
                                     id="Firstname"
@@ -90,10 +89,10 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row">
-                            <label htmlFor="LastName" className="col-sm-2 col-form-label float-left">Last Name</label>
-                            <div className="col-sm-10">
+                        <div className="form-group row d-flex justify-content-center">
+                            <div className="col-8">
                                 <input
+                                    htmlFor="LastName"
                                     type="LastName"
                                     className="form-control"
                                     id="LastName"
@@ -102,10 +101,10 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row">
-                            <label htmlFor="EMAIL" className="col-sm-2 col-form-label float-left">Email</label>
-                            <div className="col-sm-10">
+                        <div className="form-group row d-flex justify-content-center">
+                            <div className="col-8">
                                 <input
+                                    htmlFor="EMAIL"
                                     type="email"
                                     className="form-control"
                                     id="EMAIL"
@@ -114,10 +113,10 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row">
-                            <label htmlFor="PASSWORD" className="col-sm-2 col-form-label float-left">Password</label>
-                            <div className="col-sm-10">
+                        <div className="form-group row d-flex justify-content-center">
+                            <div className="col-8">
                                 <input
+                                    htmlFor="PASSWORD"
                                     type="password"
                                     className="form-control"
                                     id="PASSWORD"
@@ -126,17 +125,17 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row">
-                            <div className="mx-auto col-sm-10">
+                        <div className="form-group row d-flex justify-content-center">
+                            <div className="mx-auto col-8">
                                 <button
+                                    
                                     type="submit"
-                                    className="btn btn-success"
+                                    className="btn col-12 fancy-button shadow d-flex justify-content-center"
                                     onClick={this.addUser}
-                                >Submit</button>
+                                >Sign Up!</button>
                             </div>
                         </div>
                     </form>
-                </div>
             </Fragment>
         )
     }

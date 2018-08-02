@@ -40,21 +40,21 @@ class Contact extends Component {
 
     render() {
         return (
-            <div className="container">
-                <form className="p-7" onSubmit={(e) => this.handleSubmit(e)}>
+            <div className="container pt-5">
+                <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
-                        <input htmlFor="name" placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0" required />
+                        <input htmlFor="name" placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0 col-8 d-flex justify-content-center" required />
                     </div>
                     <div className="form-group">
-                        <input htmlFor="email" placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} email="mail" type="email" className="form-control rounded-0" required />
+                        <input htmlFor="email" placeholder="Email" onChange={(e) => this.handleEmail(e.target.value)} email="mail" type="email" className="form-control rounded-0 col-8 d-flex justify-content-center" required />
                     </div>
                     <div className="form-group">
-                        <textarea onChange={(e) => this.handleMessage(e.target.value)} cols="30" rows="10" className="form-control rounded-0"></textarea>
-                        <input type="submit" className="btn btn-success float-left mt-2 p-1 rounded-0" />
+                        <textarea onChange={(e) => this.handleMessage(e.target.value)} cols="30" rows="10" className="form-control rounded-0 col-8 d-flex align-content-center"></textarea>
+                        <input type="submit" className="btn btn-success float-left rounded-0 d-flex mx-auto" />
                     </div>
 
                 </form>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center map position-relative">
                     <Map />
                 </div>
 
