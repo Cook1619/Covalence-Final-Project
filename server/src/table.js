@@ -30,6 +30,11 @@ class Table {
         return executeQuery(sql);
     }
 
+    hasWon() {
+        let sql = `SELECT * FROM ${this.tableName} WHERE hasWon = ${1}`;
+        return executeQuery(sql);
+    }
+
     find(query) {
         let columns = Object.keys(query);
         let values = Object.values(query);
