@@ -57,7 +57,7 @@ class Register extends Component {
         }
         console.log(userInfo)
         if (this.state.name === '' || this.state.email === '' || this.state.firstname === '' || this.state.lastname === '' || this.state.password === '') {
-            alert('WHAT THE FUCK ARE YOU DOING');
+            alert('Please Fill out the form');
         } else {
         userServices.insert(userInfo)
             .catch(error => console.log(error));

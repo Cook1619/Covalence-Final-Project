@@ -9,6 +9,7 @@ function isLoggedIn(req, res, next) {
         next();
     } else {
         res.sendStatus(401);
+        console.log('this is the middleware')
     }
 }
 

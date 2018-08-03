@@ -2,6 +2,7 @@ import { Router } from 'express';
 import classesRouter from './classes';
 import authRouter from './auth';
 import usersRouter from './users';
+import singleUserRouter from './singleuser';
 import postGameRouter from './postgame';
 import futureGamesRouter from './futuregames'
 import gamesRouter from './games'
@@ -17,6 +18,7 @@ router.use('/users', usersRouter);
 router.use('/postgame', postGameRouter);
 router.use('/games', gamesRouter );
 router.use('/contact', contactRouter);
+router.use('/singleuser', singleUserRouter);
 
 router.route('*')
     // .post(tokenMiddleware, isLoggedIn)

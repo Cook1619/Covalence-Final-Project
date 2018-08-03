@@ -4,25 +4,27 @@ import { Link } from 'react-router-dom';
 import { render } from 'react-dom';
 
 
-class SingleBlog extends Component {
+class MyAccount extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
+
         this.state = {
             users: []
         }
-    }
 
+    }
     async componentDidMount() {
-        let id = this.props.match.params.id;
+        let id = this.props.match.params.id
         try {
-            let res = await fetch('/api/users/' + id);
+            let res = await fetch(`/api/singleuser/${id}`);
             let data = await res.json();
             this.setState({
                 users: data
             })
+            console.log(data)
         } catch (e) {
-            console.log(e);
+            console.log(`Error: ${e}`)
         }
     }
     // async deleteUser() {
@@ -42,7 +44,7 @@ class SingleBlog extends Component {
                     <div className="card-header">
                         <div className="card-body">{this.state.users.name}
                             <p>{this.state.users._created}</p>
-                            <Link className="btn btn-info float-right m-2" to={`/admin`} /*onClick={this.deleteUser.bind(this)}*/> Delete User</Link>
+                            {/* <Link className="btn btn-info float-right m-2" to={`/admin`} onClick={this.deleteUser.bind(this)}> Delete User</Link> */}
                         </div>
                     </div>
                 </div>
@@ -51,5 +53,5 @@ class SingleBlog extends Component {
     }
 }
 
-export default SingleBlog;
+export default MyAccount;
 
