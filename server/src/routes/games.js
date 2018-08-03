@@ -6,9 +6,10 @@ import { config } from '../config';
 
 let router = Router();
 
-const scores = new Table('scoreboard');
+// const scores = new Table('scoreboard');
+let date = 1;
 
-router.get('/', async(req, res) => {
+router.get('/', async (req, res) => {
 
     try {
         let testData = await axios({
@@ -19,7 +20,7 @@ router.get('/', async(req, res) => {
                 password: config.SPORTS_PW
             }
         });
-        
+
         console.log(testData.data);
 
         res.status(200).send('Ok');
