@@ -1,6 +1,7 @@
 import mysql from 'mysql';
 
 let pool = mysql.createPool({
+<<<<<<< HEAD
     // connectionLimit: 10,
     // host: process.env.DB_HOST,
     // user: process.env.DB_USER,
@@ -13,6 +14,13 @@ let pool = mysql.createPool({
         password: 'password',
         database: 'strikezone1',
     
+=======
+    connectionLimit: 10,
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'strikezone'
+>>>>>>> 5ade1f6c922e3fbb9a29493f6b817db805cbddd1
 });
 
 async function executeQuery(sql, args = []) {

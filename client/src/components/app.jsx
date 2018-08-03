@@ -14,7 +14,11 @@ import Register from './Register';
 import MyAccount from './Admin/AdminSingleUser';
 import Logo from './img/logo.png'
 import HowItWorks from './HowItWorks';
+<<<<<<< HEAD
 import BetPage from './Admin/BetPage';
+=======
+// import BetPage from './BetPage';
+>>>>>>> 5ade1f6c922e3fbb9a29493f6b817db805cbddd1
 
 class Navigation extends Component {
 
@@ -46,7 +50,7 @@ class Navigation extends Component {
                                 <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/futuregames">Bet Now</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/myaccount/:id">My Account</Link>
+                                <Link className="btn border-0 rounded-0 navbar-right nav-link mt-2" to="/myaccount/">My Account</Link>
                             </li>
                         </ul>
                         <AuthButton className="nav-link float-right ml-auto" to="/login" />
@@ -61,9 +65,9 @@ class Navigation extends Component {
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                         <Route path="/howitworks" component={HowItWorks} />
-                        <PrivateRoute path="games/:id" component={BetPage} />
+                        {/* <PrivateRoute path="games/:id" component={BetPage} /> */}
                         <PrivateRoute path="/futuregames" component={FutureGames} />
-                        <PrivateRoute path="/myaccount/:id" component={MyAccount} />
+                        <PrivateRoute path="/myaccount/" component={MyAccount} />
                     </Switch>
                 </Fragment>
             </Router>
