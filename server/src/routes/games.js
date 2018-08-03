@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import axios from 'axios';
 import Table from '../table';
-import { config } from '../config';
 
 
 let router = Router();
@@ -15,8 +14,8 @@ router.get('/', async(req, res) => {
             method: 'get',
             url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180801`,
             auth: {
-                username: config.SPORTS_SK,
-                password: config.SPORTS_PW
+                username: process.env.SPORTS_SK,
+                password: process.env.SPORTS_PW
             }
         });
         
