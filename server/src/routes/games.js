@@ -6,7 +6,7 @@ import Table from '../table';
 
 let router = Router();
 
-// const scores = new Table('scoreboard');
+const scores = new Table('scoreboard');
 let date = 1;
 
 router.get('/', async (req, res) => {
@@ -21,10 +21,27 @@ router.get('/', async (req, res) => {
             }
         });
 
-        console.log(testData.data);
-        
+        // console.log(testData.data);
+
         let scoreData = testData.data.scoreboard.gameScore;
-        console.log(scoreData);
+
+        let gameArray = [];
+
+        const getInfoWeNeed = () => {
+
+            let gameData = {
+                scoreboard: scoreData
+            };
+
+            gameArray.push(gameData);
+
+            return gameArray;
+
+        };
+
+        console.log(getInfoWeNeed());
+        let scoreboardData = JSON.stringify(gameArray)
+        console.log(scoreboardData)
 
         // scores.insert(scoreData);
 

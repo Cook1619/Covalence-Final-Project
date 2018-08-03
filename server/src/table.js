@@ -14,6 +14,12 @@ class Table {
         return results[0];
     }
 
+    async getUser(id) {
+        let sql = `SELECT * FROM ${this.tableName} WHERE id = ${id};`;
+        let results = await executeQuery(sql, [id]);
+        return results[0];
+    }
+
     getAll() {
         let sql = `SELECT * FROM ${this.tableName}`;
         return executeQuery(sql);
