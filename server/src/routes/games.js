@@ -14,8 +14,8 @@ router.get('/', async(req, res) => {
             method: 'get',
             url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180801`,
             auth: {
-                username: 'e91faac0-bac2-4f7e-afde-853ef7',
-                password: 'Kino81672141!'
+                username: process.env.SPORTS_SK,
+                password: process.env.SPORTS_PW
             }
         });
         
