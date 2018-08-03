@@ -18,7 +18,7 @@ class CheckoutForm extends Component {
         try {
             let token = await this.props.stripe.createToken({name: this.state.customerName });
             await postCharge({ id: token.id, amount: 10 });
-        } catch (e) {
+        } catch (e) { 
             console.log(e);
         }
     }

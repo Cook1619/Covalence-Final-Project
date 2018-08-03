@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import { tokenMiddleware, isLoggedIn } from '../middleware/auth.mw';
-// import { generateHash } from '../utils/hash';
 import Table from "../table";
 import { generateHash } from '../utils/hash';
 
@@ -23,15 +22,15 @@ router.post('/addnew', async (req,res) => {
     res.json(id);
 })
 
-router.get('/', async (req, res) => {
-    let user = await newUser.getAll();
-    res.json(user);
-})
-
-router.get('/id', tokenMiddleware, isLoggedIn, async (req, res) => {
-    let user = await newUser.getOne();
-    res.json(user);
-})
+// router.get('/:id', tokenMiddleware, isLoggedIn, async (req, res) => {
+//     try {
+//         let myAccount = await newUser.getOne(req.params.id);
+//         res.json(myAccount);
+//     } catch (err) {
+//         console.log(err);
+//         res.sendStatus(500);
+//     }
+// });
 
 router.get('/me', tokenMiddleware, isLoggedIn, (req, res) => {
     res.json(req.user);

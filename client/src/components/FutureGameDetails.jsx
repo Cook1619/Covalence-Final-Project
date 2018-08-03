@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FutureGameDetails = ({ gameData }) => {
 
     return (
-        <React.Fragment className="bg-dark">
+        <React.Fragment>
             <div className="col-md-6 position-static">
                 <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
                     <div className="card-header bg-dark text-white rounded-0">

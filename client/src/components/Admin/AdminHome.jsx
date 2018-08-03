@@ -4,13 +4,13 @@ import AdminDisplay from './AdminDisplay';
 class AdminHome extends Component {
     constructor(props){
         super(props)
-        this.state ={
-            users: []
-        }
+        
+            this.userId = props.match.params.id;
+
     }
     async componentDidMount() {
         try {
-            let res = await fetch('/api/users');
+            let res = await fetch('/api/users/');
             let data = await res.json();
             this.setState({
                 users: data
