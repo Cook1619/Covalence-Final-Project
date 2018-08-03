@@ -14,7 +14,7 @@ import Register from './Register';
 import MyAccount from './Admin/AdminSingleUser';
 import Logo from './img/logo.png'
 import HowItWorks from './HowItWorks';
-import BetPage from './BetPage';
+import BetPage from './Admin/BetPage';
 
 class Navigation extends Component {
 

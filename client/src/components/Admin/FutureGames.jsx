@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import FutureGameDetails from '../FutureGameDetails';
+import FutureGameDetails from './FutureGameDetails';
 import BaseballPhoto from '../img/baseballheader.png'
 
 

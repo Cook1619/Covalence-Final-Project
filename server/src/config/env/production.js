@@ -6,7 +6,14 @@ let cfg = {
     STRIPE_SK: process.env.STRIPE_SK,
     SPORTS_SK: process.env.SPORTS_SK,
     SPORTS_PW: process.env.SPORTS_PW,
-    GOOGLE_SK: process.env.GOOGLE_SK
+    GOOGLE_SK: process.env.GOOGLE_SK,
+    db: {
+        connectionLimit: 10,
+        DB_HOST: process.env.DB_HOST,
+        DB_USER: process.env.DB_USER,
+        DB_PASS: process.env.DB_PASS,
+        DB_NAME: process.env.DB_NAME,
+    },
 };
 
 export { cfg };
