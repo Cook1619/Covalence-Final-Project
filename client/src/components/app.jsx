@@ -14,11 +14,7 @@ import Register from './Register';
 import MyAccount from './Admin/AdminSingleUser';
 import Logo from './img/logo.png'
 import HowItWorks from './HowItWorks';
-<<<<<<< HEAD
-import BetPage from './Admin/BetPage';
-=======
-// import BetPage from './BetPage';
->>>>>>> 5ade1f6c922e3fbb9a29493f6b817db805cbddd1
+import BetPage from './BetPage';
 
 class Navigation extends Component {
 
@@ -65,7 +61,7 @@ class Navigation extends Component {
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                         <Route path="/howitworks" component={HowItWorks} />
-                        {/* <PrivateRoute path="games/:id" component={BetPage} /> */}
+                        <PrivateRoute path="games/:id" component={BetPage} />
                         <PrivateRoute path="/futuregames" component={FutureGames} />
                         <PrivateRoute path="/myaccount/" component={MyAccount} />
                     </Switch>
@@ -77,3 +73,4 @@ class Navigation extends Component {
 
 export default Navigation;
 
+//hi
