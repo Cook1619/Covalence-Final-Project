@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import peopleRouter from './people';
 import classesRouter from './classes';
 import authRouter from './auth';
 import usersRouter from './users';
@@ -28,7 +27,6 @@ router.route('*')
 router.use('/futuregames', futureGamesRouter);    
 router.use('/donate', stripeDonationsRouter);
 router.use('/classes', classesRouter);
-router.use('/people', peopleRouter);
 
 
 
