@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-class GameDetails extends Component {
+class PastGameDetails extends Component {
     constructor(props) {
         super(props);
     }
@@ -28,4 +28,4 @@ class GameDetails extends Component {
     }
 
 }
-export default GameDetails;
+export default PastGameDetails;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { sendContactEmail } from '../services/contact';
-import Map from './map';
+import { sendContactEmail } from '../../services/contact';
+import Map from '../map';
 
 class Contact extends Component {
     constructor(props) {

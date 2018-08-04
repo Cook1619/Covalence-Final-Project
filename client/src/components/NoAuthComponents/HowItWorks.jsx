@@ -1,5 +1,5 @@
 import React from 'react';
-import background from './img/howitworks.png'
+import background from '../img/howitworks.png'
 
 
 const HowItWorks = () => {

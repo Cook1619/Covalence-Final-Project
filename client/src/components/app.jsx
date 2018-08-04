@@ -1,19 +1,19 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Donate from './donate';
-import PastGames from './PastGames';
+import PastGames from './NoAuthComponents/PastGames';
 import FutureGames from './Admin/FutureGames'
 import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
 import AuthButton from './auth/authButton';
-import HomePage from './HomePage';
-import Contact from './Contact';
-import About from './About';
-import Register from './Register';
+import HomePage from './NoAuthComponents/HomePage';
+import Contact from './Forms/Contact';
+import About from './NoAuthComponents/About';
+import Register from './Forms/Register';
 import MyAccount from './Admin/AdminSingleUser';
 import Logo from './img/logo.png'
-import HowItWorks from './HowItWorks';
+import HowItWorks from './NoAuthComponents/HowItWorks';
 import BetPage from './Admin/BetPage';
 
 class Navigation extends Component {

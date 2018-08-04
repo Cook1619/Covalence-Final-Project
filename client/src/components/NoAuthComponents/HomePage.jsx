@@ -1,6 +1,5 @@
 import React from 'react';
-import background from './img/homepage.png'
-
+import background from '../img/homepage.png'
 
 const HomePage = () => {
     return (

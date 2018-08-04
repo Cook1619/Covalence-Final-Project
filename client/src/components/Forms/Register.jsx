@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import * as userServices from '../services/registerusers';
+import * as userServices from '../../services/registerusers';
 
 class Register extends Component {
     constructor(props) {

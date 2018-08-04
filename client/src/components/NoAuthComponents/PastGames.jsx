@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import GameDetails from './GameDetails';
+import PastGameDetails from './PastGameDetails';
 
 let apiKey = 'ZTkxZmFhYzAtYmFjMi00ZjdlLWFmZGUtODUzZWY3Oktpbm84MTY3MjE0MSE=';
 let sportsURL = 'https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180625';
@@ -27,7 +27,7 @@ class PastGames extends Component {
    
     render() {
            let pastGames = this.state.games.map((game, index)=> {
-               return <GameDetails key={index} game={game}/>
+               return <PastGameDetails key={index} game={game}/>
            })
         return (
             <Fragment>

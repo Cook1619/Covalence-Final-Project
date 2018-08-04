@@ -1,7 +1,7 @@
 import React from 'react';
-import Rodgers from './img/rodgers.png'
-import Peter from './img/mypic.png'
-import teambg from './img/teambg.png'
+import Rodgers from '../img/rodgers.png'
+import Peter from '../img/mypic.png'
+import teambg from '../img/teambg.png'
 
 const About = () => {
     return (
