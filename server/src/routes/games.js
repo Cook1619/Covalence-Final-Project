@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
         // console.log(testData.data);
 
         let scoreData = testData.data.scoreboard.gameScore;
-
+        
         let gameArray = [];
 
         const getInfoWeNeed = () => {
@@ -34,15 +34,15 @@ router.get('/', async (req, res) => {
             };
 
             gameArray.push(gameData);
-
+            console.log(gameArray);
             return gameArray;
 
         };
-
-        console.log(getInfoWeNeed());
+        
+        getInfoWeNeed()
         let scoreboardData = JSON.stringify(gameArray)
-        console.log(scoreboardData)
-
+        // console.log(scoreboardData)
+        
         // scores.insert(scoreData);
 
         // scores.insert(scoreboard);
