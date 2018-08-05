@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
             };
 
             gameArray.push(gameData);
-            console.log(gameArray);
+            
             return gameArray;
 
         };
