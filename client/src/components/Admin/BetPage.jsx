@@ -14,9 +14,9 @@ class BetPage extends Component {
             let res = await fetch('/api/futuregames/' + id);
             let data = await res.json();
             this.setState({
-                game: data.game
+                game: data
             })
-            console.log(game)
+            console.log(data);
         } catch (e) {
             console.log(`Error: ${e}`)
         }
