@@ -16,7 +16,6 @@ class BetPage extends Component {
             this.setState({
                 games: data
             })
-            console.log(data)
         } catch (e) {
             console.log(`Error: ${e}`)
         }
@@ -26,9 +25,19 @@ class BetPage extends Component {
       
         return (
             <Fragment>
-                <div className="card">
-                    <div className="card-header">
-                        <h1>{data.game_location}</h1>
+                <div className="col-md-12 position-static">
+                    <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
+                        <div className="card-header bg-dark text-white rounded-0">
+                            <h5 className="text-center mt-3">Matchup Preview</h5>
+                        </div>
+                        <div className="card-body">
+                            <div className="card-text">
+                                {`${data.awayTeam_City}   ${data.awayTeam_Name} VS ${data.homeTeam_City}   ${data.homeTeam_Name}`}
+                            </div>
+                            <div></div>
+                            <div>At</div>
+                            <div>{`${data.game_location}`}</div>
+                        </div>
                     </div>
                 </div>
             </Fragment>
