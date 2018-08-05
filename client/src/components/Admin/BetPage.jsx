@@ -16,7 +16,7 @@ class BetPage extends Component {
             this.setState({
                 game: data
             })
-            console.log(data);
+            console.log(game);
         } catch (e) {
             console.log(`Error: ${e}`)
         }
