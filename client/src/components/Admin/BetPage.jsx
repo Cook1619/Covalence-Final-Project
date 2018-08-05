@@ -4,7 +4,7 @@ class BetPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            games: []
+            game: []
         };
     }
 
@@ -14,8 +14,9 @@ class BetPage extends Component {
             let res = await fetch(`/api/futuregames/${id}`);
             let data = await res.json();
             this.setState({
-                games: data
+                game: data.game
             })
+            console.log(game)
         } catch (e) {
             console.log(`Error: ${e}`)
         }
