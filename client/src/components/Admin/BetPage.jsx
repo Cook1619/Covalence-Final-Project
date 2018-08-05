@@ -10,6 +10,7 @@ class BetPage extends Component {
 
 
     async componentDidMount() {
+        let id = this.props.match.params.id;
         try {
             let res = await fetch('/api/futuregames/' + id);
             let data = await res.json();
