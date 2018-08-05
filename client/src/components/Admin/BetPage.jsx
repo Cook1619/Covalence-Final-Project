@@ -17,14 +17,14 @@ class BetPage extends Component {
             this.setState({
                 game: data
             })
-            console.log(game);
+            console.log(gane);
         } catch (e) {
             console.log(`Error: ${e}`)
         }
     }
 
     render() {
-      
+      console.log(this.state.game)
         return (
             <Fragment>
                 <div className="col-md-12 position-static">

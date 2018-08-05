@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FutureGameDetails = ({ gameData }) => {
-
+    console.log(gameData.game_ID);
     return (
         <React.Fragment>
             <div className="col-md-6 position-static">
