@@ -11,7 +11,7 @@ class BetPage extends Component {
 
     async componentDidMount() {
         try {
-            let res = await fetch(`/api/futuregames/${id}`);
+            let res = await fetch('/api/futuregames/' + id);
             let data = await res.json();
             this.setState({
                 game: data.game

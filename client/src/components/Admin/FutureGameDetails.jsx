@@ -17,7 +17,7 @@ const FutureGameDetails = ({ gameData }) => {
                         <div></div>
                         <div>At</div>
                         <div>{`${gameData.game_location}`}</div>
-                        <Link to={`games/${gameData.game_ID}`}><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
+                        <Link to={`${gameData.game_ID}`}><button className="btn btn-sm btn-success float-right">Bet Now</button></Link>
                     </div>
                 </div>
             </div>
