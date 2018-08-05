@@ -33,11 +33,11 @@ class BetPage extends Component {
                         </div>
                         <div className="card-body">
                             <div className="card-text">
-                                {`${data.awayTeam_City}   ${data.awayTeam_Name} VS ${data.homeTeam_City}   ${data.homeTeam_Name}`}
+                                {`${game.awayTeam_City}   ${game.awayTeam_Name} VS ${game.homeTeam_City}   ${game.homeTeam_Name}`}
                             </div>
                             <div></div>
                             <div>At</div>
-                            <div>{`${data.game_location}`}</div>
+                            <div>{`${game.game_location}`}</div>
                         </div>
                     </div>
                 </div>
