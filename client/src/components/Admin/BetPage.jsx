@@ -31,6 +31,8 @@ class BetPage extends Component {
                     <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
                         <div className="card-header bg-dark text-white rounded-0">
                             <h5 className="text-center mt-3">{this.state.game.game_location}</h5>
+                        <h5 className="mt-3 text-center">{this.state.game.game_date}</h5>
+                        <h5 className="mt-3 text-center">{this.state.game.game_time}</h5>
                         </div>
                         <div className="card-body">
                             <div className="card-text text-center">

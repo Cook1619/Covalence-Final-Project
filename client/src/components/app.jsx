@@ -63,7 +63,7 @@ class Navigation extends Component {
                         <Route path="/howitworks" component={HowItWorks} />
                         <PrivateRoute path="/futuregames/:id" component={BetPage} />
                         <PrivateRoute path="/futuregames" component={FutureGames} />
-                        <PrivateRoute path="/myaccount/:id" component={MyAccount} />
+                        <PrivateRoute path="/myaccount/" component={MyAccount} />
                     </Switch>
                 </Fragment>
             </Router>
