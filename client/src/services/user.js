@@ -48,4 +48,13 @@ function me() {
     return baseService.get('/api/users/me');
 }
 
-export { isLoggedIn, checkLogin, login, logout };
+
+function one(id) {
+    return baseService.get(`/api/singleuser/${id}`);
+}
+
+// function update(id, data) {
+//     return baseService.put(`/api/singleuser/${id}`, data);
+// }
+
+export { isLoggedIn, checkLogin, login, logout, one, /*update*/ };

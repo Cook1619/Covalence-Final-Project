@@ -9,6 +9,9 @@ let router = Router();
 const scores = new Table('scoreboard');
 let date = 1;
 
+
+let gameArray = [];
+
 router.get('/', async (req, res) => {
 
     try {
@@ -24,28 +27,21 @@ router.get('/', async (req, res) => {
         // console.log(testData.data);
 
         let scoreData = testData.data.scoreboard.gameScore;
-        
-        let gameArray = [];
+
 
         const getInfoWeNeed = () => {
 
-            let gameData = {
-                scoreboard: scoreData
-            };
+            scoreData.forEach(function (games) {
+                gameArray.push(games);
 
-            gameArray.push(gameData);
-            
-            return gameArray;
-
+            });
         };
-        
-        getInfoWeNeed()
-        let scoreboardData = JSON.stringify(gameArray)
-        // console.log(scoreboardData)
-        
-        // scores.insert(scoreData);
 
-        // scores.insert(scoreboard);
+        console.log(getInfoWeNeed())
+        let gameString = JSON.stringify(gameArray);
+        let parsedData = JSON.parse(gameString)
+        console.log(gameArray)
+
 
         res.status(200).send('Ok');
     } catch (err) {
@@ -54,17 +50,18 @@ router.get('/', async (req, res) => {
 
 });
 
-export default router;
+router.post('/', async (req, res) => {
+    try {
+        let gameString = JSON.stringify(gameArray);
+        let idObj = await scores.insert({
+            game_ID: gameString.body.awayScore
+        });
+        console.log(idObj)
+        res.status(201).json(idObj);
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+});
 
-// router.post('/addnew', async (req,res) => {
-//
-//     let body = {
-//         name: req.body.name,
-//         email: req.body.email,
-//         firstname: req.body.firstname,
-//         lastname: req.body.lastname,
-//         hash
-//     }
-//     let id = await newUser.insert(body);
-//     res.json(id);
-// })
+export default router;

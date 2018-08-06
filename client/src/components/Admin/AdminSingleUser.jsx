@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import * as blogServices from '../../services/registerusers'
 import { Link } from 'react-router-dom';
 import { render } from 'react-dom';
-
+import * as userService from '../../services/user'
+import { me } from '../../services/user'
 
 class MyAccount extends Component {
 
@@ -15,13 +15,10 @@ class MyAccount extends Component {
 
     }
     async componentDidMount() {
-        let id = this.props.match.params.id
         try {
-            let res = await fetch(`/api/singleuser/${id}`);
-            let data = await res.json();
-            this.setState({
-                users: data
-            })
+            let res = await fetch(`/api/users/me`);
+            let users = await res.json();
+            this.setState({ users })
             console.log(data)
         } catch (e) {
             console.log(`Error: ${e}`)
