@@ -24,7 +24,7 @@ import { Router } from 'express';
 import Table from '../table';
 let router = Router();
 
-let SportsData = new Table('scoreboard');
+let SportsData = new Table('pastgames');
 
 router.get('/', async (req, res) => {
     let mlbdata = await SportsData.lastInning();

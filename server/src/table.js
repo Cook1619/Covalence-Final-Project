@@ -55,7 +55,7 @@ class Table {
         let columns = Object.keys(row);
         let values = Object.values(row);
         let placeholderString = generatePlaceholders(values);
-        let sql = `INSERT INTO scoreboard (post_game_ID, game_date, homeScore, awayScore, isCompleted) VALUES (${placeholderString});`;
+        let sql = `INSERT INTO ${this.tableName} (${columns.join(',')}) VALUES (${placeholderString});`;
         let results = await executeQuery(sql, values);
         return { id: results.insertId };
     }

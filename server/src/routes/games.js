@@ -6,63 +6,47 @@ import Table from '../table';
 
 let router = Router();
 
-const scores = new Table('scoreboard');
+const scores = new Table('pastgames');
 let date = 1;
 
 
 let gameArray = [];
 
-router.get('/', async (req, res) => {
-
+router.post('/', async (req, res) => {
     try {
         let testData = await axios({
             method: 'get',
-            url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180801`,
+            url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180804`,
             auth: {
                 username: config.SPORTS_SK,
                 password: config.SPORTS_PW
             }
         });
 
-        // console.log(testData.data);
-
         let scoreData = testData.data.scoreboard.gameScore;
+        console.log(scoreData)
 
-
-        const getInfoWeNeed = () => {
-
-            scoreData.forEach(function (games) {
-                gameArray.push(games);
-
+        scoreData.forEach( async gameObj => {
+            let idObj =  await scores.insertScoreboard({
+                game_ID: gameObj.game.ID,
+                game_date: gameObj.game.date,
+                game_location: gameObj.game.location,
+                homeTeam_ID: gameObj.game.homeTeam.ID,
+                homeTeam_City: gameObj.game.homeTeam.City,
+                homeTeam_Name: gameObj.game.homeTeam.Name,
+                awayTeam_ID: gameObj.game.awayTeam.ID,
+                awayTeam_City: gameObj.game.awayTeam.City,
+                awayTeam_Name: gameObj.game.awayTeam.Name,
+                homeScore: gameObj.homeScore,
+                awayScore: gameObj.awayScore,
             });
-        };
-        getInfoWeNeed();
-        let gameString = JSON.stringify(gameArray);
-        let parsedData = JSON.parse(gameString);
-
-        res.status(200).send('Ok');
-    } catch (err) {
-        res.status(500).send('SHIT');
-    }
-
-});
-
-router.post('/', async (req, res) => {
-    try {
-        for (let i = 0; i < gameArray.length; i++) {
-            let idObj = await scores.insertScoreboard({
-                post_game_ID: gameArray[i].game.ID,
-                game_date: gameArray[i].game.date,
-                homeScore: gameArray[i].homeScore,
-                awayScore: gameArray[i].awayScore,
-                isCompleted: gameArray[i].isCompleted
-            });
-            res.status(201).json(idObj);
-    }
-    } catch (err) {
-        console.log(err);
-        res.sendStatus(500);
-    }
-});
+        });
+        res.sendStatus(200);
+         
+        } catch (err) {
+            console.log(err);
+            res.sendStatus(500);
+        }
+    });
 
 export default router;
