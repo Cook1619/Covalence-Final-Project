@@ -12,7 +12,7 @@ class BetPage extends Component {
     async componentDidMount() {
         let id = this.props.match.params.id;
         try {
-            let res = await fetch('/api/futuregames/' + id);
+            let res = await fetch('https://strikezone.herokuapp.com/api/futuregames/' + id);
             let data = await res.json();
             this.setState({
                 game: data
