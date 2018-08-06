@@ -36,11 +36,12 @@ router.get('/', async (req, res) => {
 
             });
         };
-
-        console.log(getInfoWeNeed())
+        getInfoWeNeed();
         let gameString = JSON.stringify(gameArray);
-        let parsedData = JSON.parse(gameString)
-        console.log(gameArray)
+        let parsedData = JSON.parse(gameString);
+        // console.log(gameArray);
+        let n = n + 1
+        console.log(gameArray[n].awayScore)
 
 
         res.status(200).send('Ok');
@@ -52,6 +53,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
+        let gameString = JSON.stringify(gameArray);
         let idObj = await scores.insertScoreboard({
             post_game_ID: res.body.id,
             game_date: res.body.date,
