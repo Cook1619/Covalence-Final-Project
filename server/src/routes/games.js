@@ -7,10 +7,6 @@ import Table from '../table';
 let router = Router();
 
 const scores = new Table('pastgames');
-let date = 1;
-
-
-let gameArray = [];
 
 router.post('/', async (req, res) => {
     try {
@@ -41,8 +37,8 @@ router.post('/', async (req, res) => {
                 awayScore: gameObj.awayScore,
             });
         });
+        console.log(idObj)
         res.sendStatus(200);
-         
         } catch (err) {
             console.log(err);
             res.sendStatus(500);
