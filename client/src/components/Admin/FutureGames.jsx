@@ -18,7 +18,6 @@ class FutureGames extends Component {
             this.setState({
                 games: data
             })
-            console.log(data)
         } catch (e) {
             console.log(`Error: ${e}`)
         }

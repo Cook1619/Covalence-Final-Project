@@ -33,7 +33,6 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     let id = req.params.id;
-    console.log(id);
     let mlbdata = await SportsData.getOne(id);
     res.json(mlbdata);
 });

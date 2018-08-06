@@ -14,10 +14,10 @@ class BetPage extends Component {
         try {
             let res = await fetch('https://strikezone.herokuapp.com/api/futuregames/2');
             let data = await res.json();
+            console.log(data);
             this.setState({
                 game: data
             })
-            console.log(game);
         } catch (e) {
             console.log(`Error: ${e}`)
         }
