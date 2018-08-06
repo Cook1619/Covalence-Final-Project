@@ -57,4 +57,4 @@ function one(id) {
 //     return baseService.put(`/api/singleuser/${id}`, data);
 // }
 
-export { isLoggedIn, checkLogin, login, logout, one, /*update*/ };
+export { isLoggedIn, checkLogin, login, logout, one, me /*update*/ };

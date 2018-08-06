@@ -3,6 +3,7 @@ import { tokenMiddleware, isLoggedIn } from '../middleware/auth.mw';
 import Table from "../table";
 import { generateHash } from '../utils/hash';
 
+
 let router = Router();
 
 let newUser = new Table('users');
@@ -42,5 +43,11 @@ router.get('/me', tokenMiddleware, isLoggedIn, (req, res) => {
     res.json(req.user);
 });
 
+router.get('/me/:id',tokenMiddleware, isLoggedIn, async(req, res) => {
+  
+    let id = req.params.id;
+    let userData =  await newUser.getOne(id);
+    res.json(userData);
+});
 
 export default router;

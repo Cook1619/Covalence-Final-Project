@@ -11,7 +11,7 @@ import HomePage from './NoAuthComponents/HomePage';
 import Contact from './Forms/Contact';
 import About from './NoAuthComponents/About';
 import Register from './Forms/Register';
-import MyAccount from './Admin/AdminSingleUser';
+import MyAccount from './Admin/MyAccount';
 import Logo from './img/logo.png'
 import HowItWorks from './NoAuthComponents/HowItWorks';
 import BetPage from './Admin/BetPage';
@@ -63,7 +63,7 @@ class Navigation extends Component {
                         <Route path="/howitworks" component={HowItWorks} />
                         <PrivateRoute path="/futuregames/:id" component={BetPage} />
                         <PrivateRoute path="/futuregames" component={FutureGames} />
-                        <PrivateRoute path="/myaccount/" component={MyAccount} />
+                        <PrivateRoute path="/myaccount/:id" component={MyAccount} />
                     </Switch>
                 </Fragment>
             </Router>
