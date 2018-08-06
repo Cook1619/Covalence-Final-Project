@@ -52,13 +52,12 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        let gameString = JSON.stringify(gameArray);
         let idObj = await scores.insertScoreboard({
-            post_game_ID: req.body.id,
-            game_date: req.body.date,
-            homeScore: req.body.homeScore,
-            awayScore: req.body.awayScore,
-            isCompleted: req.body.isCompleted
+            post_game_ID: res.body.id,
+            game_date: res.body.date,
+            homeScore: res.body.homeScore,
+            awayScore: res.body.awayScore,
+            isCompleted: res.body.isCompleted
             
         });
         console.log(idObj)
