@@ -39,8 +39,6 @@ router.get('/', async (req, res) => {
         getInfoWeNeed();
         let gameString = JSON.stringify(gameArray);
         let parsedData = JSON.parse(gameString);
-        // console.log(gameArray);
-
 
         res.status(200).send('Ok');
     } catch (err) {
@@ -51,18 +49,15 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        let i;
-        for (i = 0; i < gameArray.length; i++) { 
+        for (let i = 0; i < gameArray.length; i++) {
             let idObj = await scores.insertScoreboard({
                 post_game_ID: gameArray[i].game.ID,
                 game_date: gameArray[i].game.date,
                 homeScore: gameArray[i].homeScore,
                 awayScore: gameArray[i].awayScore,
                 isCompleted: gameArray[i].isCompleted
-                
             });
-            // console.log(idObj)
-        res.status(201).json(idObj);
+            res.status(201).json(idObj);
     }
     } catch (err) {
         console.log(err);
