@@ -31,10 +31,20 @@ class BetPage extends Component {
                     <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
                         <div className="card-header bg-dark text-white rounded-0">
                             <h5 className="text-center mt-3">{this.state.game.game_location}</h5>
+                        <h5 className="mt-3 text-center">August 4th 2018</h5>
+                        <h5 className="mt-3 text-center">{this.state.game.game_time}</h5>
                         </div>
                         <div className="card-body">
-                            <div className="card-text text-center">
-                                {`${this.state.game.awayTeam_City}   ${this.state.game.awayTeam_Name} VS ${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
+                            <div className="card-text">
+                                <h1 className="float-left mt-3 position-relative">
+                                {`${this.state.game.awayTeam_City}   ${this.state.game.awayTeam_Name}`} 
+
+                                <button className="align-baseline float-left" href="/">The {this.state.game.awayTeam_Name} will win</button>
+                               </h1> 
+                                
+                                <h1 className="float-right mt-3">
+                                {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
+                                </h1>
                             </div>
                         </div>
                     </div>

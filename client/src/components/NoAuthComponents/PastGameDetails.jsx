@@ -16,7 +16,10 @@ class PastGameDetails extends Component {
                     </div>
                     <div className="card-body text-center">
                         <h4>
-                            {`${games.awayTeam.Name} ${this.props.game.awayScore} to ${games.homeTeam.Name} ${this.props.game.homeScore}`}
+                            {`${games.awayTeam.Name} ${this.props.game.awayScore}`}
+                        </h4>
+                        <h4>
+                            {`${games.homeTeam.Name} ${this.props.game.homeScore}`}
                         </h4>
                     </div>
                 </div>

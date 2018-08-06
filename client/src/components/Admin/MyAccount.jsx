@@ -36,10 +36,11 @@ class MyAccount extends Component {
     render() {
         return (
             <div>
-                <div className="card">
+                <div className="card bg-dark">
                     <div className="card-header">
-                        <div className="card-body">
-                            <h1>hi</h1>
+                        <div className="card-body text-light text-center">
+                            <h1>Hello {this.state.users.firstname}!</h1>
+                            
                         </div>
                     </div>
                 </div>
