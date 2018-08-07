@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Moment from 'react-moment';
 
 class MyAccount extends Component {
 
@@ -35,8 +36,8 @@ class MyAccount extends Component {
                     <div className="card-header">
                         <div className="card-body text-light text-center">
                             <h4>{`Hello ${this.state.users.firstname} ${this.state.users.lastname}!`}</h4>
-                            <p className="card-text">{`Email: ${this.state.users.email}`}</p>
-                            <p className="card-text">{`Join on: ${this.state.users._created}`}</p>
+                            <p className="card-text mt-3">{`Email: ${this.state.users.email}`}</p>
+                            <p className="card-text">Joined: <Moment date={this.state.users._created} /></p>
                         </div>
                     </div>
                 </div>
