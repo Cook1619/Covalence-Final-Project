@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { me } from '../../services/user';
-
 
 class MyAccount extends Component {
 
@@ -15,11 +13,10 @@ class MyAccount extends Component {
     async componentDidMount() {
         try {
             const AUTH_TOKEN_KEY = 'authtoken';
-            let fuckingToken = localStorage.getItem(AUTH_TOKEN_KEY);
-            console.log(fuckingToken);
+            let token = localStorage.getItem(AUTH_TOKEN_KEY);
             let res = await fetch('/api/users/me', {
                 headers: {
-                    'Authorization': fuckingToken
+                    'Authorization': token
                 }
             });
             let data = await res.json();
@@ -31,16 +28,15 @@ class MyAccount extends Component {
             console.log(`Error: ${e}`)
         }
     }
-  
-
     render() {
         return (
             <div>
-                <div className="card bg-dark">
+                <div className="card bg-dark mt-5">
                     <div className="card-header">
                         <div className="card-body text-light text-center">
-                            <h1>Hello {this.state.users.firstname}!</h1>
-                            
+                            <h4>{`Hello ${this.state.users.firstname} ${this.state.users.lastname}!`}</h4>
+                            <p className="card-text">{`Email: ${this.state.users.email}`}</p>
+                            <p className="card-text">{`Join on: ${this.state.users._created}`}</p>
                         </div>
                     </div>
                 </div>
