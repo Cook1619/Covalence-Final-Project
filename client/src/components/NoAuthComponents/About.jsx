@@ -1,4 +1,5 @@
 import React from 'react';
+import Matt from '../img/matt.jpg'
 import Rodgers from '../img/rodgers.png'
 import Peter from '../img/mypic.png'
 import teambg from '../img/teambg.png'
@@ -11,7 +12,7 @@ const About = () => {
                 <div>
                     <div className="col-sm-3 profilepic">
                         <a href="https://github.com/Cook1619" target="_blank">
-                            <img src={Rodgers} alt="Some text" className="shadow-lg profilepic"/>
+                            <img src={Matt} alt="Some text" className="shadow-lg profilepic"/>
                         </a>
                     </div>
                     <h3 className="text-light mt-5">Matt Cook</h3>
