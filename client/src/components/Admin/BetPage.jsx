@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 class BetPage extends Component {
     constructor(props) {
@@ -31,19 +32,22 @@ class BetPage extends Component {
                     <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
                         <div className="card-header bg-dark text-white rounded-0">
                             <h5 className="text-center mt-3">{this.state.game.game_location}</h5>
-                        <h5 className="mt-3 text-center">August 4th 2018</h5>
-                        <h5 className="mt-3 text-center">{this.state.game.game_time}</h5>
+                            <h5 className="mt-3 text-center">August 4th 2018</h5>
+                            <h5 className="mt-3 text-center">{this.state.game.game_time}</h5>
                         </div>
                         <div className="card-body">
-                            <div className="card-text">
-                                <h1 className="float-left mt-3 position-relative">
-                                {`${this.state.game.awayTeam_City}   ${this.state.game.awayTeam_Name}`} 
-
-                                <button className="align-baseline float-left" href="/">The {this.state.game.awayTeam_Name} will win</button>
-                               </h1> 
-                                
+                            <div className="card-text col-12">
+                                <h1 className="float-left mt-3">
+                                    {`${this.state.game.awayTeam_City}   ${this.state.game.awayTeam_Name}`}
+                                    <div className="card-body float-left mt-5 ml-3">
+                                        <Link className="btn btn-success float-left position-absolute" to='/betcheckout'>¡The {this.state.game.awayTeam_Name} will win!</Link>
+                                    </div>
+                                </h1>
                                 <h1 className="float-right mt-3">
-                                {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
+                                    {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
+                                    <div className="card-body ">
+                                        <Link className="btn btn-success float-right position-relative" to='/betcheckout/'>¡The {this.state.game.homeTeam_Name} will win!</Link>
+                                    </div>
                                 </h1>
                             </div>
                         </div>
@@ -55,3 +59,4 @@ class BetPage extends Component {
 }
 
 export default BetPage;
+

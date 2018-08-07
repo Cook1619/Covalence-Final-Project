@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { injectStripe } from 'react-stripe-elements';
 import { postCharge } from '../../services/stripeService';
+
 import CardSection from './cardSection';
 
 class CheckoutForm extends Component {
@@ -11,13 +12,14 @@ class CheckoutForm extends Component {
             customerName: ''
         }
     }
-
+  
     async handleSubmit(e) {
         e.preventDefault();
         try {
             let token = await this.props.stripe.createToken({name: this.state.customerName });
-            await postCharge({ id: token.id, amount: 10 });
-        } catch (e) { 
+            await postCharge({ id: token.token.id, amount: 59 });
+            alert('Thanks for your payment!')
+        } catch (e) {
             console.log(e);
         }
     }
@@ -28,7 +30,7 @@ class CheckoutForm extends Component {
 
     render() {
         return (
-            <form onSubmit={(e) => this.handleSubmit(e)}>
+            <form className ="col-md-6 mx-auto"onSubmit={(e) => this.handleSubmit(e)}>
                 <input onChange={(e) => this.handleNameInput(e)} placeholder="Name" htmlFor="name" id="name" />
                 <CardSection />
                 <button>SUBMIT</button>
