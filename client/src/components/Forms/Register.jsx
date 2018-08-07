@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import * as userServices from '../../services/registerusers';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
     constructor(props) {
@@ -61,6 +62,7 @@ class Register extends Component {
             alert('Please Fill out the form');
         } else {
         userServices.insert(userInfo)
+        alert('Thank you for registering!')
             .catch(error => console.log(error));
         }
     }
@@ -69,9 +71,10 @@ class Register extends Component {
     render() {
         return (
             <Fragment>
-                    <form className="pt-4 mt-5">
-                        <div className="form-group row d-flex justify-content-center">
-                            <div className="col-6">
+                <div className="card col-6 bg-dark mt-5 p-3 d-flex mx-auto">
+                    <form>
+                        <div className="form-group row">
+                            <div className="col">
                                 <input
                                     htmlFor="name"
                                     type="name"
@@ -82,8 +85,8 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row d-flex justify-content-center">
-                            <div className="col-6">
+                        <div className="form-group row">
+                            <div className="col">
                                 <input
                                     htmlFor="firstname"
                                     type="firstname"
@@ -94,8 +97,8 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row d-flex justify-content-center">
-                            <div className="col-6">
+                        <div className="form-group row ">
+                            <div className="col">
                                 <input
                                     htmlFor="lastname"
                                     type="lastname"
@@ -106,8 +109,8 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row d-flex justify-content-center">
-                            <div className="col-6">
+                        <div className="form-group row">
+                            <div className="col">
                                 <input
                                     htmlFor="email"
                                     type="email"
@@ -118,12 +121,12 @@ class Register extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group row d-flex justify-content-center">
-                            <div className="col-6">
+                        <div className="form-group row">
+                            <div className="col">
                                 <input
                                     htmlFor="password"
                                     type="password"
-                                    className="form-control rounded-0"
+                                    className="form-control rounded-0 mb-3"
                                     id="password"
                                     placeholder="Password"
                                     onChange={this.handlePassword}
@@ -131,16 +134,16 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className="form-group row d-flex justify-content-center">
-                            <div className="mx-auto col-6">
-                                <button
-                                    
+                            <div>
+                                <Link
+                                    to="/login"
                                     type="submit"
-                                    className="btn col-12 fancy-button shadow d-flex justify-content-center rounded-0"
                                     onClick={this.addUser}
-                                >Sign Up!</button>
+                                > <button className="btn btn-success rounded-0 mt-0">Sign Up!</button></Link>
                             </div>
                         </div>
                     </form>
+                </div>
             </Fragment>
         )
     }
