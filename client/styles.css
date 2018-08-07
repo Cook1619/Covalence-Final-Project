@@ -194,3 +194,9 @@ h3{
 .register{
   overflow: hidden;
 }
+
+#jumbotron{
+  margin-top: 15em;
+  margin-bottom: 20em;
+
+}
