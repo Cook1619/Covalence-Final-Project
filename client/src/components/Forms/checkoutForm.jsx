@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { injectStripe } from 'react-stripe-elements';
 import { postCharge } from '../../services/stripeService';
+import { Link } from 'react-router-dom';
 
 import CardSection from './cardSection';
 
@@ -33,7 +34,7 @@ class CheckoutForm extends Component {
             <form className ="col-md-6 mx-auto"onSubmit={(e) => this.handleSubmit(e)}>
                 <input onChange={(e) => this.handleNameInput(e)} placeholder="Name" htmlFor="name" id="name" />
                 <CardSection />
-                <button>SUBMIT</button>
+                <Link to="/postcheckout"><button>SUBMIT</button></Link>
             </form>
         );
     }

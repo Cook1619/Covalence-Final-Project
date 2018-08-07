@@ -16,6 +16,7 @@ import Logo from './img/logo.png'
 import HowItWorks from './NoAuthComponents/HowItWorks';
 import BetPage from './Admin/BetPage';
 import BetCheckout from './Admin/BetCheckout';
+import PostCheckout from './Admin/PostCheckout'
 
 class Navigation extends Component {
 
@@ -66,7 +67,7 @@ class Navigation extends Component {
                         <PrivateRoute path="/futuregames" component={FutureGames} />
                         <PrivateRoute path="/myaccount/" component={MyAccount} />
                         <PrivateRoute path="/betcheckout" component={BetCheckout} />
-
+                        <PrivateRoute path="/postcheckout" component={PostCheckout} />
                     </Switch>
                 </Fragment>
             </Router>
