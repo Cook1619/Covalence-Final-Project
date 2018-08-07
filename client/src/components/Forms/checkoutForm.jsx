@@ -17,7 +17,7 @@ class CheckoutForm extends Component {
         e.preventDefault();
         try {
             let token = await this.props.stripe.createToken({name: this.state.customerName });
-            await postCharge({ id: token.token.id, amount: 59 });
+            await postCharge({ id: token.token.id, amount: 10 });
             alert('Thanks for your payment!')
         } catch (e) {
             console.log(e);

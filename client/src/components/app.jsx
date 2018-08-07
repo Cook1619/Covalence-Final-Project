@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Donate from './donate';
+// import Donate from './donate';
 import PastGames from './NoAuthComponents/PastGames';
 import FutureGames from './Admin/FutureGames'
 import PrivateRoute from './auth/privateRoute';
@@ -60,7 +60,7 @@ class Navigation extends Component {
                         <Route path="/about" component={About} />
                         <Route path="/register" component={Register} />
                         <Route path="/logout" component={Logout} />
-                        <Route path="/donate" component={Donate} />
+                        {/* <Route path="/donate" component={Donate} /> */}
                         <Route path="/howitworks" component={HowItWorks} />
                         <PrivateRoute path="/futuregames/:id" component={BetPage} />
                         <PrivateRoute path="/futuregames" component={FutureGames} />

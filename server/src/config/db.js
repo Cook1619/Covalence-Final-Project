@@ -9,7 +9,6 @@ let pool = mysql.createPool({
 });
 
 
-
 async function executeQuery(sql, args = []) {
     let connection = await getConnection();
     return sendQueryToDB(connection, sql, args);
