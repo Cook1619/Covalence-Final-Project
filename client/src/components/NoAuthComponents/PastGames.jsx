@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PastGameDetails from './PastGameDetails';
+import { config } from '../../../../server/src/config';
 
-let apiKey = 'ZTkxZmFhYzAtYmFjMi00ZjdlLWFmZGUtODUzZWY3Oktpbm84MTY3MjE0MSE=';
 let sportsURL = 'https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180625';
 
 class PastGames extends Component {
@@ -17,7 +17,7 @@ class PastGames extends Component {
         fetch(sportsURL, {
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': `Basic ${apiKey}`
+                'Authorization': `Basic ${config.SPORTS_FE}`
             })
         }).then(res => res.json())
             .then(response => this.setState({

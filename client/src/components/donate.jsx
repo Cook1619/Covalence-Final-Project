@@ -7,7 +7,7 @@ class Donate extends Component {
 
     render() {
         return (
-            <StripeProvider apiKey="pk_test_fUN9BfC4uQD2SS1o14ihYW8K">
+            <StripeProvider apiKey="pk_test_1fv6LZKQ730P8NVywH8s6Ref">
                 <Elements>
                     <InjectedCheckoutForm />
                 </Elements>

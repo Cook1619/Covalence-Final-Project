@@ -6,6 +6,7 @@ let cfg = {
     STRIPE_SK: process.env.STRIPE_SK,
     SPORTS_SK: process.env.SPORTS_SK,
     SPORTS_PW: process.env.SPORTS_PW,
+    SPORTS_FE: process.env.SPORTS_FE,
     GOOGLE_SK: process.env.GOOGLE_SK,
     db: {
         connectionLimit: 10,
