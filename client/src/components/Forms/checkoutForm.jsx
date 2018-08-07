@@ -13,11 +13,11 @@ class CheckoutForm extends Component {
             customerName: ''
         }
     }
-  
+
     async handleSubmit(e) {
         e.preventDefault();
         try {
-            let token = await this.props.stripe.createToken({name: this.state.customerName });
+            let token = await this.props.stripe.createToken({ name: this.state.customerName });
             await postCharge({ id: token.token.id, amount: 10 });
             alert('Thanks for your payment!')
         } catch (e) {
@@ -31,11 +31,15 @@ class CheckoutForm extends Component {
 
     render() {
         return (
-            <form className ="col-md-6 mx-auto"onSubmit={(e) => this.handleSubmit(e)}>
-                <input onChange={(e) => this.handleNameInput(e)} placeholder="Name" htmlFor="name" id="name" />
-                <CardSection />
-                <Link to="/postcheckout"><button>SUBMIT</button></Link>
-            </form>
+            <div className="row">
+                <div className="col-md-6 d-flex align-text-center">
+                    <form className="col mx-auto" onSubmit={(e) => this.handleSubmit(e)}>
+                        <input onChange={(e) => this.handleNameInput(e)} placeholder="Name" htmlFor="name" id="name" />
+                        <CardSection />      
+                        <Link className="btn btn-success" to="/postcheckout">SUBMIT</Link>
+                    </form>
+                </div>
+            </div>
         );
     }
 }

@@ -30,8 +30,8 @@ class FutureGames extends Component {
 
         return (
             <div>
-                <img className = "w-100" src={BaseballPhoto} alt=""/>
-                <div className="container-fluid mt-5">
+                <img className = "w-100 mt-5" src={BaseballPhoto} alt=""/>
+                <div className="container-fluid">
                     <div className="row">
                         {gameList}
                     </div>

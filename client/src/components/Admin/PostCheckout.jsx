@@ -14,8 +14,10 @@ class PostCheckout extends Component {
         return (
             <div>
                 <Jumbotron>
-                    <h1 className="display-3 text-center mt-4">THANKS FOR BETTING!</h1>
-                    <h5 className="text-center">Check your account after the game to see your earnings.</h5>
+                    <div className="margin-top">
+                        <h1 className="text-center">THANKS FOR BETTING!</h1>
+                        <h5 className="text-center">Check your account after the game to see your earnings.</h5>
+                    </div>
                 </Jumbotron>
             </div>
 

@@ -40,7 +40,7 @@ class Contact extends Component {
 
     render() {
         return (
-            <div className="container pt-5" >
+            <div className="container padding-top margin-bottom" >
                 <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="form-group">
                         <input htmlFor="name" placeholder="Name" onChange={(e) => this.handleName(e.target.value)} name="name" type="text" className="form-control rounded-0 col-8 mx-auto" required />

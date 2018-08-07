@@ -180,6 +180,9 @@ h3{
   margin-bottom: 16em;
 }
 
+.small-margin-bottom{
+  margin-bottom: 5em;
+}
 .margin-top{
   top: 10em;
 }

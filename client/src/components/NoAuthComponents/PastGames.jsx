@@ -31,7 +31,7 @@ class PastGames extends Component {
            })
         return (
             <Fragment>
-                <div className="container-fluid mt-5">
+                <div className="padding-top margin-bottom">
                     <div className="row">
                         {pastGames}
                     </div>
