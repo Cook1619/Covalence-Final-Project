@@ -46,7 +46,7 @@ class BetPage extends Component {
                                 <h1 className="float-right mt-3">
                                     {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
                                     <div className="card-body ">
-                                        <Link className="btn btn-success float-right position-relative" to='/betcheckout/'>¡The {this.state.game.homeTeam_Name} will win!</Link>
+                                        <Link className="btn btn-success float-right position-relative" to='/betcheckout'>¡The {this.state.game.homeTeam_Name} will win!</Link>
                                     </div>
                                 </h1>
                             </div>
