@@ -136,10 +136,11 @@ class Register extends Component {
                         <div className="form-group row d-flex justify-content-center">
                             <div>
                                 <Link
+                                    className="btn btn-success rounded-0 mt-0"
                                     to="/login"
                                     type="submit"
                                     onClick={this.addUser}
-                                > <button className="btn btn-success rounded-0 mt-0">Sign Up!</button></Link>
+                                >Sign Up</Link>
                             </div>
                         </div>
                     </form>

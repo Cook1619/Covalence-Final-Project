@@ -61,9 +61,9 @@ class Login extends Component {
 
         return (
             <Fragment>
-                <p className="d-flex justify-content-center pt-5 login-form">Login Here!</p>
-                <div className="d-flex justify-content-center pt-5">
-                    <form className="login-form p-0 col-6 rounded-0" onSubmit={(e) => this.login(e)}>
+                <p className="login-padding-top d-flex justify-content-center login-form">Login Here!</p>
+                <div className="d-flex justify-content-center login-padding-bottom">
+                    <form className="login-form p-0 col-6 rounded-0"   onSubmit={(e) => this.login(e)}>
                         <div className="form-group col-md-8 d-flex mx-auto p-2">
                             <input placeholder="Email" htmlFor="email" id="email" className="form-control" type="email" onChange={(e) => this.handleEmailChange(e.target.value)} required />
                         </div>
@@ -73,7 +73,7 @@ class Login extends Component {
                         {this.state.feedbackMessage ? (
                             <p>{this.state.feedbackMessage}</p>
                         ) : null}
-                        <input type="submit" value="Login" className="fancy-button btn btn-success login-button d-flex mx-auto mb-10" />
+                        <input type="submit" value="Login" className="fancy-button btn btn-success login-button d-flex mx-auto mb-10 login-margin-bottom" />
                     </form>
                 </div>
 
