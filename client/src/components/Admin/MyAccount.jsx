@@ -32,7 +32,7 @@ class MyAccount extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="pt-5">
                 <div className="card bg-dark mt-5 shadow">
                     <div className="card-header">
                         <div className="card-body text-light text-center">

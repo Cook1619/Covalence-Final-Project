@@ -71,8 +71,9 @@ class Register extends Component {
     render() {
         return (
             <Fragment>
-                <div className="card col-6 bg-dark mt-5 p-3 d-flex mx-auto">
-                    <form>
+               <div className="row padding-top">
+                <div className="card col-6 bg-dark d-flex mx-auto margin-bottom register p-2">
+                    <form className="m-2">
                         <div className="form-group row">
                             <div className="col">
                                 <input
@@ -145,8 +146,10 @@ class Register extends Component {
                         </div>
                     </form>
                 </div>
+                </div> 
             </Fragment>
         )
     }
 }
 export default Register;
+

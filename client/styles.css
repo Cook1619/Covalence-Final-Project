@@ -172,10 +172,22 @@ h3{
   background-color: #159915;
 }
 
-.login-padding-top{
+.padding-top{
   padding-top: 10em;
 }
 
-.login-margin-bottom{
+.margin-bottom{
   margin-bottom: 16em;
+}
+
+.margin-top{
+  top: 10em;
+}
+
+.top{
+  top: 20em;
+}
+
+.register{
+  overflow: hidden;
 }

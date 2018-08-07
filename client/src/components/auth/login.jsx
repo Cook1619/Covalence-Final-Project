@@ -61,8 +61,8 @@ class Login extends Component {
 
         return (
             <Fragment>
-                <p className="login-padding-top d-flex justify-content-center login-form">Login Here!</p>
-                <div className="d-flex justify-content-center login-padding-bottom">
+                <p className="padding-top d-flex justify-content-center login-form">Login Here!</p>
+                <div className="d-flex justify-content-center margin-bottom">
                     <form className="login-form p-0 col-6 rounded-0"   onSubmit={(e) => this.login(e)}>
                         <div className="form-group col-md-8 d-flex mx-auto p-2">
                             <input placeholder="Email" htmlFor="email" id="email" className="form-control" type="email" onChange={(e) => this.handleEmailChange(e.target.value)} required />
