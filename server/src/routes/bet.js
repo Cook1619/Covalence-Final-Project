@@ -18,9 +18,12 @@ router.get('/', async (req, res) => {
 // router.post('/', async (req, res) => {
 //     try {
 //         // idObj will look like { id: 7 }
-//         let idObj = await classTable.insert({
-//             name: req.body.name,
-//             description: req.body.description
+//         let idObj = await betTable.insert({
+//             amount: req.body.amount,
+//             userid:req,
+//             gameid: req.body.description,
+//             teamid: ,
+            
 //         });
 //         res.status(201).json(idObj);
 //     } catch (err) {

@@ -10,7 +10,8 @@ class CheckoutForm extends Component {
         super(props);
 
         this.state = {
-            customerName: ''
+            customerName: '',
+            dollars: null
         }
     }
 
