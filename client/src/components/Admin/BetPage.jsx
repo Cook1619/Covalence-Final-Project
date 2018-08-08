@@ -64,7 +64,7 @@ class BetPage extends Component {
                                         {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
                                         <div className="card-body">
                                             <div>
-                                                <Link to='/betcheckout' className="btn btn-success">¡The {this.state.game.awayTeam_Name} will win!</Link>
+                                                <Link to='/betcheckout' className="btn btn-success">¡The {this.state.game.homeTeam_Name} will win!</Link>
                                             </div>
 
                                         </div>
