@@ -25,9 +25,8 @@ class BetPage extends Component {
             console.log(`Error: ${e}`)
         }
     }
-
     render() {
-        // console.log(this.state.game[0])
+         console.log(this.state.game[0])
         return (
             <Fragment>
                 <div className="col-md-12 margin-top large-margin-bottom border-2">
@@ -53,10 +52,10 @@ class BetPage extends Component {
                                         {`${this.state.game.awayTeam_City}   ${this.state.game.awayTeam_Name}`}
                                         <div className="card-body">
                                             <div>
-                                                <Link to='/betcheckout' className="btn btn-success">¡The {this.state.game.awayTeam_Name} will win!</Link>
+                                                <Link to={{ pathname: '/betcheckout', state: { awayTeam_Name: this.state.game.awayTeam_Name, game_ID: this.state.game.id, awayTeam_ID: this.state.game.awayTeam_ID}}} className="btn btn-success">The {this.state.game.awayTeam_Name} will win!</Link>
                                             </div>
 
-                                        </div>
+                                        </div> 
                                     </h1>
                                 </div>
                                 <div>
@@ -64,7 +63,7 @@ class BetPage extends Component {
                                         {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
                                         <div className="card-body">
                                             <div>
-                                                <Link to='/betcheckout' className="btn btn-success">¡The {this.state.game.homeTeam_Name} will win!</Link>
+                                                <Link to={{ pathname: '/betcheckout', state: { homeTeam_Name: this.state.game.homeTeam_Name, game_ID: this.state.game.id, homeTeam_ID: this.state.game.homeTeam_ID}}} className="btn btn-success">The {this.state.game.homeTeam_Name} will win!</Link>
                                             </div>
 
                                         </div>

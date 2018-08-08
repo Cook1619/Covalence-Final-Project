@@ -6,6 +6,7 @@ import singleUserRouter from './singleuser';
 import postGameRouter from './postgame';
 import futureGamesRouter from './futuregames'
 import gamesRouter from './games'
+import betRouter from './bet'
 import contactRouter from './contactform'
 import stripeDonationsRouter from './stripeDonations';
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
@@ -19,7 +20,7 @@ router.use('/postgame', postGameRouter);
 router.use('/games', gamesRouter );
 router.use('/contact', contactRouter);
 router.use('/singleuser', singleUserRouter);
-
+router.use('/bet', betRouter);
 router.route('*')
     // .post(tokenMiddleware, isLoggedIn)
     .put(tokenMiddleware, isLoggedIn)

@@ -30,6 +30,7 @@ class MyAccount extends Component {
             console.log(`Error: ${e}`)
         }
     }
+    
     render() {
         return (
             <div className="pt-5">

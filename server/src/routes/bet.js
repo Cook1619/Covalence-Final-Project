@@ -15,22 +15,22 @@ router.get('/', async (req, res) => {
     }
 });
 
-// router.post('/', async (req, res) => {
-//     try {
-//         // idObj will look like { id: 7 }
-//         let idObj = await betTable.insert({
-//             amount: req.body.amount,
-//             userid:req,
-//             gameid: req.body.description,
-//             teamid: ,
-            
-//         });
-//         res.status(201).json(idObj);
-//     } catch (err) {
-//         console.log(err);
-//         res.sendStatus(500);
-//     }
-// });
+router.post('/', async (req, res) => {
+    try {
+        // idObj will look like { id: 7 }
+        let amount = parseFloat(req.body.bet)
+        let idObj = await betTable.insert({
+            amount: amount,
+            userid: req.body.userid,
+            gameid: req.body.gameid,
+            teamid: req.body.teamid,
+        });
+        res.status(201).json(idObj);
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+});
 
 // router.get('/:id', async (req, res) => {
 //     try {
