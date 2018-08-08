@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import * as betServices from '../../services/bets';
+import { Link } from 'react-router-dom';
 import Donate from '../donate';
 
 class BetCheckout extends Component {
@@ -57,23 +59,47 @@ class BetCheckout extends Component {
     }
 
     handleBet(e) {
-         this.setState({bet: e.target.value})
+        this.setState({ bet: e.target.value })
+    }
+
+    addBet() {
+        let userInfo = {
+            userid: this.state.userid,
+            teamid: this.state.teamid,
+            gameid: this.state.gameid,
+            bet: this.state.bet,
+        }
+        console.log(userInfo)
+        if (this.state.bet === '') {
+            alert('Please Fill out the form');
+        } else {
+            betServices.insert(userInfo)
+            alert('Thank you for registering!')
+                .catch(error => console.log(error));
+        }
     }
 
     render() {
-       
-        console.log(this.state)
-
         return (
             <div id="checkout">
-               {this.teamRender()}
-                <div className="card bg-light col-8 d-flex mx-auto mt-5">
-                    <div className="card-body float-left">
-                      <input type="text" value={this.state.bet} onChange={this.handleBet.bind(this)}/>{/* <Donate /> */} 
+                {this.teamRender()}
+                <form>
+                    <div className="card bg-light col-8 d-flex mx-auto mt-5">
+                        <div className="card-body float-left">
+                            <input
+                                type="text"
+                                value={this.state.bet}
+                                onChange={this.handleBet.bind(this)}
+                            />
+                            <Link
+                                className="btn btn-success rounded-0 mt-0"
+                                to="/MyAccount"
+                                type="submit"
+                                onClick={this.addBet.bind(this)}
+                            >Complete Bet!!</Link>
+                        </div>
                     </div>
-
-                </div>
-
+                </form>
             </div>
 
         )
