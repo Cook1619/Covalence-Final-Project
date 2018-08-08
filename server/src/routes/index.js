@@ -25,8 +25,7 @@ router.route('*')
     // .post(tokenMiddleware, isLoggedIn)
     .put(tokenMiddleware, isLoggedIn)
     .delete(tokenMiddleware, isLoggedIn);
-
-
+router.use('/bet', betRouter);
 router.use('/futuregames', futureGamesRouter);    
 router.use('/donate', stripeDonationsRouter);
 router.use('/classes', classesRouter);
