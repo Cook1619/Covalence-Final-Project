@@ -179,6 +179,9 @@ h3{
 .margin-bottom{
   margin-bottom: 16em;
 }
+.large-margin-bottom{
+  margin-bottom: 30em;
+}
 
 .small-margin-bottom{
   margin-bottom: 5em;
@@ -198,5 +201,11 @@ h3{
 #jumbotron{
   margin-top: 15em;
   margin-bottom: 20em;
+
+}
+
+#checkout{
+  margin-top: 15em;
+  margin-bottom: 10em;
 
 }
