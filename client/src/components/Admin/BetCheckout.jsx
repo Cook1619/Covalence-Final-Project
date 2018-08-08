@@ -6,8 +6,21 @@ class BetCheckout extends Component {
         super(props);
 
         this.state = {
-            games: []
+            game: []
         };
+    }
+    async componentDidMount() {
+        let id = this.props.match.params.id;
+        try {
+            let res = await fetch('/api/futuregames/' + id);
+            let data = await res.json();
+            console.log(data);
+            this.setState({
+                game: data
+            })
+        } catch (e) {
+            console.log(`Error: ${e}`)
+        }
     }
 
     render() {
