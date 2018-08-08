@@ -2,14 +2,11 @@ import { Router } from 'express';
 import Table from '../table';
 let router = Router();
 
-let SportsData = new Table('futuregames');
-let teamData = new Table('teams')
+let SportsData = new Table('teams');
 
 router.get('/', async (req, res) => {
-    let mlbdata = await SportsData.futureGame()
-    let logos = await teamData.getLogos();
-    let allData = ({mlbdata, logos})
-    res.json(allData);
+    let teams = await SportsData.getAll();
+    res.json(teams);
 });
 
 router.get('/:id', async (req, res) => {

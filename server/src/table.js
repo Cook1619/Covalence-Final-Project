@@ -14,19 +14,21 @@ class Table {
         return results[0];
     }
 
-    async getUser(id) {
-        let sql = `SELECT * FROM ${this.tableName} WHERE id = ${id};`;
-        let results = await executeQuery(sql, [id]);
-        return results[0];
-    }
-
     getAll() {
         let sql = `SELECT * FROM ${this.tableName}`;
         return executeQuery(sql);
     }
 
+    getLogos() {
+        let sql = `SELECT home.logos as homeTeam, away.logos as awayTeam, futuregames.id
+        FROM futuregames 
+        INNER JOIN teams home ON home.id = futuregames.homeTeam_ID 
+        INNER JOIN teams away ON away.id = futuregames.awayTeam_ID`;
+        return executeQuery(sql)
+    }
+
     lastInning() {
-        let sql = `SELECT * FROM ${this.tableName} WHERE inningSummary_inning_number=9 AND isUnplayed = false `;
+        let sql = `SELECT * FROM ${this.tableName} WHERE inningSummary_inning_number = 9 AND isUnplayed = ${0} `;
         return executeQuery(sql);
     }
 

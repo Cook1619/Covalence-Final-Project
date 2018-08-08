@@ -7,6 +7,7 @@ import mysql from 'mysql';
 //     password: process.env.DB_PASS,
 //     database: process.env.DB_NAME
 // });
+
 let pool = mysql.createPool({
     connectionLimit: 10,
     host: 'us-cdbr-iron-east-04.cleardb.net',

@@ -16,18 +16,20 @@ class FutureGames extends Component {
             let res = await fetch('/api/futuregames');
             let data = await res.json();
             this.setState({
-                games: data
+                games: res.data
             })
+            console.log(data)
+            console.log(res.data)
         } catch (e) {
-            console.log(`Error: ${e}`)
+            console.log(`Error: ${e}`) 
         }
     }
+    
+    
     render() {
-
-        let gameList = this.state.games.map((game, index) => { 
-            return <FutureGameDetails key={index} gameData={game} />
+        let gameList = this.state.games && this.state.games.map((obj, index) => { 
+            return <FutureGameDetails key={index} gameData={obj} />
         })
-
         return (
             <div>
                 <img className = "w-100 mt-5" src={BaseballPhoto} alt=""/>
