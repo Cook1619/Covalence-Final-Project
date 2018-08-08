@@ -10,14 +10,14 @@ class BetPage extends Component {
     }
 
     async componentDidMount() {
-        
+        let id = this.props.match.params.id;
         try {
-            let res = await fetch('/api/futuregames/');
+            let res = await fetch('/api/futuregames/' + id);
             let data = await res.json();
-            console.log(data);
             this.setState({
                 game: data
             })
+            console.log(this.state.game)
         } catch (e) {
             console.log(`Error: ${e}`)
         }
