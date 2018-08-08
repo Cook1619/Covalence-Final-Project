@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 
 const FutureGameDetails = ({ gameData }) => {
+    console.log(gameData)
 
     return (
         <React.Fragment>
