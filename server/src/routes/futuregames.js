@@ -31,10 +31,18 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         let id = req.params.id;
+        //Sets up array for the response object
+        let dataArray = [];
+        //Returns an object
         let mlbdata = await SportsData.getOne(id);
+        //Pushes object into array
+        dataArray.push(mlbdata);
+        //Gets array of objects
         let logos = await teamData.getLogos();
 
-        mlbdata.forEach(function (mlb) {
+        //Same code now runs since it's two arrays and
+        //not an object and an array
+        dataArray.forEach(function (mlb) {
             logos.forEach(function (logo) {
                 if (mlb.id === logo.id) {
                     _.assign(mlb, logo);
@@ -42,7 +50,8 @@ router.get('/:id', async (req, res) => {
             });
         });
 
-        res.json(mlbdata);
+        //Returns single game with appropriate logos.
+        res.json(dataArray);
 
     } catch (e) {
         console.log(e);

@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import Moment from 'react-moment';
+
 import { Link } from 'react-router-dom';
 
 class BetPage extends Component {
@@ -15,39 +17,59 @@ class BetPage extends Component {
             let res = await fetch('/api/futuregames/' + id);
             let data = await res.json();
             this.setState({
-                game: data
+                game: data[0]
             })
-            console.log(this.state.game)
+            console.log(data[0])
+
         } catch (e) {
             console.log(`Error: ${e}`)
         }
     }
 
     render() {
-
+        // console.log(this.state.game[0])
         return (
             <Fragment>
-                <div className="col-md-12 margin-top large-margin-bottom">
+                <div className="col-md-12 margin-top large-margin-bottom border-2">
                     <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
-                        <div className="card-header bg-dark text-white rounded-0">
-                            <h5 className="text-center mt-3">{this.state.game.game_location}</h5>
-                            <h5 className="mt-3 text-center">August 4th 2018</h5>
-                            <h5 className="mt-3 text-center">{this.state.game.game_time}</h5>
+                        <div className="card-header bg-dark text-white rounded-0 row">
+                            <div className="col-md-4 pull-right">
+                                <img src={this.state.game.awayTeam} alt="" className="logo-left d-flex mx-auto" />
+                            </div>
+                            <div className="col-md-4 ">
+                                <h5 className="text-center mt-3">{`${this.state.game.game_location}`} </h5>
+                                <h5 className="mt-3 text-center"><Moment format="MM/DD/YYYY">{`${this.state.game.game_date}`}</Moment></h5>
+                                <h5 className="mt-3 text-center">{this.state.game.game_time}</h5>
+                            </div>
+
+                            <div className="col-md-4 ">
+                                <img src={this.state.game.homeTeam} alt="" className="logo-right d-flex mx-auto" />
+                            </div>
                         </div>
                         <div className="card-body">
-                            <div className="card-text col-12">
-                                <h1 className="float-left mt-3">
-                                    {`${this.state.game.awayTeam_City}   ${this.state.game.awayTeam_Name}`}
-                                    <div className="card-body float-left mt-5 ml-3">
-                                        <Link to='/betcheckout' className="btn btn-success float-left position-absolute">¡The {this.state.game.awayTeam_Name} will win!</Link>
-                                    </div>
-                                </h1>
-                                <h1 className="float-right mt-3">
-                                    {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
-                                    <div className="card-body ">
-                                        <Link to='/betcheckout/' className="btn btn-success float-right position-relative">¡The {this.state.game.homeTeam_Name} will win!</Link>
-                                    </div>
-                                </h1>
+                            <div className="card-text col">
+                                <div>
+                                    <h1 className="float-left mt-3 col-md-6 text-center">
+                                        {`${this.state.game.awayTeam_City}   ${this.state.game.awayTeam_Name}`}
+                                        <div className="card-body">
+                                            <div>
+                                                <Link to='/betcheckout' className="btn btn-success">¡The {this.state.game.awayTeam_Name} will win!</Link>
+                                            </div>
+
+                                        </div>
+                                    </h1>
+                                </div>
+                                <div>
+                                    <h1 className="float-left mt-3 col-md-6 text-center">
+                                        {`${this.state.game.homeTeam_City}   ${this.state.game.homeTeam_Name}`}
+                                        <div className="card-body">
+                                            <div>
+                                                <Link to='/betcheckout' className="btn btn-success">¡The {this.state.game.awayTeam_Name} will win!</Link>
+                                            </div>
+
+                                        </div>
+                                    </h1>
+                                </div>
                             </div>
                         </div>
                     </div>

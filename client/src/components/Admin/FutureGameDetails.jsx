@@ -10,7 +10,7 @@ const FutureGameDetails = ({ gameData }) => {
                 <div className="card post-body p-2 m-4 bg-light rounded-0 shadow-lg">
                     <div className="card-header bg-dark text-white rounded-0">
                         <h5 className="text-center">Matchup Preview</h5>
-                        <p className="text-center"><Moment format="MM/DD/YYYY">{`${gameData.game_date}`     }</Moment></p>
+                        <p className="text-center"><Moment format="MM/DD/YYYY">{`${gameData.game_date}`}</Moment></p>
                     </div>
                     <div className="card-body">
                         <div className="card-text">
