@@ -16,7 +16,7 @@ class FutureGames extends Component {
             let res = await fetch('/api/futuregames');
             let data = await res.json();
             this.setState({
-                games: data.mlbdata
+                games: data
             })
            console.log(this.state.games)
         } catch (e) {
