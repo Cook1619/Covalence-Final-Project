@@ -25,7 +25,7 @@ router.use('/bet', betRouter);
 router.use('/fake_it', fakeItTillYouMakeItRouter);
 router.route('*')
     // .post(tokenMiddleware, isLoggedIn)
-    .put(tokenMiddleware, isLoggedIn)
+    // .put(tokenMiddleware, isLoggedIn)
     .delete(tokenMiddleware, isLoggedIn);
 router.use('/bet', betRouter);
 router.use('/futuregames', futureGamesRouter);    
