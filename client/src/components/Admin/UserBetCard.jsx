@@ -6,11 +6,22 @@ export default class UserBetCard extends Component {
     renderWinOrLose() {
         switch (this.props.bet.is_winning_bet) {
             case 1:
-                return console.log('winner');
+                return <p style={{ color: 'green', fontWeight: 'bold' }}>You won!</p>;
             case 2:
-                return console.log('loser');
+                return <p style={{ color: 'red', fontWeight: 'bold' }}>You lost!</p>;
             default:
-                return console.log('undetermined');
+                return (<i><p>Waiting on result ..</p></i>);
+        }
+    }
+
+    renderBetOrCollectButton() {
+        switch (this.props.bet.is_winning_bet) {
+            case 1:
+                return <Link className="btn btn-sm btn-success float-bottom my-2 disabled" to="/futuregames">Colect Winnings!</Link>;
+            case 2:
+                return <Link className="btn btn-sm btn-dark float-bottom my-2" to="/futuregames">Bet Again!</Link>;
+            default:
+                return <Link className="btn btn-sm btn-dark float-bottom my-2" to="/futuregames">Push Your Luck?</Link>;
         }
     }
 
@@ -18,11 +29,12 @@ export default class UserBetCard extends Component {
         this.renderWinOrLose();
         return (
             <div className="card bg-dark mt-4 col-3 border-dark p-3 m-2 shadow">
-                <div className="card-header text-center bg-light"><u>Amount Bet:</u>
+                <div className="card-text text-center bg-light"><u>Status:</u> {this.renderWinOrLose()}</div>
+                <div className="card-text text-center bg-light"><u>Amount Bet:</u>
                     <div className="card-text text-center"><b>${this.props.bet.amount}</b></div>
-                    <div className="card-header text-center bg-light"><u>On Team:</u>
+                    <div className="text-center bg-light"><u>On Team:</u>
                         <div className="card-text text-center"><i>{this.props.bet.teamName}</i></div>
-                        <Link className="btn btn-sm btn-dark float-bottom mt-2" to="/futuregames">Bet Again!</Link>
+                        {this.renderBetOrCollectButton()}
                     </div>
                 </div>
             </div>
