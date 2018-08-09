@@ -41,20 +41,6 @@ class MyAccount extends Component {
         }
     }
 
-    // async componentDidMount() {
-    //     try {
-    //         let id = this.state.users.id
-    //         let res = await fetch(`/api/bet/${id}`);
-    //         let betData = await res.json();
-    //         this.setState({
-    //             bets: betData
-    //         })
-    //        console.log(id)
-    //     } catch (e) {
-    //         console.log(`Error: ${e}`) 
-    //     }
-    // }
-
     render() {
 
         let allBets = this.state.bets.map((bet, index) => {
@@ -72,7 +58,7 @@ class MyAccount extends Component {
                     </div>
                 </div>
                 
-                <div className="container-fluid row d-flex justify-content-center">
+                <div className="row d-flex justify-content-center" style={{ marginBottom: '5rem'}}>
                     {allBets}
                 </div>
             </div>

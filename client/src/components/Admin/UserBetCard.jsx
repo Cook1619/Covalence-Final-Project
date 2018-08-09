@@ -45,7 +45,7 @@ export default class UserBetCard extends Component {
 
     render() {
         return (
-            <div className="card bg-dark mt-4 col-3 border-dark p-3 m-2 shadow">
+            <div className="card bg-dark m-2 col-3 border-dark p-3 shadow">
                 <div className="card-text text-center bg-light"><u>Status:</u> {this.renderWinOrLose()}</div>
                 <div className="card-text text-center bg-light"><u>Amount Bet:</u>
                     <div className="card-text text-center"><b>${this.state.bet.amount}</b></div>
