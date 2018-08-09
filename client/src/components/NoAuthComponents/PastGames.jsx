@@ -36,6 +36,8 @@ class PastGames extends Component {
     }
    
     render() {
+        let googleApi = process.env.GOOGLE_API
+        conosle.log(googleApi)
         return (
             <Fragment>
                 <div className="padding-top margin-bottom">
