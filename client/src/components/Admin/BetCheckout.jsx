@@ -6,7 +6,7 @@ import Donate from '../donate';
 class BetCheckout extends Component {
     constructor(props) {
         super(props);
-
+        console.log(props)
         this.state = {
             userid: [],
             teamid: [],
@@ -50,29 +50,23 @@ class BetCheckout extends Component {
         if (this.props.location.state.homeTeam_Name) {
             return (
                 <div className="container d-flex justify-content-center">
-                    <div className="row">
-                        <div className="card">
-                            <div className="card-header bg-dark text-light">
-                                <h4>Matchup Selection</h4>
-                            </div>
-                            <div className="text-center mt-5 card-body">
-                                <h4>{this.props.location.state.homeTeam_Name}!</h4>
-                            </div>
+                    <div className="card col-4 w-25">
+                        <img src={this.props.location.state.img} alt="baseball" className="logo-right d-flex mx-auto" />
+                        <div className="card-body bg-success mt-2 rounded">
+                            <h3 className="card-title text-center text-white">Matchup Selection</h3>
+                            <h6 className="card-text text-center text-white">{this.props.location.state.homeTeam_Name}!</h6>
                         </div>
                     </div>
                 </div>
             )
         } else {
             return (
-                <div className="container">
-                    <div className="row">
-                        <div className="card">
-                            <div className="card-header bg-dark text-light">
-                                <h4>Matchup Selection</h4>
-                            </div>
-                            <div className="text-center mt-5 card-body">
-                                <h4>{this.props.location.state.awayTeam_Name}!</h4>
-                            </div>
+                <div className="container d-flex justify-content-center">
+                    <div className="card col-4 w-25">
+                        <img src={this.props.location.state.img} alt="baseball" className="logo-right d-flex mx-auto" />
+                        <div className="card-body bg-success mt-2 rounded">
+                            <h3 className="card-title text-center text-white">Matchup Selection</h3>
+                            <h6 className="card-text text-center text-white">{this.props.location.state.awayTeam_Name}!</h6>
                         </div>
                     </div>
                 </div>

@@ -18,8 +18,6 @@ class BetPage extends Component {
             this.setState({
                 game: data[0]
             })
-            console.log(data[0])
-
         } catch (e) {
             console.log(`Error: ${e}`)
         }
@@ -57,7 +55,8 @@ class BetPage extends Component {
                                                         state: {
                                                             awayTeam_Name: this.state.game.awayTeam_Name,
                                                             game_ID: this.state.game.id,
-                                                            awayTeam_ID: this.state.game.awayTeam_ID
+                                                            awayTeam_ID: this.state.game.awayTeam_ID,
+                                                            img: this.state.game.awayTeam
                                                         }
                                                     }}
                                                     className="btn btn-success">
@@ -78,7 +77,8 @@ class BetPage extends Component {
                                                         state: {
                                                             homeTeam_Name: this.state.game.homeTeam_Name,
                                                             game_ID: this.state.game.id,
-                                                            homeTeam_ID: this.state.game.homeTeam_ID
+                                                            homeTeam_ID: this.state.game.homeTeam_ID,
+                                                            img: this.state.game.homeTeam
                                                         }
                                                     }}
                                                     className="btn btn-success">The {this.state.game.homeTeam_Name} will win!</Link>
