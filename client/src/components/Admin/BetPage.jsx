@@ -30,7 +30,7 @@ class BetPage extends Component {
                     <div className="card post-body p-4 m-4 bg-light rounded-0 shadow-lg">
                         <div className="card-header bg-dark text-white rounded row">
                             <div className="col-md-4 pull-right">
-                                <img src={this.state.game.awayTeam} alt="" className="logo-left d-flex mx-auto" />
+                                <img src={this.state.game.awayTeam} alt="" className="logo-left d-flex mx-auto w-50" />
                             </div>
                             <div className="col-md-4 ">
                                 <h5 className="text-center mt-3">{`${this.state.game.game_location}`}</h5>
@@ -39,7 +39,7 @@ class BetPage extends Component {
                             </div>
 
                             <div className="col-md-4 ">
-                                <img src={this.state.game.homeTeam} alt="" className="logo-right d-flex mx-auto" />
+                                <img src={this.state.game.homeTeam} alt="" className="logo-right d-flex mx-auto w-50" />
                             </div>
                         </div>
                         <div className="card-body">

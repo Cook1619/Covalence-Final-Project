@@ -35,7 +35,7 @@ export default class UserBetCard extends Component {
     renderBetOrCollectButton() {
         switch (this.state.bet.is_winning_bet) {
             case 1:
-                return <Link className="btn btn-sm btn-success float-bottom my-2 disabled" to="/">Colect Winnings!</Link>;
+                return <Link className="btn btn-sm btn-success float-bottom my-2 disabled" to="/">Collect Winnings!</Link>;
             case 2:
                 return <Link className="btn btn-sm btn-dark float-bottom my-2" to="/futuregames">Bet Again!</Link>;
             default:
