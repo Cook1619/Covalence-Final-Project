@@ -7,7 +7,7 @@ import { generateHash } from '../utils/hash';
 let router = Router();
 
 let newUser = new Table('users');
-let betTable = new Table('bets')
+
 //comment
 
 router.post('/addnew', async (req, res) => {
@@ -48,7 +48,6 @@ router.get('/me/:id',tokenMiddleware, isLoggedIn, async(req, res) => {
     let id = req.params.id;
     let userData =  await newUser.getOne(id);
     res.json(userData);
-
 });
 
 export default router;

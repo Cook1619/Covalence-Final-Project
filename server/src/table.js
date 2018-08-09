@@ -43,13 +43,15 @@ class Table {
         return executeQuery(sql);
     }
 
-    getUserBets() {
+    async getUserBets(id) {
         let sql = `SELECT u.id , b.amount, b.teamid, b.gameid
                 FROM users AS u
                 INNER JOIN bets AS b
-                ON b.userid =  u.id`;
-        return executeQuery(sql)
-    }
+                ON b.userid =  u.id
+                where u.id=${id}`;
+                let results = await executeQuery(sql, [id]);
+                return results;    }
+
     find(query) {
         let columns = Object.keys(query);
         let values = Object.values(query);
