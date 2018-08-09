@@ -44,10 +44,10 @@ class Table {
     }
 
     async getUserBets(id) {
-        let sql = `SELECT u.id , b.amount, b.teamid, b.gameid
+        let sql = `SELECT u.id , b.amount, t.name as teamName, b.gameid
                 FROM users AS u
-                INNER JOIN bets AS b
-                ON b.userid =  u.id
+                INNER JOIN bets AS b ON b.userid =  u.id
+                JOIN teams AS t ON b.teamid = t.id
                 where u.id=${id}`;
         let results = await executeQuery(sql, [id]);
         return results;
