@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import PastGameDetails from './PastGameDetails';
-import { config } from '../../../../server/src/config';
 
 let sportsURL = 'https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180625';
 
