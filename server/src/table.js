@@ -44,13 +44,22 @@ class Table {
     }
 
     async getUserBets(id) {
-        let sql = `SELECT u.id , b.id as betid, b.amount, t.name as teamName, b.gameid, b.is_winning_bet
+        let sql = `SELECT u.id as userid, b.id as betid, b.amount, t.name as teamName, b.gameid, b.is_winning_bet
                 FROM users AS u
                 INNER JOIN bets AS b ON b.userid =  u.id
                 JOIN teams AS t ON b.teamid = t.id
                 where u.id=${id}`;
         let results = await executeQuery(sql, [id]);
         return results;
+    }
+
+    async getSingleUserBet(betid) {
+        let sql = `SELECT b.userid as userid, b.id as betid, b.amount, t.name as teamName, b.gameid, b.is_winning_bet
+                FROM bets b
+                JOIN teams t ON b.teamid = t.id
+                where b.id=${betid}`;
+        let results = await executeQuery(sql, [betid]);
+        return results[0];
     }
 
     find(query) {
