@@ -2,9 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class UserBetCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            bet: this.props.bet
+        };
+    }
+
+    simulateGame() {
+        console.log(this.state.bet);
+    }
 
     renderWinOrLose() {
-        switch (this.props.bet.is_winning_bet) {
+        switch (this.state.bet.is_winning_bet) {
             case 1:
                 return <p style={{ color: 'green', fontWeight: 'bold' }}>You won!</p>;
             case 2:
@@ -15,9 +25,9 @@ export default class UserBetCard extends Component {
     }
 
     renderBetOrCollectButton() {
-        switch (this.props.bet.is_winning_bet) {
+        switch (this.state.bet.is_winning_bet) {
             case 1:
-                return <Link className="btn btn-sm btn-success float-bottom my-2 disabled" to="/futuregames">Colect Winnings!</Link>;
+                return <Link className="btn btn-sm btn-success float-bottom my-2 disabled" to="/">Colect Winnings!</Link>;
             case 2:
                 return <Link className="btn btn-sm btn-dark float-bottom my-2" to="/futuregames">Bet Again!</Link>;
             default:
@@ -26,15 +36,17 @@ export default class UserBetCard extends Component {
     }
 
     render() {
-        this.renderWinOrLose();
         return (
             <div className="card bg-dark mt-4 col-3 border-dark p-3 m-2 shadow">
                 <div className="card-text text-center bg-light"><u>Status:</u> {this.renderWinOrLose()}</div>
                 <div className="card-text text-center bg-light"><u>Amount Bet:</u>
-                    <div className="card-text text-center"><b>${this.props.bet.amount}</b></div>
+                    <div className="card-text text-center"><b>${this.state.bet.amount}</b></div>
                     <div className="text-center bg-light"><u>On Team:</u>
-                        <div className="card-text text-center"><i>{this.props.bet.teamName}</i></div>
+                        <div className="card-text text-center"><i>{this.state.bet.teamName}</i></div>
                         {this.renderBetOrCollectButton()}
+                        <div>
+                            <button className="remove-all-styles btn btn-outline-warning mb-1" onClick={() => this.simulateGame()}>(simulate game)</button>
+                        </div>
                     </div>
                 </div>
             </div>
