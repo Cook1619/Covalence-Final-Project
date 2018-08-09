@@ -8,11 +8,13 @@ class MyAccount extends Component {
         super(props)
 
         this.state = {
-            users: []
-        }
+            users: [],
+            bets: []        }
 
     }
-    async componentDidMount() {
+
+    
+    async componentWillMount() {
         try {
             const AUTH_TOKEN_KEY = 'authtoken';
             let token = localStorage.getItem(AUTH_TOKEN_KEY);
@@ -30,9 +32,23 @@ class MyAccount extends Component {
             console.log(`Error: ${e}`)
         }
     }
-    
+
+    // async componentDidMount() {
+    //     try {
+    //         let id = this.state.users.id
+    //         let res = await fetch(`/api/bet/${id}`);
+    //         let betData = await res.json();
+    //         this.setState({
+    //             bets: betData
+    //         })
+    //        console.log(id)
+    //     } catch (e) {
+    //         console.log(`Error: ${e}`) 
+    //     }
+    // }
+
     render() {
-        console.log(this.state)
+        console.log(this.state.users.id)
         return (
             <div className="pt-5">
                 <div className="card bg-dark mt-5 shadow">
