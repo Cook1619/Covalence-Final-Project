@@ -41,11 +41,22 @@ class MyAccount extends Component {
         }
     }
 
+    renderBets() {
+        if (this.state.bets.length === 0) {
+            return <div className="loader mt-5"></div>
+        } else {
+            let allBets = this.state.bets.map((bet, index) => {
+                return <UserBetCard key={index} bet={bet} />
+            });
+            return allBets;
+        }
+    }
+
     render() {
 
-        let allBets = this.state.bets.map((bet, index) => {
-            return <UserBetCard key={index} bet={bet} />
-        });
+        // let allBets = this.state.bets.map((bet, index) => {
+        //     return <UserBetCard key={index} bet={bet} />
+        // });
 
         return (
             <div className="pt-5">
@@ -57,9 +68,9 @@ class MyAccount extends Component {
                         </div>
                     </div>
                 </div>
-                
-                <div className="row d-flex justify-content-center" style={{ marginBottom: '5rem'}}>
-                    {allBets}
+
+                <div className="row d-flex justify-content-center" style={{ marginBottom: '5rem' }}>
+                    {this.renderBets()}
                 </div>
             </div>
         )
