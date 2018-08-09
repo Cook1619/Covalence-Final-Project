@@ -5,7 +5,7 @@ export default class SimulateGame extends Component {
         super(props);
     }
 
-    simulateGame() {
+    async simulateGame() {
         let result = await fetch('/api/fake_it/');
         console.log(result);
     }   

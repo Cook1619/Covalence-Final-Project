@@ -9,6 +9,7 @@ import gamesRouter from './games'
 import betRouter from './bet'
 import contactRouter from './contactform'
 import stripeDonationsRouter from './stripeDonations';
+import fakeItTillYouMakeItRouter from './fakeGameResult';
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
 
 let router = Router();
@@ -21,6 +22,7 @@ router.use('/games', gamesRouter );
 router.use('/contact', contactRouter);
 router.use('/singleuser', singleUserRouter);
 router.use('/bet', betRouter);
+router.use('/fake_it', fakeItTillYouMakeItRouter);
 router.route('*')
     // .post(tokenMiddleware, isLoggedIn)
     .put(tokenMiddleware, isLoggedIn)
