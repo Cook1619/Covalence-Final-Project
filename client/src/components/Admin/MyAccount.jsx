@@ -68,7 +68,6 @@ class MyAccount extends Component {
                         <div className="card-body text-light text-center">
                             <h4>{`Hello ${this.state.users.firstname}!`}</h4>
                             <p className="card-text mt-3">{`Email: ${this.state.users.email}`}</p>
-                            <p className="card-text">Joined: <Moment date={this.state.users._created} /></p>
                         </div>
                     </div>
                 </div>
