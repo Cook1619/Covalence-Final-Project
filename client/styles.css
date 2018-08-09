@@ -260,3 +260,8 @@ h3{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.betpage{
+  margin-bottom: 60px;
+  margin-top: 30px;
+}

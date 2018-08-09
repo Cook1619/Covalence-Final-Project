@@ -62,20 +62,32 @@ class Login extends Component {
         return (
             <Fragment>
                 <p className="padding-top d-flex justify-content-center login-form">Login Here!</p>
-                <div className="d-flex justify-content-center margin-bottom">
-                    <form className="login-form p-0 col-6 rounded-0"   onSubmit={(e) => this.login(e)}>
-                        <div className="form-group col-md-8 d-flex mx-auto p-2">
-                            <input placeholder="Email" htmlFor="email" id="email" className="form-control" type="email" onChange={(e) => this.handleEmailChange(e.target.value)} required />
-                        </div>
-                        <div className="form-group col-md-8 d-flex mx-auto">
-                            <input htmlFor="password" placeholder="Password" id="password" className="form-control" type="password" onChange={(e) => this.handlePasswordChange(e.target.value)} required />
-                        </div>
-                        {this.state.feedbackMessage ? (
-                            <p>{this.state.feedbackMessage}</p>
-                        ) : null}
-                        <input type="submit" value="Login" className="fancy-button btn btn-success login-button d-flex mx-auto mb-10 login-margin-bottom" />
-                    </form>
+
+                <div className="row d-flex justify-content-center">
+                    <div className="col-8">
+                        <form className="login-form p-0 rounded-0" onSubmit={(e) => this.login(e)}>
+                            <div className="form-group col-md-8 d-flex mx-auto p-2">
+                                <input placeholder="Email" htmlFor="email" id="email" className="form-control" type="email" onChange={(e) => this.handleEmailChange(e.target.value)} required />
+                            </div>
+                            <div className="form-group col-md-8 d-flex mx-auto">
+                                <input htmlFor="password" placeholder="Password" id="password" className="form-control" type="password" onChange={(e) => this.handlePasswordChange(e.target.value)} required />
+                            </div>
+                            {this.state.feedbackMessage ? (
+                                <p>{this.state.feedbackMessage}</p>
+                            ) : null}
+                            <input type="submit" value="Login" className="fancy-button btn btn-success login-button d-flex mx-auto mb-10 login-margin-bottom" />
+                        </form>
+                    </div>
                 </div>
+                <div className="row d-flex justify-content-center mt-5">
+                    <div>
+                        <h5 className="text-center text-light">Don't have an account? <a href="/register">Register Here!</a>
+                        </h5>
+                    </div>
+                </div>
+
+
+
 
             </Fragment>
         );
@@ -83,3 +95,4 @@ class Login extends Component {
 }
 
 export default Login;
+
