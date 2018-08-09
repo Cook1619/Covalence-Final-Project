@@ -9,8 +9,16 @@ export default class UserBetCard extends Component {
         };
     }
 
-    simulateGame() {
-        console.log(this.state.bet);
+    async simulateGame() {
+        try {
+            let result = await fetch(`/api/fake_it/${this.state.bet.betid}`, { method: 'PUT' });
+            let data = await result.json();
+            this.setState({
+                bet: data
+            })
+        } catch (e) {
+            console.log(`Error updating bet: ${e}`);
+        }
     }
 
     renderWinOrLose() {
