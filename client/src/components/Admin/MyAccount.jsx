@@ -54,10 +54,6 @@ class MyAccount extends Component {
 
     render() {
 
-        // let allBets = this.state.bets.map((bet, index) => {
-        //     return <UserBetCard key={index} bet={bet} />
-        // });
-
         return (
             <div className="pt-5">
                 <div className="card bg-dark mt-5 shadow">

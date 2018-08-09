@@ -12,7 +12,6 @@ class PastGames extends Component {
         };
     }
 
-
     componentWillMount(){
         fetch(sportsURL, {
             headers: new Headers({
@@ -24,16 +23,24 @@ class PastGames extends Component {
                 games: response.scoreboard.gameScore
             }));
     }
+    
+    renderPastGames() {
+        if (this.state.games.length === 0) {
+            return <div className="loader mt-5 mx-auto"></div>
+        } else {
+            let pastGames = this.state.games.map((game, index)=> {
+                return <PastGameDetails key={index} game={game}/>
+            })
+            return pastGames;
+        }
+    }
    
     render() {
-           let pastGames = this.state.games.map((game, index)=> {
-               return <PastGameDetails key={index} game={game}/>
-           })
         return (
             <Fragment>
                 <div className="padding-top margin-bottom">
                     <div className="row">
-                        {pastGames}
+                        {this.renderPastGames()}
                     </div>
                 </div>
             </Fragment>
