@@ -55,12 +55,12 @@ class MyAccount extends Component {
     render() {
 
         return (
-            <div className="pt-5">
+            <div className="container col-8 pt-5">
                 <div className="card bg-dark mt-5 shadow">
-                    <div className="card-header">
-                        <div className="card-body text-light text-center">
-                            <h4>{`Hello ${this.state.users.firstname}!`}</h4>
-                            <p className="card-text mt-3">{`Email: ${this.state.users.email}`}</p>
+                    <div className="card-header text-white text-center">
+                        <h4>{`Hello ${this.state.users.firstname}!`}</h4>
+                        <div className="card-body bg-light text-center">
+                            <p className="card-text text-dark">{`Email: ${this.state.users.email}`}</p>
                         </div>
                     </div>
                 </div>
