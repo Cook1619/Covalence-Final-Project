@@ -4,24 +4,15 @@ import Table from '../table';
 let router = Router();
 let betTable = new Table('bets');
 
-router.get('/:id', async (req, res) => {
-    let id = req.params.id;
-    try {
-        let getBetsTest = await betTable.getOne(id);
-        res.status(200).send(getBetsTest);
-    } catch (error) {
-        console.log(`Error getting bet details! ${error}`);
-        res.status(500).send(`Error getting bet details! ${error}`);
-    }
-});
+router.put('/:betid', async (req, res) => {
 
-router.put('/:id', async (req, res) => {
-    let id = req.params.id;
+    let betid = req.params.betid;
     let randomNum = Math.floor((Math.random() * 2) + 1);
+
     try {
-        let updateABetRandomly = await betTable.updateBetRandomly(id, randomNum);
-        console.log(updateABetRandomly);
-        res.status(200).send(updateABetRandomly);
+        let updateABetRandomly = await betTable.updateBetRandomly(betid, randomNum);
+        let getBet = await betTable.getSingleUserBet(betid);
+        res.status(200).send(getBet);
     } catch (error) {
         console.log(`Error updating bet details! ${error}`);
         res.status(500).send(`Error updating bet details! ${error}`);
