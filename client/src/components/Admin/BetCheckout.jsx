@@ -49,11 +49,33 @@ class BetCheckout extends Component {
     teamRender() {
         if (this.props.location.state.homeTeam_Name) {
             return (
-                <div className="text-center mt-5">You have chosen the {this.props.location.state.homeTeam_Name}!</div>
+                <div className="container d-flex justify-content-center">
+                    <div className="row">
+                        <div className="card">
+                            <div className="card-header bg-dark text-light">
+                                <h4>Matchup Selection</h4>
+                            </div>
+                            <div className="text-center mt-5 card-body">
+                                <h4>{this.props.location.state.homeTeam_Name}!</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             )
         } else {
             return (
-                <div className="text-center mt-5">You have chosen the {this.props.location.state.awayTeam_Name}!</div>
+                <div className="container">
+                    <div className="row">
+                        <div className="card">
+                            <div className="card-header bg-dark text-light">
+                                <h4>Matchup Selection</h4>
+                            </div>
+                            <div className="text-center mt-5 card-body">
+                                <h4>{this.props.location.state.awayTeam_Name}!</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             )
         }
     }
@@ -86,6 +108,7 @@ class BetCheckout extends Component {
                 <form>
                     <div className="card bg-light col-8 d-flex mx-auto mt-5">
                         <div className="card-body float-left">
+                            <h5>Enter Bet Here:</h5>
                             <input
                                 type="text"
                                 value={this.state.bet}
