@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Moment from 'react-moment';
-import { Link } from 'react-router-dom';
+import UserBetCard from './UserBetCard';
 
 class MyAccount extends Component {
 
@@ -9,11 +9,12 @@ class MyAccount extends Component {
 
         this.state = {
             users: [],
-            bets: []        }
+            bets: []
+        }
 
     }
 
-    
+
     async componentWillMount() {
         try {
             const AUTH_TOKEN_KEY = 'authtoken';
@@ -27,7 +28,14 @@ class MyAccount extends Component {
             this.setState({
                 users: data
             })
-            console.log(data)
+
+            let id = data.id
+            let betResult = await fetch(`/api/bet/${id}`);
+            let betData = await betResult.json();
+            this.setState({
+                bets: betData
+            })
+
         } catch (e) {
             console.log(`Error: ${e}`)
         }
@@ -48,7 +56,11 @@ class MyAccount extends Component {
     // }
 
     render() {
-        console.log(this.state.users.id)
+
+        let allBets = this.state.bets.map((bet, index) => {
+            return <UserBetCard key={index} bet={bet} />
+        });
+
         return (
             <div className="pt-5">
                 <div className="card bg-dark mt-5 shadow">
@@ -60,11 +72,8 @@ class MyAccount extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="card bg-dark col-4 mt-4 border-dark p-3 mb-3 shadow">
-                    <div className="card-header text-center bg-light"><u>Amount Won:</u>
-                        <div className="card-text text-center">$230.50</div>
-                        <Link className="btn btn-sm btn-dark float-bottom mt-2" to="/futuregames">Bet Again!</Link>
-                    </div>
+                <div className="row">
+                    {allBets}
                 </div>
             </div>
         )
