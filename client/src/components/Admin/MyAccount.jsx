@@ -25,13 +25,14 @@ class MyAccount extends Component {
             this.setState({
                 users: data
             })
-            console.log(data);
+            console.log(data)
         } catch (e) {
             console.log(`Error: ${e}`)
         }
     }
     
     render() {
+        console.log(this.state)
         return (
             <div className="pt-5">
                 <div className="card bg-dark mt-5 shadow">

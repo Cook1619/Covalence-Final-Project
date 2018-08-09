@@ -1,21 +1,12 @@
 import mysql from 'mysql';
 
-// let pool = mysql.createPool({
-//     connectionLimit: 10,
-//     host: process.env.DB_HOST,
-//     user: process.env.DB_USER,
-//     password: process.env.DB_PASS,
-//     database: process.env.DB_NAME
-// });
 let pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'us-cdbr-iron-east-04.cleardb.net',
-    user: 'b328433c0d9634',
-    password: '2005baff',
-    database: 'heroku_08c98ed23a86959'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
 });
-
-
 
 
 async function executeQuery(sql, args = []) {

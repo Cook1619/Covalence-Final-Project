@@ -21,8 +21,8 @@ class Table {
 
     getLogos() {
         let sql = `SELECT home.logos as homeTeam, away.logos as awayTeam, futuregames.id
-        FROM futuregames 
-        INNER JOIN teams home ON home.id = futuregames.homeTeam_ID 
+                    FROM futuregames 
+                    INNER JOIN teams home ON home.id = futuregames.homeTeam_ID 
         INNER JOIN teams away ON away.id = futuregames.awayTeam_ID`;
         return executeQuery(sql)
     }
@@ -43,6 +43,13 @@ class Table {
         return executeQuery(sql);
     }
 
+    getUserBets() {
+        let sql = `SELECT u.id , b.amount, b.teamid, b.gameid
+                FROM users AS u
+                INNER JOIN bets AS b
+                ON b.userid =  u.id`;
+        return executeQuery(sql)
+    }
     find(query) {
         let columns = Object.keys(query);
         let values = Object.values(query);
