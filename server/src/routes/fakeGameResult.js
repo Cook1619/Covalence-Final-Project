@@ -8,9 +8,8 @@ router.get('/:id', async (req, res) => {
     let id = req.params.id;
     try {
         let getBetsTest = await betTable.getOne(id);
-        console.log(getBetsTest);
         res.status(200).send(getBetsTest);
-    } catch (err) {
+    } catch (error) {
         console.log(`Error getting bet details! ${error}`);
         res.status(500).send(`Error getting bet details! ${error}`);
     }
@@ -18,13 +17,14 @@ router.get('/:id', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     let id = req.params.id;
+    let randomNum = Math.floor((Math.random() * 2) + 1);
     try {
-        let getBetsTest = await betTable.getAll();
-        console.log(getBetsTest);
-        res.status(200).send(getBetsTest);
-    } catch (err) {
-        console.log(`Error getting bet details! ${error}`);
-        res.status(500).send(`Error getting bet details! ${error}`);
+        let updateABetRandomly = await betTable.updateBetRandomly(id, randomNum);
+        console.log(updateABetRandomly);
+        res.status(200).send(updateABetRandomly);
+    } catch (error) {
+        console.log(`Error updating bet details! ${error}`);
+        res.status(500).send(`Error updating bet details! ${error}`);
     }
 });
 

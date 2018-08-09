@@ -49,8 +49,9 @@ class Table {
                 INNER JOIN bets AS b
                 ON b.userid =  u.id
                 where u.id=${id}`;
-                let results = await executeQuery(sql, [id]);
-                return results;    }
+        let results = await executeQuery(sql, [id]);
+        return results;
+    }
 
     find(query) {
         let columns = Object.keys(query);
@@ -78,6 +79,15 @@ class Table {
         let sql = `INSERT INTO ${this.tableName} (${columns.join(',')}) VALUES (${placeholderString});`;
         let results = await executeQuery(sql, values);
         return { id: results.insertId };
+    }
+
+    async updateBetRandomly(id, randomNum) {
+        let sql =
+            `UPDATE bets
+        SET is_winning_bet = ${randomNum}
+        WHERE bets.id = ${id};`;
+        executeQuery(sql, [id])
+        return this.getOne(id);
     }
 
     update(id, row) {
