@@ -71,7 +71,8 @@ class MyAccount extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                
+                <div className="container-fluid row d-flex justify-content-center">
                     {allBets}
                 </div>
             </div>
