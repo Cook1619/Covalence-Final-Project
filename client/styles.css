@@ -55,6 +55,10 @@ form{
     margin-top: 10px;
   }
 
+  .remove-all-styles {
+    all: unset;
+  }
+
   .fancy-button{
       background-color: #159915   
   }
