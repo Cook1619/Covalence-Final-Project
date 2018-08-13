@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PastGameDetails from './PastGameDetails';
 
-let sportsURL = 'https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180802';
+// let sportsURL = 'https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180802';
 
 class PastGames extends Component {
     constructor(props) {
@@ -11,16 +11,16 @@ class PastGames extends Component {
         };
     }
 
-    componentWillMount(){
-        fetch(sportsURL, {
-            headers: new Headers({
-                'Content-Type': 'application/json',
-                'Authorization': `Basic ${process.env.SPORTS_FE}`
+    async componentDidMount() {
+        try {
+            let res = await fetch('/api/games');
+            let data = await res.json();
+            this.setState({
+                games: data
             })
-        }).then(res => res.json())
-            .then(response => this.setState({
-                games: response.scoreboard.gameScore
-            }));
+        } catch (e) {
+            console.log(`Error: ${e}`) 
+        }
     }
     
     renderPastGames() {

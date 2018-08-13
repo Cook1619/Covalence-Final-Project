@@ -5,7 +5,7 @@ let router = Router();
 let SportsData = new Table('pastgames');
 
 router.get('/', async (req, res) => {
-    let mlbdata = await SportsData.lastInning();
+    let mlbdata = await SportsData.getAll();
     res.json(mlbdata);
 });
 

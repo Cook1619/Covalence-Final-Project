@@ -7,11 +7,16 @@ let router = Router();
 
 const scores = new Table('pastgames');
 
+router.get('/', async (req, res) => {
+    let mlbdata = await scores.getAll();
+    res.json(mlbdata);
+});
+
 router.post('/', async (req, res) => {
     try {
         let testData = await axios({
             method: 'get',
-            url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180804`,
+            url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180802`,
             auth: {
                 username: process.env.SPORTS_SK,
                 password: process.env.SPORTS_PW
