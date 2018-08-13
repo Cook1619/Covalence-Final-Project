@@ -109,9 +109,9 @@ class BetCheckout extends Component {
                                 onChange={this.handleBet.bind(this)}
                             />
                             <Link
-                                className="btn btn-success rounded-0 mt-0 float-right"
+                                id="bet-button"
+                                className="btn btn-success rounded-0 bet-button float-right"
                                 to="/MyAccount"
-                                type="submit"
                                 onClick={this.addBet.bind(this)}
                             >Complete Bet!!</Link>
                         </div>

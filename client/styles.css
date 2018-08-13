@@ -265,3 +265,20 @@ h3{
   margin-bottom: 60px;
   margin-top: 30px;
 }
+
+.signup-button .btn-success { 
+  background: #159915;
+  border-color: #33912c;
+}
+
+.signup-button .btn-success a {
+  color: #fafafa;
+}
+
+.signup-button .btn-success:hover { 
+  background: #33912c;
+}
+
+#bet-button{
+  margin-top: -18px;
+}
