@@ -90,7 +90,7 @@ class BetCheckout extends Component {
             alert('Please Fill out the form');
         } else {
             betServices.insert(userInfo)
-            alert('Thank you for registering!')
+            alert('Thank you for betting!')
                 .catch(error => console.log(error));
         }
     }
