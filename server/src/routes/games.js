@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import axios from 'axios';
-import { config } from '../config'
 import Table from '../table';
 
 
@@ -14,8 +13,8 @@ router.post('/', async (req, res) => {
             method: 'get',
             url: `https://api.mysportsfeeds.com/v1.0/pull/mlb/2018-regular/scoreboard.json?fordate=20180804`,
             auth: {
-                username: config.SPORTS_SK,
-                password: config.SPORTS_PW
+                username: process.env.SPORTS_SK,
+                password: process.env.SPORTS_PW
             }
         });
 

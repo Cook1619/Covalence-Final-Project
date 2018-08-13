@@ -2,7 +2,6 @@ import React from 'react';
 import GoogleMaps from "simple-react-google-maps"
 
 const Map = (props) => {
-console.log(apiKey)
     return (
         <React.Fragment>
             <GoogleMaps

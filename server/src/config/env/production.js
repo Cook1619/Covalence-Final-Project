@@ -7,7 +7,7 @@ let cfg = {
     SPORTS_SK: process.env.SPORTS_SK,
     SPORTS_PW: process.env.SPORTS_PW,
     SPORTS_FE: process.env.SPORTS_FE,
-    GOOGLE_SK: process.env.GOOGLE_SK,
+    GOOGLE_API: process.env.GOOGLE_API,
     db: {
         connectionLimit: 10,
         DB_HOST: process.env.DB_HOST,
